@@ -4,7 +4,7 @@ import PropType from 'prop-types';
 const ImageBox = ({ arrowDirection, imgSrc }) => {
   return (
     <div className='h-32 relative'>
-      <img className='absolute h-full object-contain' src={imgSrc} alt='Icon' />
+      <img className='absolute h-full object-fill' src={imgSrc} alt='Icon' />
 
       {arrowDirection === 'down' && (
         <div className='absolute top-0 z-20 w-full'>
