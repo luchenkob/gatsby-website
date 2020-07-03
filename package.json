@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
-  "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "name": "meliorism-website",
+  "description": "Meliorism website using Gatsby and Prismic",
+  "version": "1.0.0",
+  "author": "Kazi Noshin J. O.",
   "dependencies": {
     "core-js": "2",
     "gatsby": "2.23.14",
@@ -53,9 +53,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind"
-  },
-  "bugs": {
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind/issues"
+    "url": "https://gitlab.com/KNJO/meliorism-website"
   }
 }
