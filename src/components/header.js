@@ -16,7 +16,7 @@ function Header() {
         </Link>
 
         <button
-          className='flex items-center block text-white md:hidden'
+          className='flex items-center text-white md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -35,7 +35,7 @@ function Header() {
         <nav
           className={`${
             isExpanded ? `block` : `hidden`
-          } absolute top-0 left-0 z-20 bg-white text-gray-400 md:block md:flex md:items-center w-full `}
+          } absolute top-0 left-0 z-20 bg-white text-gray-400 md:flex md:items-center w-full `}
         >
           {[
             {

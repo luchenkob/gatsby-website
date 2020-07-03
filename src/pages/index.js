@@ -6,7 +6,9 @@ import Header from '../components/header';
 import TextBox from '../components/textBox';
 import ImageBox from '../components/imageBox'
 
-import background from '../images/image.jpg';
+import background from '../images/png/image.png';
+import image4 from '../images/png/image_4.png';
+
 import logoEntrepreneur from '../images/brand_logos/entrepreneur.png';
 import logoForbes from '../images/brand_logos/forbes-logo-svg.png';
 import logoYahooNews from '../images/brand_logos/yahoo-news-light.png';
@@ -78,6 +80,20 @@ function IndexPage() {
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
         </section>
+
+        <section className='mt-6 p-3 text-gray-700 text-left'>
+         <h3 className='text-2xl'>How we do it</h3>
+         <p className='mt-4 text-sm'>
+         In a hyper-connected world, we adapt and empower business and individuals to compete through technology. We develop and execute technology solutions to improve our customers’ effective processes and dynamic outcomes. Ultimately, allowing them to become high-performance businesses. 
+         </p>
+
+        </section>
+
+        <section className='relative'>
+         <img className='block mt-4 w-screen' src={image4} alt='Man with laptop smiling while sitting on armchair' />
+
+        </section>
+
       </section>
     </Layout>
   );
