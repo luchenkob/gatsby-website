@@ -7,8 +7,8 @@ function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <header className='bg-transparent p-4 md:p-8'>
-      <div className='relative flex flex-wrap items-center justify-between max-w-4xl pb-4 mx-auto border-b'>
+    <header className='bg-transparent'>
+      <div className='relative flex flex-wrap items-center justify-between max-w-4xl pt-2 pb-4 mx-auto border-b'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
             <img className='h-6' src={logo} />
