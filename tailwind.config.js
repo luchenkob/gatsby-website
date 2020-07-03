@@ -1,0 +1,25 @@
+// See https://tailwindcss.com/docs/configuration for details
+module.exports = {
+  purge: [
+    './src/**/*.js',
+  ],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      purple: '#7D06E3',
+      white: '#FFFFFF',
+      gray: {
+        100: '#F9F9F9',
+        200: '#DADADA',
+        300: '#B7B7B7',
+        400: '#6C6C6C',
+        500: '#373737',
+        600: '#202020',
+        700: '#131414',
+      },
+    },
+  },
+  variants: {},
+  // https://github.com/tailwindcss/custom-forms
+  plugins: [require("@tailwindcss/custom-forms")],
+};
