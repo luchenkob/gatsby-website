@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
-import logo from '../images/prancheta-1-2-x-8@3x.png';
+import logo from '../../images/prancheta-1-2-x-8@3x.png';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);

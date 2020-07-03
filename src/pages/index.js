@@ -1,33 +1,33 @@
 import React from 'react';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Header from '../components/header';
-import TextBox from '../components/textBox';
-import ImageBox from '../components/imageBox';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import TextBox from '../components/Home/TextBox';
+import ImageBox from '../components/Home/ImageBox';
 
-import background from '../images/png/image.png';
-import image4 from '../images/png/image_4.png';
+import background from '../images/home/png/image.png';
+import image4 from '../images/home/png/image_4.png';
 
-import logoEntrepreneur from '../images/brand_logos/entrepreneur.png';
-import logoForbes from '../images/brand_logos/forbes-logo-svg.png';
-import logoYahooNews from '../images/brand_logos/yahoo-news-light.png';
-import logoABCNews from '../images/brand_logos/1200-px-abc-news-solid-black-logo-svg.png';
+import logoEntrepreneur from '../images/home/brand_logos/entrepreneur.png';
+import logoForbes from '../images/home/brand_logos/forbes-logo-svg.png';
+import logoYahooNews from '../images/home/brand_logos/yahoo-news-light.png';
+import logoABCNews from '../images/home/brand_logos/1200-px-abc-news-solid-black-logo-svg.png';
 
-import iconGraduate from '../images/svg/graduate.svg';
-import onlineEducation from '../images/png/image-online-education.png';
-import iconRetail from '../images/svg/retail.svg';
-import retail from '../images/png/image-retail.png';
-import iconTravel from '../images/svg/travel.svg';
-import travel from '../images/png/image-travel.png';
+import iconGraduate from '../images/home/svg/graduate.svg';
+import onlineEducation from '../images/home/png/image-online-education.png';
+import iconRetail from '../images/home/svg/retail.svg';
+import retail from '../images/home/png/image-retail.png';
+import iconTravel from '../images/home/svg/travel.svg';
+import travel from '../images/home/png/image-travel.png';
 
 
-import brand1 from '../images/png/1195-px-marriott-vacation-club-svg.png'
-import brand2 from '../images/png/celebrity-cruise.png'
-import brand3 from '../images/png/amazon.png'
-import brand4 from '../images/png/avis-vector-logo.png'
-import brand5 from '../images/png/british-airways.png'
-import brand6 from '../images/png/carnival-corporation-plc.png'
+import brand1 from '../images/home/png/1195-px-marriott-vacation-club-svg.png'
+import brand2 from '../images/home/png/celebrity-cruise.png'
+import brand3 from '../images/home/png/amazon.png'
+import brand4 from '../images/home/png/avis-vector-logo.png'
+import brand5 from '../images/home/png/british-airways.png'
+import brand6 from '../images/home/png/carnival-corporation-plc.png'
 
 function IndexPage() {
   return (
@@ -38,11 +38,9 @@ function IndexPage() {
       />
 
       <section className='text-center'>
-        <section
-          className='hero px-3 pt-3 md:px-8 text-left w-full bg-no-repeat bg-contain text-white'
-          style={{ backgroundImage: `url(${background})`, height: '400px' }}
-        >
-          <Header />
+        
+        <Hero backgroundUrl={background}>
+
           <div className='mt-12'>
             <h2 className='my-4 text-2xl font-bold'>
               Driven by technology, powered by expertise
@@ -54,7 +52,7 @@ function IndexPage() {
               through innovative solutions and building capability.
             </p>
           </div>
-        </section>
+        </Hero>
 
         <section className='mt-12 px-3 tracking-tight'>
           <h3 className='text-xs tracking-wide uppercase'>As seen on</h3>
@@ -107,7 +105,7 @@ function IndexPage() {
         </section>
 
         <img
-          className='block mt-4 w-screen'
+          className='block mt-6 w-screen'
           src={image4}
           alt='Man with laptop smiling while sitting on armchair'
         />
