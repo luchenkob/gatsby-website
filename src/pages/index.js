@@ -4,11 +4,12 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
+import SpecialImage from '../components/SpecialImage';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
 import background from '../images/home/png/image.png';
-import image4 from '../images/home/png/image_4.png';
+import image from '../images/home/png/image_2.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';
 import onlineEducation from '../images/home/png/image-online-education.png';
@@ -87,11 +88,7 @@ function IndexPage() {
           </p>
         </section>
 
-        <img
-          className='block mt-6 w-screen'
-          src={image4}
-          alt='Man with laptop smiling while sitting on armchair'
-        />
+        <SpecialImage imgSrc={image} imgAlt='Man with laptop smiling while sitting on armchair' />
 
         <section className='px-3 mt-12'>
           <h3 className='text-2xl capitalize'>Brands we worked with</h3>

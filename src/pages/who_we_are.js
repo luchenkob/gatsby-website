@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 
 import background from '../images/who_we_are/png/image-main.png';
 import image from '../images/who_we_are/png/image.png';
+import SpecialImage from '../components/SpecialImage';
 
 function WhoWeArePage() {
   return (
@@ -26,7 +27,7 @@ function WhoWeArePage() {
           </div>
         </Hero>
 
-        <section className='mt-16'>
+        <section className='mt-12 px-3'>
           <p>
             Meliorism is a premier all-in-one technology solutions provider with
             a focus on delivering world-class, custom technology platforms that
@@ -40,15 +41,12 @@ function WhoWeArePage() {
             technology platforms, which can be the growth engine for aspiring
             digital companies.
           </p>
-          <div className='mb-4 relative'>
-            <img
-              className='block mt-6 w-screen'
-              src={image}
-              alt='Women looking at phone'
-            />
-            <div className='absolute right-0 z-10 -mt-4 mr-8 bg-purple h-8 w-8 rounded-full'></div>
-          </div>
         </section>
+        
+        <SpecialImage
+          imgSrc={image}
+          imageAlt='Woman on her phone smiling sitting in a cafe'
+        />
       </section>
     </Layout>
   );

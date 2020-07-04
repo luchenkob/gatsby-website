@@ -18,6 +18,12 @@ module.exports = {
         700: '#131414',
       },
     },
+    extend: {
+      spacing: {
+        '2-75': '0.6875rem',
+        '52': '13rem'
+      }
+    }
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms

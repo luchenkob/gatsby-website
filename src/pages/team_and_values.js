@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
 import ValueBox from '../components/ValueBox';
+import SpecialImage from '../components/SpecialImage';
 
 import background from '../images/team_and_values/png/image-main.png';
 import image from '../images/team_and_values/png/image.png';
@@ -37,7 +38,7 @@ function TeamAndValuesPage() {
           </div>
         </Hero>
 
-        <section className='mt-12'>
+        <section className='mt-12 px-3'>
           <p>
             Today, we have over 150 dedicated, passionate, and professional
             people employed in our numerous offices across Dubai and beyond. Our
@@ -45,15 +46,9 @@ function TeamAndValuesPage() {
             exceptional experiences for our customers--from Marketing to Tech,
             Finance, Legal, and Support.
           </p>
-          <div className='relative'>
-            <img
-              className='block mt-6 w-screen'
-              src={image}
-              alt='Women looking at phone'
-            />
-            <div className='absolute right-0 z-10 -mt-4 mr-8 bg-purple h-8 w-8 rounded-full'></div>
-          </div>
         </section>
+
+        <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
 
         <section className='mt-12 px-3 tracking-tight'>
           <AsSeenOn />
