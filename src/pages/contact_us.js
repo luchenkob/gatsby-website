@@ -1,82 +1,64 @@
-// import React from 'react';
+import React from 'react';
 
-// import Layout from '../components/layout';
-// import SEO from '../components/seo';
-// import Header from '../components/header';
-// import TextBox from '../components/textBox';
-// import ImageBox from '../components/imageBox';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import ContactBox from '../components/ContactUs/ContactBox';
 
-// // import background from '../images/contact_us/image.png';
+import background from '../images/contact_us/png/image-main.png';
 
-// function IndexPage() {
-//   return (
-//     <Layout>
-//       <SEO
-//         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-//         title='Home'
-//       />
+import iconQuestion from '../images/contact_us/svg/icon-questions.svg';
+import iconSales from '../images/contact_us/svg/icon-sales.svg';
+import iconMedia from '../images/contact_us/svg/icon-media.svg';
 
-//       <section className='text-center'>
-//         <section
-//           className='hero px-3 pt-3 md:px-8 text-left w-full bg-no-repeat bg-contain text-white'
-//           style={{ backgroundImage: `url(${background})`, height: '400px' }}
-//         >
-//           <Header />
-//           <div className='mt-12'>
-//             <h2 className='my-4 text-2xl font-bold'>
-//               Driven by technology, powered by expertise
-//             </h2>
-//             <p className='leading-snug text-xs'>
-//               The most distinguished organizations recognize the edge of
-//               technological evolution. As trusted leaders at the forefront of
-//               technology progression, we help our customers stay competitive
-//               through innovative solutions and building capability.
-//             </p>
-//           </div>
-//         </section>
+function ContactUsPage() {
+  return (
+    <Layout>
+      <SEO
+        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        title='Contact Us'
+      />
 
-//         <section className='mt-12 px-3 tracking-tight'>
-//           <h3 className='text-xs tracking-wide uppercase'>As seen on</h3>
-//           <div className='mt-6 grid grid-flow-row gap-3'>
-//             <div className='flex items-start justify-center space-x-6'>
-//               <img src={logoForbes} />
-//               <img src={logoEntrepreneur} />
-//             </div>
-//             <div className='flex items-center justify-center space-x-6'>
-//               <img src={logoYahooNews} />
-//               <img src={logoABCNews} />
-//             </div>
-//           </div>
+      <section className='text-center'>
+        <Hero backgroundUrl={background}>
+          <div className='flex items-stretch h-64'>
+            <h1 className='mt-8 self-center text-2xl font-bold'>
+              We&apos;d love to
+              <br />
+              hear from you
+            </h1>
+          </div>
+        </Hero>
 
-//           <p className='mt-12 font-light'>
-//             Helping you build a thriving digital business, both in what you do
-//             and how you do it through innovative solutions designed for:
-//           </p>
+        <section className='mt-12'>
+          <h2>Our team is always ready to help - get in touch</h2>
+        </section>
 
-//           <div className='px-2 mt-8 grid grid-flow-col grid-rows-4 grid-cols-2'>
-//             <TextBox
-//               text='Online education'
-//               imgSrc={iconGraduate}
-//               hasBottomBorder={false}
-//             />
-//             <ImageBox imgSrc={onlineEducation} arrowDirection='down' />
+        <section className='mt-12 px-3'>
+          <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
+            <ContactBox
+              heading='General Questions'
+              text='Have a general question for us?'
+              svgUrl={iconQuestion}
+              toMail='info@bemeliorism.com'
+            />
+            <ContactBox
+              heading='Sales'
+              text="We'd love to talk about how we can work together."
+              svgUrl={iconSales}
+              toMail='sales@bemeliorism.com'
+            />
+            <ContactBox
+              heading='Media and Press'
+              text='Get news, company info, and media resources.'
+              svgUrl={iconMedia}
+              toMail='media@bemeliorism.com'
+            />
+          </div>
+        </section>
+      </section>
+    </Layout>
+  );
+}
 
-//             <TextBox
-//               text='E-commerce'
-//               imgSrc={iconRetail}
-//               hasTopBorder={false}
-//               hasBottomBorder={false}
-//             />
-//             <ImageBox imgSrc={retail} arrowDirection='down' />
-
-//             <ImageBox imgSrc={travel} arrowDirection='up' />
-//             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
-//           </div>
-//         </section>
-
-//       </section>
-//     </Layout>
-//   );
-// }
-
-// export default IndexPage;
+export default ContactUsPage;

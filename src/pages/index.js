@@ -35,9 +35,9 @@ function IndexPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='mt-5'>
-            <h2 className='text-2xl font-bold'>
+            <h1 className='text-2xl font-bold'>
               Driven by technology, powered by expertise
-            </h2>
+            </h1>
             <p className='mt-4 leading-snug text-xs'>
               The most distinguished organizations recognize the edge of
               technological evolution. As trusted leaders at the forefront of

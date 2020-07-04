@@ -24,10 +24,10 @@ function TeamAndValuesPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='mt-5'>
-            <h2 className='text-2xl font-bold'>
+            <h1 className='text-2xl font-bold'>
               Leaders, Innovators, Creators, and Storytellers. All Under One
               Roof.
-            </h2>
+            </h1>
             <p className='mt-4 leading-snug text-xs'>
               We&apos;re a team of creators, innovators, and storytellers, based
               in the city of the future, Dubai, UAE. We come from all different
