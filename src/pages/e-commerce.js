@@ -66,7 +66,7 @@ function ECommercePage() {
         <div className='mt-6'>
           <SpecialImage
             imgSrc={image}
-            imageAlt='Group of professionals smiling'
+            imageAlt='Man on phone smiling'
           />
         </div>
       </section>
