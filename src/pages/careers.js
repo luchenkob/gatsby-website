@@ -19,7 +19,7 @@ function CareersPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='flex items-stretch h-64'>
+          <div className='flex h-64'>
             <h1 className='mt-8 self-center text-2xl font-bold'>
               Grow
               <br />

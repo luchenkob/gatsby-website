@@ -9,7 +9,7 @@ import background from '../images/elearning/png/image-main.png';
 import image from '../images/elearning/png/image.png';
 import image2 from '../images/elearning/png/image-2.png';
 
-function CareersPage() {
+function ELearningPage() {
   const listItems = [
     'Live Streaming Videos',
     'Virtual Classroom',
@@ -25,7 +25,7 @@ function CareersPage() {
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title='Careers'
+        title='E-learning'
       />
 
       <section className='text-center'>
@@ -97,4 +97,4 @@ function CareersPage() {
   );
 }
 
-export default CareersPage;
+export default ELearningPage;
