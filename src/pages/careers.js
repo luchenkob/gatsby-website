@@ -49,7 +49,7 @@ function CareersPage() {
             Get in touch with our Talent Acquisition team.
           </span>
 
-          <div className='mt-1'>
+          <div className='mt-4'>
             <Button text='Check job openings' />
           </div>
         </section>

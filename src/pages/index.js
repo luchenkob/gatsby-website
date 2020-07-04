@@ -91,7 +91,7 @@ function IndexPage() {
         <SpecialImage imgSrc={image} imgAlt='Man with laptop smiling while sitting on armchair' />
 
         <section className='px-3 mt-12'>
-          <h3 className='text-2xl capitalize'>Brands we worked with</h3>
+          <h2 className='capitalize'>Brands we worked with</h2>
           <p className='mt-3 text-sm'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with

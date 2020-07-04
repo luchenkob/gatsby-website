@@ -7,7 +7,7 @@ import twitter from '../../images/svg/twitter_2.svg';
 
 const Footer = () => {
   return (
-    <footer className='mt-12 px-3 py-8 bg-gray-600 text-gray-300 text-xs'>
+    <footer className='mt-16 px-3 py-8 bg-gray-600 text-gray-300 text-xs'>
       <nav className='grid grid-cols-2 gap-12'>
         <div className='flex flex-col space-y-4'>
           <div>
