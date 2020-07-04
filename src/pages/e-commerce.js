@@ -67,6 +67,7 @@ function ECommercePage() {
           <SpecialImage
             imgSrc={image}
             imageAlt='Man on phone smiling'
+            bubbleRight={false}
           />
         </div>
       </section>
