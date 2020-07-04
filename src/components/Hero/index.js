@@ -9,7 +9,7 @@ const Hero = ({ backgroundUrl, children }) => {
       style={{ backgroundImage: `url(${backgroundUrl})`, height: '400px' }}
     >
       <Header />
-      {children}
+      <main>{children}</main>
     </section>
   );
 };

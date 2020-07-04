@@ -57,7 +57,7 @@ function ELearningPage() {
             Our team of experts have hands-on experience in delivering different
             e-learning solutions that maximize.
           </p>
-          <ul className='block mt-2 text-xs list-none space-y-1' style={{}}>
+          <ul className='block mt-2 text-xs list-none space-y-2' style={{}}>
             {listItems.map((item, index) => (
               <li key={index} className='flex items-center'>
                 <div className='inline-block h-1 w-1 rounded-full bg-purple'></div>
@@ -65,15 +65,15 @@ function ELearningPage() {
               </li>
             ))}
           </ul>
+          <div className='-mx-3 mt-6'>
+            <SpecialImage
+              imgSrc={image}
+              imageAlt='Group of professionals smiling'
+            />
+          </div>
         </section>
-        <div className='mt-6'>
-          <SpecialImage
-            imgSrc={image}
-            imageAlt='Group of professionals smiling'
-          />
-        </div>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-16 px-3'>
           <h2>
             Count on our expertise to build custom E-Learning solutions for your
             sector.

@@ -5,7 +5,7 @@ import Footer from '../Footer'
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-700">
+    <div className="antialiased flex flex-col min-h-screen font-sans text-gray-700 overflow-hidden">
       <div className="flex-1 w-full">
         {children}
       </div>

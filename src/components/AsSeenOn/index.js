@@ -8,8 +8,8 @@ import logoABCNews from '../../images/brand_logos/1200-px-abc-news-solid-black-l
 const AsSeenOn = () => {
   return (
     <>
-      <h3 className='text-xs tracking-wide uppercase'>As seen on</h3>
-      <div className='mt-6 grid grid-flow-row gap-3'>
+      <span className='text-xs tracking-wide uppercase'>As seen on</span>
+      <div className='mt-4 grid grid-flow-row gap-4'>
         <div className='flex items-start justify-center space-x-6'>
           <img src={logoForbes} />
           <img src={logoEntrepreneur} />

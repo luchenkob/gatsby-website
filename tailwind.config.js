@@ -8,6 +8,7 @@ module.exports = {
       transparent: 'transparent',
       purple: '#7D06E3',
       white: '#FFFFFF',
+      menuGray: '#8a8a8a',
       gray: {
         100: '#F9F9F9',
         200: '#DADADA',
@@ -21,6 +22,7 @@ module.exports = {
     extend: {
       spacing: {
         '2-75': '0.6875rem',
+        '7-5': '1.875rem',
         '52': '13rem'
       }
     }

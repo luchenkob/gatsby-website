@@ -8,7 +8,7 @@ const ContactButton = ({ toMail }) => {
 
   return (
     <button
-      className='px-6 py-2-75 bg-purple text-white text-xs'
+      className='h-10 w-40 bg-purple text-white text-xs'
       type='button'
       onClick={handleClick}
     >

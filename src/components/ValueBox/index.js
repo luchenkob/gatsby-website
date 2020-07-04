@@ -6,9 +6,9 @@ const ValueBox = ({ heading, text, svgUrl }) => {
     <div className='p-6 h-56 flex flex-col items-start justify-between'>
       <div className='text-gray-700 text-left text-sm flex flex-col'>
         <h4 className='font-semibold'>{heading}</h4>
-        <p className='mt-1'>{text}</p>
+        <p className='mt-2'>{text}</p>
       </div>
-      <img src={svgUrl} alt='icon' />
+      <img className='w-12 h-10' src={svgUrl} alt='icon' />
     </div>
   );
 };

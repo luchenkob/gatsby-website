@@ -35,11 +35,11 @@ function IndexPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='mt-5'>
-            <h1 className='text-2xl font-bold'>
+          <div className='flex flex-col justify-center'>
+            <h1 className='mt-16  text-2xl font-bold'>
               Driven by technology, powered by expertise
             </h1>
-            <p className='mt-4 leading-snug text-xs'>
+            <p className='mt-6 leading-snug text-xs'>
               The most distinguished organizations recognize the edge of
               technological evolution. As trusted leaders at the forefront of
               technology progression, we help our customers stay competitive
@@ -48,7 +48,7 @@ function IndexPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3 tracking-tight'>
+        <section className='mt-6 px-3 tracking-tight'>
           <AsSeenOn />
 
           <p className='mt-12 font-light'>
@@ -77,8 +77,8 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 px-3 text-left'>
-          <h3 className='text-2xl'>How we do it</h3>
+        <section className='mt-12 px-3 text-left bg-gray-100'>
+          <h2 className='inline-block mt-10'>How we do it</h2>
           <p className='mt-3 text-sm'>
             In a hyper-connected world, we adapt and empower business and
             individuals to compete through technology. We develop and execute
@@ -86,19 +86,24 @@ function IndexPage() {
             and dynamic outcomes. Ultimately, allowing them to become
             high-performance businesses.
           </p>
+
+          <div className='-mx-3 mt-6'>
+            <SpecialImage
+              imgSrc={image}
+              imgAlt='Man with laptop smiling while sitting on armchair'
+            />
+          </div>
         </section>
 
-        <SpecialImage imgSrc={image} imgAlt='Man with laptop smiling while sitting on armchair' />
-
         <section className='px-3 mt-12'>
-          <h2 className='capitalize'>Brands we worked with</h2>
-          <p className='mt-3 text-sm'>
+          <h2 className='capitalize'>Brands we work with</h2>
+          <p className='mt-6 text-sm'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.
           </p>
 
-          <div className='mt-6 grid grid-flow-row gap-4'>
+          <div className='mt-7-5 grid grid-flow-row gap-3'>
             <div className='flex items-center justify-center space-x-4'>
               <img src={brand1} />
               <img src={brand2} />

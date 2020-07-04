@@ -27,7 +27,7 @@ function WhoWeArePage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 px-3 py-10 bg-gray-100 text-left'>
           <p>
             Meliorism is a premier all-in-one technology solutions provider with
             a focus on delivering world-class, custom technology platforms that

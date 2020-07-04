@@ -52,11 +52,13 @@ function CareersPage() {
           <div className='mt-4'>
             <Button text='Check job openings' />
           </div>
+          <div className='-mx-3 mt-6'>
+            <SpecialImage
+              imgSrc={image}
+              imageAlt='Group of professionals smiling'
+            />
+          </div>
         </section>
-        <SpecialImage
-          imgSrc={image}
-          imageAlt='Group of professionals smiling'
-        />
       </section>
     </Layout>
   );

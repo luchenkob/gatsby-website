@@ -8,8 +8,8 @@ const ContactBox = ({ heading, text, svgUrl, toMail }) => {
     <div className='p-6 h-52 flex flex-col items-start justify-between'>
       <div className='text-gray-700 text-left text-sm flex flex-col items-start'>
         <img src={svgUrl} alt='icon' />
-        <h4 className='mt-3 font-semibold'>{heading}</h4>
-        <p className='mt-1'>{text}</p>
+        <h4 className='mt-4 font-semibold'>{heading}</h4>
+        <p className='mt-2'>{text}</p>
       </div>
 
       <ContactButton toMail={toMail} />

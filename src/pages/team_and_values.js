@@ -38,24 +38,25 @@ function TeamAndValuesPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
-          <p>
+        <section className='mt-12 px-3 bg-gray-100'>
+          <p className='inline-block mt-10'>
             Today, we have over 150 dedicated, passionate, and professional
             people employed in our numerous offices across Dubai and beyond. Our
             dynamic in-house team is composed of departments that drive
             exceptional experiences for our customers--from Marketing to Tech,
             Finance, Legal, and Support.
           </p>
+          <div className='-mx-3 mt-6'>
+          <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
+          </div>
         </section>
 
-        <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
-
-        <section className='mt-12 px-3 tracking-tight'>
+        <section className='mt-16 px-3 tracking-tight'>
           <AsSeenOn />
         </section>
 
         <section className='mt-12 px-3 tracking-tight'>
-          <h3>Our Values</h3>
+          <h2>Our Values</h2>
           <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
             <ValueBox
               heading='Innovation is our constant'

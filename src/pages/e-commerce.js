@@ -50,10 +50,10 @@ function ECommercePage() {
 
         <section className='mt-12 text-left px-3 bg-gray-100'>
           <p className='inline-block mt-10'>
-            Our team of experts have hands-on experience in delivering different
-            e-learning solutions that maximize.{' '}
+            Count on our team and their digital know-how to craft your online
+            presence because we:
           </p>
-          <ul className='block mt-2 text-xs list-none space-y-1' style={{}}>
+          <ul className='block mt-2 text-xs list-none space-y-2' style={{}}>
             {listItems.map((item, index) => (
               <li key={index} className='flex items-center'>
                 <div className='inline-block h-1 w-1 rounded-full bg-purple'></div>
