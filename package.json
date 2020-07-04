@@ -6,6 +6,7 @@
   "dependencies": {
     "core-js": "2",
     "gatsby": "2.23.19",
+    "gatsby-cli": "^2.12.58",
     "gatsby-plugin-manifest": "2.4.14",
     "gatsby-plugin-offline": "3.2.15",
     "gatsby-plugin-postcss": "2.3.6",
