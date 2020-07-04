@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
-import ValueBox from '../components/ValueBox'
+import ValueBox from '../components/ValueBox';
 
 import background from '../images/team_and_values/png/image-main.png';
 import image from '../images/team_and_values/png/image.png';
@@ -22,15 +22,20 @@ function TeamAndValuesPage() {
       />
 
       <section className='text-center'>
-        <Hero
-          backgroundUrl={background}
-          heading='Leaders, Innovators, Creators, and Storytellers. All Under One
-        Roof.'
-          text="We're a team of creators, innovators, and storytellers, based
-        in the city of the future, Dubai, UAE. We come from all different
-        backgrounds and have a wide variety of interests but are all
-        driven by our love for technology."
-        />
+        <Hero backgroundUrl={background}>
+          <div className='mt-5'>
+            <h2 className='text-2xl font-bold'>
+              Leaders, Innovators, Creators, and Storytellers. All Under One
+              Roof.
+            </h2>
+            <p className='mt-4 leading-snug text-xs'>
+              We&apos;re a team of creators, innovators, and storytellers, based
+              in the city of the future, Dubai, UAE. We come from all different
+              backgrounds and have a wide variety of interests but are all
+              driven by our love for technology.
+            </p>
+          </div>
+        </Hero>
 
         <section className='mt-12'>
           <p>
@@ -57,23 +62,22 @@ function TeamAndValuesPage() {
         <section className='mt-12 px-3 tracking-tight'>
           <h3>Our Values</h3>
           <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
-
-          <ValueBox
-            heading='Innovation is our constant'
-            text='Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill.'
-            svgUrl={iconInnovation}
+            <ValueBox
+              heading='Innovation is our constant'
+              text='Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill.'
+              svgUrl={iconInnovation}
             />
-          <ValueBox
-            heading='People are our engine'
-            text='Technological innovation is driven by people. We each take pride in what we deliver and we are inspired by the contributions of others.'
-            svgUrl={iconPeople}
+            <ValueBox
+              heading='People are our engine'
+              text='Technological innovation is driven by people. We each take pride in what we deliver and we are inspired by the contributions of others.'
+              svgUrl={iconPeople}
             />
-          <ValueBox
-            heading='Insight is out guide'
-            text='Understanding the needs of others is critical to doing great work. We make an impact when we invest in knowing our clients and our team..'
-            svgUrl={iconSearch}
+            <ValueBox
+              heading='Insight is out guide'
+              text='Understanding the needs of others is critical to doing great work. We make an impact when we invest in knowing our clients and our team..'
+              svgUrl={iconSearch}
             />
-            </div>
+          </div>
         </section>
       </section>
     </Layout>

@@ -16,13 +16,17 @@ function WhoWeArePage() {
       />
 
       <section className='text-center'>
-        <Hero
-          backgroundUrl={background}
-          heading='Innovation 
-          is in our DNA'
-        />
+        <Hero backgroundUrl={background}>
+          <div className='flex items-stretch h-64'>
+            <h2 className='mt-8 self-center text-2xl font-bold'>
+              Innovation
+              <br />
+              is in our DNA
+            </h2>
+          </div>
+        </Hero>
 
-        <section className='mt-12'>
+        <section className='mt-16'>
           <p>
             Meliorism is a premier all-in-one technology solutions provider with
             a focus on delivering world-class, custom technology platforms that
@@ -30,6 +34,7 @@ function WhoWeArePage() {
             industries. Our sole aim is to provide cost-effective technology
             services.
           </p>
+          <br />
           <p>
             Our team has a relentless focus on delivering scalable and reliable
             technology platforms, which can be the growth engine for aspiring

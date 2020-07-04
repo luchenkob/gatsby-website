@@ -33,13 +33,19 @@ function IndexPage() {
       />
 
       <section className='text-center'>
-        <Hero
-          backgroundUrl={background}
-          heading=' Driven by technology, powered by expertise'
-          text='The most distinguished organizations recognize the edge of technological evolution. As trusted leaders at the forefront of
-          technology progression, we help our customers stay competitive
-          through innovative solutions and building capability.'
-        />
+        <Hero backgroundUrl={background}>
+          <div className='mt-5'>
+            <h2 className='text-2xl font-bold'>
+              Driven by technology, powered by expertise
+            </h2>
+            <p className='mt-4 leading-snug text-xs'>
+              The most distinguished organizations recognize the edge of
+              technological evolution. As trusted leaders at the forefront of
+              technology progression, we help our customers stay competitive
+              through innovative solutions and building capability.
+            </p>
+          </div>
+        </Hero>
 
         <section className='mt-12 px-3 tracking-tight'>
           <AsSeenOn />
