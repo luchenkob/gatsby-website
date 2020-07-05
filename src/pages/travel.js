@@ -19,23 +19,19 @@ function TravelPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='flex flex-col justify-center'>
-            <h1 className='mt-16'>
-              Web & App-Based
+          <div className='-mt-12 flex flex-col justify-center h-full'>
+            <h1>
+              Web & App-Based Travel
               <br />
-              Travel and
-              <br />
-              Hospitality Solutions
+              and Hospitality Solutions
             </h1>
-            <p className='mt-6'>
-              Custom E-Learning Solutions to address tomorrow’s challenges
-            </p>
+            <p>for corporate travel and employee privileges</p>
           </div>
         </Hero>
 
         <section className='mt-12 mx-auto w-11/12'>
-          <h2>We built travel platforms that allow companies to reduce cost</h2>
-          <p className='mt-6'>
+          <h2 className='md:text-3xl'>We built travel platforms that allow companies to reduce cost</h2>
+          <p className='mt-6 max-w-3xl mx-auto'>
             Our travel platform is used by companies looking to lower their
             bottom line as well as reward their employees. By accessing our
             system for corporate travel or providing employees with memberships,
@@ -43,37 +39,41 @@ function TravelPage() {
           </p>
         </section>
 
-        <section className='mt-10 mx-auto w-11/12 text-left'>
-          <h5>Supply fulfillment for travel clubs</h5>
-          <p className='mt-2 text-left'>
-            We provide travel clubs around the world with an unparalleled
-            technology and fulfillment service. Members have access to
-            incredible online travel savings and a team of professionally
-            trained Travel Concierges.
-          </p>
-        </section>
-
-        <img
-          className='block mt-6 w-screen'
-          src={image}
-          alt='Woman on a boat standing with her arms open towards the sea'
-        />
-
-        <section className='mt-10 mx-auto w-11/12 text-left'>
-          <h5>Loyalty rewards programs</h5>
-          <p className='mt-2 text-left'>
-            With our dynamic Loyalty Rewards Program your members will see
-            immediate benefits from using your product. By being directly
-            rewarded for every purchase made, your members will develop loyalty
-            to your program and stay with you year after year.
-          </p>
-        </section>
-        <div className='mt-6'>
-          <SpecialImage
-            imgSrc={image2}
-            imgAlt='Woman on the beach in a hammock smiling at her phone'
+        <section className='mt-10 text-left flex flex-col md:flex-row max-w-4xl mx-auto'>
+          <div className='mx-auto mt-2 text-left w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+            <h5>Supply fulfillment for travel clubs</h5>
+            <p className='mt-4'>
+              We provide travel clubs around the world with an unparalleled
+              technology and fulfillment service. Members have access to
+              incredible online travel savings and a team of professionally
+              trained Travel Concierges.
+            </p>
+          </div>
+          <img
+            className='block mt-6 w-screen md:w-1/2'
+            src={image}
+            alt='Woman on a boat standing with her arms open towards the sea'
           />
-        </div>
+        </section>
+
+        <section className='mt-12 text-left md:flex md:mt-52 md:flex-row-reverse max-w-4xl mx-auto'>
+          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+            <h5>Loyalty rewards programs</h5>
+            <p className='mt-4'>
+              With our dynamic Loyalty Rewards Program your members will see
+              immediate benefits from using your product. By being directly
+              rewarded for every purchase made, your members will develop
+              loyalty to your program and stay with you year after year.
+            </p>
+          </div>
+          <div className='mt-6 md:w-1/2'>
+            <SpecialImage
+              imgSrc={image2}
+              imgAlt='Woman on the beach in a hammock smiling at her phone'
+              bubbleSide='right'
+            />
+          </div>
+        </section>
       </section>
     </Layout>
   );

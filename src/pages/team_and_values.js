@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
 import ValueBox from '../components/ValueBox';
 import SpecialImage from '../components/SpecialImage';
+import GraySection from '../components/GraySection';
 
 import background from '../images/team_and_values/png/image-main.png';
 import image from '../images/team_and_values/png/image.png';
@@ -24,12 +25,12 @@ function TeamAndValuesPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='mt-5'>
-            <h1 className=''>
+          <div className='-mt-12 flex flex-col justify-center h-full'>
+            <h1>
               Leaders, Innovators, Creators, and Storytellers. All Under One
               Roof.
             </h1>
-            <p className='mt-4 leading-snug text-xs'>
+            <p>
               We&apos;re a team of creators, innovators, and storytellers, based
               in the city of the future, Dubai, UAE. We come from all different
               backgrounds and have a wide variety of interests but are all
@@ -38,18 +39,15 @@ function TeamAndValuesPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 mx-auto w-11/12 bg-gray-100'>
-          <p className='inline-block mt-10'>
-            Today, we have over 150 dedicated, passionate, and professional
+        <GraySection
+          text='Today, we have over 150 dedicated, passionate, and professional
             people employed in our numerous offices across Dubai and beyond. Our
             dynamic in-house team is composed of departments that drive
             exceptional experiences for our customers--from Marketing to Tech,
-            Finance, Legal, and Support.
-          </p>
-          <div className='-mx-3 mt-6'>
+            Finance, Legal, and Support.'
+        >
           <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
-          </div>
-        </section>
+        </GraySection>
 
         <section className='mt-16 mx-auto w-11/12 tracking-tight'>
           <AsSeenOn />
@@ -57,7 +55,7 @@ function TeamAndValuesPage() {
 
         <section className='mt-12 mx-auto w-11/12 tracking-tight'>
           <h2>Our Values</h2>
-          <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
+          <div className='flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 max-w-xs w-11/12 mx-auto lg:flex-row lg:max-w-4xl lg:divide-x lg:divide-y-0'>
             <ValueBox
               heading='Innovation is our constant'
               text='Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill.'

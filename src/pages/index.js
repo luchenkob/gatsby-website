@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
 import SpecialImage from '../components/SpecialImage';
+import GraySection from '../components/GraySection'
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
@@ -100,24 +101,19 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
-            <h2 className='inline-block'>How we do it</h2>
-            <p className='mt-3'>
-              In a hyper-connected world, we adapt and empower business and
+        <GraySection
+          heading='How we do it'
+          text='In a hyper-connected world, we adapt and empower business and
               individuals to compete through technology. We develop and execute
               technology solutions to improve our customers’ effective processes
               and dynamic outcomes. Ultimately, allowing them to become
-              high-performance businesses.
-            </p>
-          </div>
-          <div className='mt-6 md:w-1/2 md:-mt-16'>
-            <SpecialImage
-              imgSrc={image}
-              imgAlt='Man with laptop smiling while sitting on armchair'
-            />
-          </div>
-        </section>
+              high-performance businesses.'
+        >
+          <SpecialImage
+            imgSrc={image}
+            imgAlt='Man with laptop smiling while sitting on armchair'
+          />
+        </GraySection>
 
         <section className='mx-auto w-11/12 mt-12'>
           <h2 className='capitalize'>Brands we work with</h2>

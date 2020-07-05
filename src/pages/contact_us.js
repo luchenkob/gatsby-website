@@ -35,7 +35,7 @@ function ContactUsPage() {
         </section>
 
         <section className='mt-12 mx-auto w-11/12'>
-          <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
+          <div className='mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 max-w-xs w-11/12 mx-auto lg:flex-row lg:max-w-4xl lg:divide-x lg:divide-y-0'>
             <ContactBox
               heading='General Questions'
               text='Have a general question for us?'

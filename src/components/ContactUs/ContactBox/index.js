@@ -5,7 +5,7 @@ import ContactButton from '../../Button';
 
 const ContactBox = ({ heading, text, svgUrl, toMail }) => {
   return (
-    <div className='p-6 h-52 flex flex-col items-start justify-between'>
+    <div className='p-6 h-56 lg:h-64 flex flex-col items-start justify-between lg:w-1/3'>
       <div className='text-gray-700 text-left flex flex-col items-start'>
         <img src={svgUrl} alt='icon' />
         <h4 className='mt-4'>{heading}</h4>
