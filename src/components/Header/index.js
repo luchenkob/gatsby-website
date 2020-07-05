@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import DropDownMenu from './DropDownMenu';
 
@@ -39,16 +39,6 @@ const Header = () => {
       },
     ],
   };
-  const child = useMemo(
-    () => (
-      <DropDownMenu
-        setSelected={setSelected}
-        selected={selected}
-        links={links}
-      />
-    ),
-    [selected],
-  );
 
   useEffect(() => {
     if (isExpanded) {
@@ -121,7 +111,12 @@ const Header = () => {
                     </svg>
                   )}
                 </button>
-                {selected === item && child}
+                {selected === item && (
+                  <DropDownMenu
+                    setSelected={setSelected}
+                    links={links[selected]}
+                  />
+                )}
               </li>
             ))}
             <li>

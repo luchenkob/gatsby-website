@@ -2,12 +2,12 @@ import React from 'react'
 import PropType from 'prop-types'
 import {Link} from 'gatsby'
 
-const DropDownMenu = ({setSelected, selected, links}) => {
+const DropDownMenu = ({setSelected, links}) => {
     return <div className='absolute pt-4'>
     <ul
       className={`w-48 bg-white text-gray-700 pl-5 py-4 shadow-sm space-y-4 transition-opacity duration-200 ease-in-out`}
     >
-      {links[selected].map((subLink) => (
+      {links.map((subLink) => (
         <li
           className='transition-colors duration-100 ease-in-out hover:text-purple'
           key={`${subLink.title}-desktop`}

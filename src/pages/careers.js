@@ -55,7 +55,7 @@ function CareersPage() {
           <div className='-mx-3 mt-6'>
             <SpecialImage
               imgSrc={image}
-              imageAlt='Group of professionals smiling'
+              imgAlt='Group of professionals smiling'
             />
           </div>
         </section>
