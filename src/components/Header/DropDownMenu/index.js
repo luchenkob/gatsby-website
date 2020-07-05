@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 const DropDownMenu = ({setSelected, links}) => {
     return <div className='absolute pt-4'>
     <ul
-      className={`w-48 bg-white text-gray-700 pl-5 py-4 shadow-sm space-y-4 transition-opacity duration-200 ease-in-out`}
+      className={`w-40 lg:w-48 bg-white text-gray-700 pl-4 lg:pl-5 py-4 shadow-sm md:space-y-3 lg:space-y-4 transition-opacity duration-200 ease-in-out`}
     >
       {links.map((subLink) => (
         <li
@@ -26,7 +26,6 @@ const DropDownMenu = ({setSelected, links}) => {
 
 DropDownMenu.propTypes = {
     setSelected: PropType.func.isRequired,
-    selected: PropType.string.isRequired,
     links: PropType.array.isRequired
 }
 

@@ -45,7 +45,7 @@ function WhoWeArePage() {
         
         <SpecialImage
           imgSrc={image}
-          imageAlt='Woman on her phone smiling sitting in a cafe'
+          imgAlt='Woman on her phone smiling sitting in a cafe'
         />
       </section>
     </Layout>

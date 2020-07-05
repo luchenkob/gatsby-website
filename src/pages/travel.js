@@ -71,7 +71,7 @@ function TravelPage() {
         <div className='mt-6'>
           <SpecialImage
             imgSrc={image2}
-            imageAlt='Woman on the beach in a hammock smiling at her phone'
+            imgAlt='Woman on the beach in a hammock smiling at her phone'
           />
         </div>
       </section>

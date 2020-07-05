@@ -53,7 +53,7 @@ const Header = () => {
       <div className='relative flex flex-wrap items-center justify-between max-w-4xl pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
-            <img className='h-6' src={logoWhite} />
+            <img className='h-6 md:h-8' src={logoWhite} />
           </span>
         </Link>
 
@@ -74,7 +74,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <nav className='hidden relative z-30 md:block w-3/6 text-lg'>
+        <nav className='hidden relative z-30 md:block w-3/6 text-sm lg:text-lg'>
           <ul className='flex w-full justify-between'>
             {Object.keys(links).map((item) => (
               <li className='relative' key={`${item}-desktop`}>

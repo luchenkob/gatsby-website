@@ -29,6 +29,12 @@ p.big {
 .caption {
     @apply text-xs font-bold;
 }
+/* 
+@screen xl {
+  h1 {
+    @apply text-6xl;
+  }
+} */
 
 @tailwind components;
 

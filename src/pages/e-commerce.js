@@ -65,7 +65,7 @@ function ECommercePage() {
           <div className='-mx-3 mt-6'>
             <SpecialImage
               imgSrc={image}
-              imageAlt='Man on phone smiling'
+              imgAlt='Man on phone smiling'
               bubbleRight={false}
             />
           </div>
