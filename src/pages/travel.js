@@ -66,7 +66,7 @@ function TravelPage() {
               loyalty to your program and stay with you year after year.
             </p>
           </div>
-          <div className='mt-6 md:w-1/2'>
+          <div className='mt-6 md:w-1/2 md:mt-0'>
             <SpecialImage
               imgSrc={image2}
               imgAlt='Woman on the beach in a hammock smiling at her phone'

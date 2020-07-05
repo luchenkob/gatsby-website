@@ -75,8 +75,8 @@ function ELearningPage() {
           sector.
         </h2>
 
-        <section className='mt-10 text-left flex flex-col md:flex-row-reverse max-w-3xl mx-auto'>
-          <div className='mx-auto mt-2 text-left w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+        <section className='mt-10 text-left flex flex-col md:flex-row-reverse max-w-6xl mx-auto'>
+          <div className='mx-auto mt-2 text-left w-11/12 md:w-1/2 md:max-w-xs lg:max-w-md md:self-center md:mt-0'>
             <h5>Corporate sector</h5>
             <p className='mt-4'>
               Continuous workforce training poses several challenges in the

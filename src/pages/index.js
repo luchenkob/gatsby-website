@@ -37,11 +37,11 @@ function IndexPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='flex flex-col justify-center'>
-            <h1 className='mt-16'>
+          <div className='-mt-12 flex flex-col justify-center h-full'>
+            <h1>
               Driven by technology, powered by expertise
             </h1>
-            <p className='mt-6'>
+            <p>
               The most distinguished organizations recognize the edge of
               technological evolution. As trusted leaders at the forefront of
               technology progression, we help our customers stay competitive
@@ -53,7 +53,7 @@ function IndexPage() {
         <section className='mt-6 mx-auto w-11/12 '>
           <AsSeenOn />
 
-          <p className='mt-12 font-light text-sm md:text-lg'>
+          <p className='mt-12 font-light text-sm md:text-lg max-w-2xl mx-auto'>
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>

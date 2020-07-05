@@ -35,27 +35,43 @@ h5 {
     @apply text-3xl;
   }
 
-  h4 {
-    @apply text-base;
-  }
+  
 }
 
 @screen lg {
   body {
-    @apply text-sm;
+    @apply text-lg;
   }
 
   h1 {
-    @apply text-3xl;
+    @apply text-6xl;
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-5xl;
+  }
+
+  h4 {
+    @apply text-lg;
   }
 }
 
 body.no-scroll {
   @apply overflow-hidden
+}
+
+.hero {
+  height: 400px;
+}
+
+@screen lg {
+  .hero {
+    height: 800px;
+  }
+}
+
+footer a:hover {
+  color: white
 }
 
 @tailwind components;
