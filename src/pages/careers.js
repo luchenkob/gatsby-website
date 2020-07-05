@@ -20,7 +20,7 @@ function CareersPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex h-64'>
-            <h1 className='mt-8 self-center text-2xl font-bold'>
+            <h1 className='mt-8 self-center '>
               Grow
               <br />
               professionally
@@ -30,7 +30,7 @@ function CareersPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 mx-auto w-11/12'>
           <h2>Life at Meliorism</h2>
           <p className='mt-6'>
             Our benefits go beyond flexible schedules and unmatched
@@ -43,14 +43,14 @@ function CareersPage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left px-3 bg-gray-100'>
+        <section className='mt-12 text-left w-11/12 mx-auto bg-gray-100'>
           <h2 className='inline-block mt-10'>Talent Pool</h2>
           <span className='block mt-2 text-xs'>
             Get in touch with our Talent Acquisition team.
           </span>
 
           <div className='mt-4'>
-            <Button text='Check job openings' />
+            <Button text='Check job openings' toMail="careers@bemeliorism.com" />
           </div>
           <div className='-mx-3 mt-6'>
             <SpecialImage

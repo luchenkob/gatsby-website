@@ -8,12 +8,12 @@ import twitter from '../../images/svg/twitter_2.svg';
 
 const Footer = () => {
   return (
-    <footer className='mt-16 px-3 py-8 bg-gray-600 text-gray-300 text-xs'>
-      <nav className='grid grid-cols-2 gap-12'>
+    <footer className='mt-16 py-8 bg-gray-600 text-gray-300 text-xs'>
+      <nav className='mx-auto w-11/12 grid grid-cols-2 gap-12'>
         <div className='flex flex-col space-y-4'>
           <div>
             <div className='caption uppercase text-gray-400'>Products</div>
-            <ul className='mt-2 flex flex-col space-y-1'>
+            <ul className='mt-2 flex flex-col space-y-2'>
               {[
                 {
                   route: `/e-learning`,
@@ -30,7 +30,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link.title}>
                   <Link
-                    className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block text-gray-800 no-underline'
                     to={link.route}
                   >
                     {link.title}
@@ -42,14 +42,14 @@ const Footer = () => {
 
           <div className=' col-span-2'>
             <Link
-              className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+              className='block text-gray-800 no-underline'
               to={'/careers'}
             >
               Careers
             </Link>
           </div>
 
-          <ul className='flex flex-col space-y-1'>
+          <ul className='flex flex-col space-y-2'>
             {[
               {
                 route: `/`,
@@ -62,7 +62,7 @@ const Footer = () => {
             ].map((link) => (
               <li key={link.title}>
                 <Link
-                  className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                  className='block text-gray-800 no-underline'
                   to={link.route}
                 >
                   {link.title}
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className='flex flex-col justify-between'>
           <div>
             <div className='caption uppercase text-gray-400'>About us</div>
-            <ul className='mt-2 flex flex-col space-y-1'>
+            <ul className='mt-2 flex flex-col space-y-2'>
               {[
                 {
                   route: `/who_we_are`,
@@ -92,7 +92,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link.title}>
                   <Link
-                    className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block text-gray-800 no-underline'
                     to={link.route}
                   >
                     {link.title}
@@ -102,7 +102,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <ul className='flex flex-col space-y-1'>
+          <ul className='flex flex-col space-y-2'>
             {[
               {
                 route: `/`,
@@ -115,7 +115,7 @@ const Footer = () => {
             ].map((link) => (
               <li key={link.title}>
                 <Link
-                  className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                  className='block text-gray-800 no-underline'
                   to={link.route}
                 >
                   {link.title}
@@ -125,7 +125,7 @@ const Footer = () => {
           </ul>
         </div>
       </nav>
-      <ul className='mt-6 flex space-x-4 col-span-2'>
+      <ul className='mx-auto w-11/12 mt-6 flex space-x-4 col-span-2'>
         <li>
           <img src={facebook} />
         </li>

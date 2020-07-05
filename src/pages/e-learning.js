@@ -31,7 +31,7 @@ function ELearningPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex flex-col justify-center'>
-            <h1 className='mt-16  text-2xl font-bold'>
+            <h1 className='mt-16  '>
               E-learning
               <br />
               is growing.
@@ -44,7 +44,7 @@ function ELearningPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 mx-auto w-11/12'>
           <p>
             Meliorism consolidates all e-learning needs into one advanced
             platform giving companies and organizations the right tools for a
@@ -52,7 +52,7 @@ function ELearningPage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left px-3 bg-gray-100'>
+        <section className='mt-12 text-left mx-auto w-11/12 bg-gray-100'>
           <p className='inline-block mt-10'>
             Our team of experts have hands-on experience in delivering different
             e-learning solutions that maximize.
@@ -73,7 +73,7 @@ function ELearningPage() {
           </div>
         </section>
 
-        <section className='mt-16 px-3'>
+        <section className='mt-16 mx-auto w-11/12'>
           <h2>
             Count on our expertise to build custom E-Learning solutions for your
             sector.

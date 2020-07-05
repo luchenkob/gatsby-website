@@ -1,7 +1,7 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
+// const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
 
-const fullConfig = resolveConfig(tailwindConfig);
+// resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
@@ -12,6 +12,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`300`, `400`, `600`]
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `600`, `700`]
+          },
+        ],
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

@@ -25,7 +25,7 @@ function TeamAndValuesPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='mt-5'>
-            <h1 className='text-2xl font-bold'>
+            <h1 className=''>
               Leaders, Innovators, Creators, and Storytellers. All Under One
               Roof.
             </h1>
@@ -38,7 +38,7 @@ function TeamAndValuesPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3 bg-gray-100'>
+        <section className='mt-12 mx-auto w-11/12 bg-gray-100'>
           <p className='inline-block mt-10'>
             Today, we have over 150 dedicated, passionate, and professional
             people employed in our numerous offices across Dubai and beyond. Our
@@ -51,11 +51,11 @@ function TeamAndValuesPage() {
           </div>
         </section>
 
-        <section className='mt-16 px-3 tracking-tight'>
+        <section className='mt-16 mx-auto w-11/12 tracking-tight'>
           <AsSeenOn />
         </section>
 
-        <section className='mt-12 px-3 tracking-tight'>
+        <section className='mt-12 mx-auto w-11/12 tracking-tight'>
           <h2>Our Values</h2>
           <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
             <ValueBox

@@ -8,7 +8,7 @@ import SpecialImage from '../components/SpecialImage';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
-import background from '../images/home/png/image.png';
+import background from '../images/home/png/image@3x.png';
 import image from '../images/home/png/image_2.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';
@@ -36,10 +36,10 @@ function IndexPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex flex-col justify-center'>
-            <h1 className='mt-16  text-2xl font-bold'>
+            <h1 className='mt-16'>
               Driven by technology, powered by expertise
             </h1>
-            <p className='mt-6 leading-snug text-xs'>
+            <p className='mt-6'>
               The most distinguished organizations recognize the edge of
               technological evolution. As trusted leaders at the forefront of
               technology progression, we help our customers stay competitive
@@ -48,10 +48,10 @@ function IndexPage() {
           </div>
         </Hero>
 
-        <section className='mt-6 px-3 tracking-tight'>
+        <section className='mt-6 mx-auto w-11/12 '>
           <AsSeenOn />
 
-          <p className='mt-12 font-light'>
+          <p className='mt-12 big'>
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>
@@ -77,9 +77,9 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 px-3 text-left bg-gray-100'>
+        <section className='mt-12 mx-auto w-11/12 text-left bg-gray-100'>
           <h2 className='inline-block mt-10'>How we do it</h2>
-          <p className='mt-3 text-sm'>
+          <p className='mt-3'>
             In a hyper-connected world, we adapt and empower business and
             individuals to compete through technology. We develop and execute
             technology solutions to improve our customers’ effective processes
@@ -95,9 +95,9 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='px-3 mt-12'>
+        <section className='mx-auto w-11/12 mt-12'>
           <h2 className='capitalize'>Brands we work with</h2>
-          <p className='mt-6 text-sm'>
+          <p className='mt-6'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.

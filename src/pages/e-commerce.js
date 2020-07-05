@@ -27,7 +27,7 @@ function ECommercePage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex h-64'>
-            <h1 className='mt-8 self-center text-2xl font-bold'>
+            <h1 className='mt-8 self-center '>
               Empowering
               <br />
               the ‘E’ for your
@@ -37,7 +37,7 @@ function ECommercePage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 mx-auto w-11/12'>
           <p>
             We live in a world where individuals and businesses are validated
             purely based on their digital presence. If you have an idea for a
@@ -48,7 +48,7 @@ function ECommercePage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left px-3 bg-gray-100'>
+        <section className='mt-12 text-left mx-auto w-11/12 bg-gray-100'>
           <p className='inline-block mt-10'>
             Count on our team and their digital know-how to craft your online
             presence because we:
@@ -61,15 +61,15 @@ function ECommercePage() {
               </li>
             ))}
           </ul>
-        </section>
 
-        <div className='mt-6'>
-          <SpecialImage
-            imgSrc={image}
-            imageAlt='Man on phone smiling'
-            bubbleRight={false}
-          />
-        </div>
+          <div className='-mx-3 mt-6'>
+            <SpecialImage
+              imgSrc={image}
+              imageAlt='Man on phone smiling'
+              bubbleRight={false}
+            />
+          </div>
+        </section>
       </section>
     </Layout>
   );

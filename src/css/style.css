@@ -1,5 +1,35 @@
 /*! purgecss start ignore */
 @tailwind base;
+body {
+    @apply font-open-sans text-xs text-gray-700;
+}
+
+h1,
+h2,
+h3,
+p {
+  @apply font-poppins;
+}
+
+h1 {
+  @apply text-2xl font-semibold;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-lg;
+}
+h4 {
+    @apply text-sm font-semibold leading-snug;
+}
+p.big {
+    @apply font-light text-sm;
+}
+.caption {
+    @apply text-xs font-bold;
+}
+
 @tailwind components;
 
 /*! purgecss end ignore */

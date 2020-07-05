@@ -4,8 +4,8 @@ import PropType from 'prop-types'
 const ValueBox = ({ heading, text, svgUrl }) => {
   return (
     <div className='p-6 h-56 flex flex-col items-start justify-between'>
-      <div className='text-gray-700 text-left text-sm flex flex-col'>
-        <h4 className='font-semibold'>{heading}</h4>
+      <div className='text-gray-700 text-left flex flex-col'>
+        <h4>{heading}</h4>
         <p className='mt-2'>{text}</p>
       </div>
       <img className='w-12 h-10' src={svgUrl} alt='icon' />

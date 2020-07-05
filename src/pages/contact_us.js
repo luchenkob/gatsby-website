@@ -22,7 +22,7 @@ function ContactUsPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex h-64'>
-            <h1 className='mt-8 self-center text-2xl font-bold'>
+            <h1 className='mt-8 self-center '>
               We&apos;d love to
               <br />
               hear from you
@@ -34,7 +34,7 @@ function ContactUsPage() {
           <h2>Our team is always ready to help - get in touch</h2>
         </section>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 mx-auto w-11/12'>
           <div className='mt-8 border-gray-200 border divide-y divide-gray-200'>
             <ContactBox
               heading='General Questions'

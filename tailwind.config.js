@@ -19,11 +19,17 @@ module.exports = {
         700: '#131414',
       },
     },
+    fontFamily: {
+      'open-sans': ['Open Sans'],
+      'poppins': ['Poppins']
+    },
     extend: {
       spacing: {
+        '2-5': '0.625rem',
         '2-75': '0.6875rem',
         '7-5': '1.875rem',
-        '52': '13rem'
+        '52': '13rem',
+        '11-5/12': '95%'
       }
     }
   },

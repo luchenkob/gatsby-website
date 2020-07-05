@@ -68,12 +68,12 @@ function Header() {
               </svg>
             </button>
           </div>
-          <nav className='flex flex-col space-y-4 text-xs'>
+          <nav className='flex flex-col text-xs'>
             <div className='mt-6 caption uppercase text-menuGray'>Products</div>
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {[
                 {
@@ -104,7 +104,7 @@ function Header() {
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {[
                 {
@@ -134,7 +134,7 @@ function Header() {
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {[
                 {

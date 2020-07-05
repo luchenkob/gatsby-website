@@ -19,7 +19,7 @@ function WhoWeArePage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex h-64'>
-            <h1 className='mt-8 self-center text-2xl font-bold'>
+            <h1 className='mt-8 self-center '>
               Innovation
               <br />
               is in our DNA
@@ -27,7 +27,7 @@ function WhoWeArePage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3 py-10 bg-gray-100 text-left'>
+        <section className='mt-12 mx-auto w-11/12 py-10 bg-gray-100 text-left'>
           <p>
             Meliorism is a premier all-in-one technology solutions provider with
             a focus on delivering world-class, custom technology platforms that

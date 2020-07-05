@@ -1,10 +1,14 @@
 import React from 'react';
 import PropType from 'prop-types';
 
-const Button = ({ text, handleClick }) => {
+const Button = ({ text, toMail }) => {
+  const handleClick = () => {
+    window.location.href = `mailto:${toMail}`;
+  };
+
   return (
     <button
-      className='h-10 w-40 bg-purple text-white text-xs'
+      className='h-10 w-40 bg-purple text-white text-xs font-semibold'
       type='button'
       onClick={handleClick}
     >
@@ -15,7 +19,7 @@ const Button = ({ text, handleClick }) => {
 
 Button.propTypes = {
   text: PropType.string.isRequired,
-  handleClick: PropType.func
+  toMail: PropType.string.isRequired,
 };
 
 export default Button;

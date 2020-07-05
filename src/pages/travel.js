@@ -20,7 +20,7 @@ function TravelPage() {
       <section className='text-center'>
         <Hero backgroundUrl={background}>
           <div className='flex flex-col justify-center'>
-            <h1 className='mt-16  text-2xl font-bold'>
+            <h1 className='mt-16'>
               Web & App-Based
               <br />
               Travel and
@@ -33,7 +33,7 @@ function TravelPage() {
           </div>
         </Hero>
 
-        <section className='mt-12 px-3'>
+        <section className='mt-12 mx-auto w-11/12'>
           <h2>We built travel platforms that allow companies to reduce cost</h2>
           <p className='mt-6'>
             Our travel platform is used by companies looking to lower their
@@ -43,7 +43,7 @@ function TravelPage() {
           </p>
         </section>
 
-        <section className='mt-10 px-3 text-left'>
+        <section className='mt-10 mx-auto w-11/12 text-left'>
           <h5>Supply fulfillment for travel clubs</h5>
           <p className='mt-2 text-left'>
             We provide travel clubs around the world with an unparalleled
@@ -59,7 +59,7 @@ function TravelPage() {
           alt='Woman on a boat standing with her arms open towards the sea'
         />
 
-        <section className='mt-10 px-3 text-left'>
+        <section className='mt-10 mx-auto w-11/12 text-left'>
           <h5>Loyalty rewards programs</h5>
           <p className='mt-2 text-left'>
             With our dynamic Loyalty Rewards Program your members will see

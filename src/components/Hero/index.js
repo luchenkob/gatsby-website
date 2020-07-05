@@ -4,13 +4,15 @@ import Header from '../Header';
 
 const Hero = ({ backgroundUrl, children }) => {
   return (
-    <section
-      className='hero px-3 pt-3 md:px-8 text-left w-full bg-no-repeat bg-contain text-white'
+    <div
+      className='hero pt-3 text-left w-screen bg-center bg-no-repeat text-white bg-cover'
       style={{ backgroundImage: `url(${backgroundUrl})`, height: '400px' }}
     >
-      <Header />
-      <main>{children}</main>
-    </section>
+      <div className='mx-auto w-11/12'>
+        <Header />
+        <main>{children}</main>
+      </div>
+    </div>
   );
 };
 
