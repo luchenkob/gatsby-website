@@ -51,10 +51,8 @@ h4 {
   }
 }
 
-@screen xl {
-  h1 {
-    @apply text-6xl;
-  }
+body.no-scroll {
+  @apply overflow-hidden
 }
 
 @tailwind components;

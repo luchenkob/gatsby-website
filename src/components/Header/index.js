@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import DropDownMenu from './DropDownMenu';
 
@@ -40,16 +41,14 @@ const Header = () => {
     ],
   };
 
-  useEffect(() => {
-    if (isExpanded) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'none';
-    }
-  }, []);
-
   return (
     <header className='bg-transparent'>
+      <div>
+        <Helmet>
+          <style>{`${isExpanded ?  'body { overflow: hidden; }' : ''}`}</style>
+        </Helmet>
+      </div>
+
       <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
@@ -133,8 +132,8 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {isExpanded && (
-        <div className='fixed z-20 inset-0 bg-white w-screen h-full overflow-hidden px-3 pt-3 md:px-8 text-left'>
-          <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto border-b'>
+        <div className='fixed z-20 inset-0 bg-white w-screen h-full px-3 pt-3 md:px-8 text-left'>
+          <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto w-11/12 border-b'>
             <Link to='/'>
               <span className='text-xl font-bold tracking-tight'>
                 <img className='h-6' src={logoPurple} />
@@ -158,7 +157,7 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <nav className='flex flex-col text-xs'>
+          <nav className='flex flex-col text-xs w-11/12 mx-auto max-w-6xl'>
             <div className='mt-6 caption uppercase text-menuGray'>Products</div>
             <ul
               className={`${
@@ -200,16 +199,12 @@ const Header = () => {
                 isExpanded ? `block` : `hidden`
               } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
-              {links['careers'].map((link) => (
-                <li key={`${link.title}-mobile`}>
-                  <Link
-                    className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
-                    to={link.route}
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
+              <Link
+                className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                to='/careers'
+              >
+                Careers
+              </Link>
             </ul>
           </nav>
         </div>
