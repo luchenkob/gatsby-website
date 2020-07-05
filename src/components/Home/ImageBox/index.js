@@ -3,8 +3,8 @@ import PropType from 'prop-types';
 
 const ImageBox = ({ arrowDirection, imgSrc }) => {
   return (
-    <div className='h-32 relative'>
-      <img className='absolute h-full object-fill' src={imgSrc} alt='Icon' />
+    <div className='h-32 relative md:w-1/3 md:h-40'>
+      <img className='absolute w-full h-full object-cover' src={imgSrc} alt='Icon' />
 
       {arrowDirection === 'down' && (
         <div className='absolute top-0 z-20 w-full'>

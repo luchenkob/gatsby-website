@@ -4,7 +4,7 @@ import PropType from 'prop-types';
 const TextBox = ({ text, imgSrc, hasTopBorder = true, hasBottomBorder = true }) => {
   return (
     <div
-      className={`p-4 h-32 flex flex-col items-start justify-between border-gray-200 border-l border-r ${
+      className={`md:h-40 md:w-1/3 p-4 h-32 flex flex-col items-start justify-between border-gray-200 border-l border-r ${
         hasTopBorder ? 'border-t' : ''
       } ${hasBottomBorder ? 'border-b' : ''}`}
     >

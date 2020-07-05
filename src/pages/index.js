@@ -13,11 +13,11 @@ import background from '../images/home/png/image-main@3x.png';
 import image from '../images/home/png/image_2.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';
-import onlineEducation from '../images/home/png/image-online-education.png';
+import onlineEducation from '../images/home/png/image-online-education@3x.png';
 import iconRetail from '../images/home/svg/retail.svg';
-import retail from '../images/home/png/image-retail.png';
+import retail from '../images/home/png/image-retail@3x.png';
 import iconTravel from '../images/home/svg/travel.svg';
-import travel from '../images/home/png/image-travel.png';
+import travel from '../images/home/png/image-travel@3x.png';
 
 import brand1 from '../images/home/png/1195-px-marriott-vacation-club-svg.png';
 import brand2 from '../images/home/png/celebrity-cruise.png';
@@ -57,7 +57,7 @@ function IndexPage() {
             and how you do it through innovative solutions designed for:
           </p>
 
-          <div className='px-2 mt-8 grid grid-flow-col grid-rows-4 grid-cols-2'>
+          <div className='md:hidden mx-auto w-11/12 max-w-xs mt-8 grid grid-flow-col grid-rows-4 grid-cols-2'>
             <TextBox
               text='Online education'
               imgSrc={iconGraduate}
@@ -76,19 +76,42 @@ function IndexPage() {
             <ImageBox imgSrc={travel} arrowDirection='up' />
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
+
+          <div className='hidden md:flex flex-wrap mx-auto max-w-xl mt-8'>
+            <TextBox
+              text='Online education'
+              imgSrc={iconGraduate}
+              hasBottomBorder={false}
+            />
+
+            <ImageBox imgSrc={travel} arrowDirection='up' />
+
+            <TextBox
+              text='E-commerce'
+              imgSrc={iconRetail}
+              hasBottomBorder={false}
+            />
+
+            <ImageBox imgSrc={onlineEducation} arrowDirection='down' />
+
+            <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
+
+            <ImageBox imgSrc={retail} arrowDirection='down' />
+          </div>
         </section>
 
-        <section className='mt-12 mx-auto w-11/12 text-left bg-gray-100'>
-          <h2 className='inline-block mt-10'>How we do it</h2>
-          <p className='mt-3'>
-            In a hyper-connected world, we adapt and empower business and
-            individuals to compete through technology. We develop and execute
-            technology solutions to improve our customers’ effective processes
-            and dynamic outcomes. Ultimately, allowing them to become
-            high-performance businesses.
-          </p>
-
-          <div className='-mx-3 mt-6'>
+        <section className='mt-12 text-left bg-gray-100 md:flex'>
+          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs md:self-center md:mt-0'>
+            <h2 className='inline-block'>How we do it</h2>
+            <p className='mt-3'>
+              In a hyper-connected world, we adapt and empower business and
+              individuals to compete through technology. We develop and execute
+              technology solutions to improve our customers’ effective processes
+              and dynamic outcomes. Ultimately, allowing them to become
+              high-performance businesses.
+            </p>
+          </div>
+          <div className='mt-6 md:w-1/2 md:mt-0'>
             <SpecialImage
               imgSrc={image}
               imgAlt='Man with laptop smiling while sitting on armchair'
@@ -104,7 +127,7 @@ function IndexPage() {
             the most reliable in the industry.
           </p>
 
-          <div className='mt-7-5 grid grid-flow-row gap-3'>
+          <div className='md:hidden mt-7-5 grid grid-flow-row gap-3'>
             <div className='flex items-center justify-center space-x-4'>
               <img src={brand1} />
               <img src={brand2} />
@@ -115,6 +138,19 @@ function IndexPage() {
               <img src={brand5} />
               <img src={brand6} />
             </div>
+          </div>
+
+          <div className='hidden md:flex mt-8 flex-row items-center justify-between w-4/5 max-w-xl mx-auto'>
+            {[brand1, brand2, brand3, brand4, brand5, brand6].map(
+              (logo, index) => (
+                <img
+                  key={index}
+                  className='hidden md:block'
+                  src={logo}
+                  alt='Brand logo'
+                />
+              ),
+            )}
           </div>
         </section>
       </section>
