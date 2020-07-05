@@ -8,7 +8,7 @@ const Button = ({ text, toMail }) => {
 
   return (
     <button
-      className='h-10 w-40 bg-purple text-white text-xs font-semibold'
+      className='h-10 w-40 bg-purple text-white text-xs font-semibold transition-colors duration-200 ease-in-out hover:bg-darkPurple'
       type='button'
       onClick={handleClick}
     >

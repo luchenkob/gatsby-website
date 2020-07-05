@@ -1,10 +1,12 @@
 import { Link } from 'gatsby';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+
+import DropDownMenu from './DropDownMenu';
 
 import logoWhite from '../../images/menu/logo-white.png';
 import logoPurple from '../../images/menu/logo-purple.png';
 
-function Header() {
+const Header = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   const [selected, setSelected] = useState(null);
   const links = {
@@ -36,13 +38,17 @@ function Header() {
         title: `Contact Us`,
       },
     ],
-    careers: [
-      {
-        route: `/careers`,
-        title: `Careers`,
-      },
-    ],
   };
+  const child = useMemo(
+    () => (
+      <DropDownMenu
+        setSelected={setSelected}
+        selected={selected}
+        links={links}
+      />
+    ),
+    [selected],
+  );
 
   useEffect(() => {
     if (isExpanded) {
@@ -78,48 +84,54 @@ function Header() {
           </svg>
         </button>
 
-        <nav className='hidden md:block w-3/6 text-lg'>
+        <nav className='hidden relative z-30 md:block w-3/6 text-lg'>
           <ul className='flex w-full justify-between'>
-            {['products', 'about us', 'careers'].map((item) => (
-              <li className='relative' key={item}>
+            {Object.keys(links).map((item) => (
+              <li className='relative' key={`${item}-desktop`}>
                 <button
                   className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
-                  onMouseOver={() =>
-                    setSelected(item === 'careers' ? '' : item)
-                  }
-                  onMouseOut={() => setSelected(null)}
+                  onMouseOver={() => setSelected(item)}
                 >
                   {item}
-                  <svg
-                    className='ml-2 inline-block'
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='8'
-                    height='5'
-                    viewBox='0 0 8 5'
-                  >
-                    <path
-                      fill='#FFF'
-                      d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z'
-                    />
-                  </svg>
+                  {selected === item ? (
+                    <svg
+                      className='ml-2 inline-block'
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='8'
+                      height='5'
+                      viewBox='0 0 8 5'
+                    >
+                      <path
+                        fill='#FFF'
+                        d='M4.002 1.68L1.009 4.864C.927 4.952.817 5 .699 5 .582 5 .472 4.952.39 4.864l-.262-.279C.045 4.498 0 4.381 0 4.255c0-.124.045-.24.128-.328L3.69.136C3.774.048 3.884 0 4.001 0c.118 0 .229.048.311.136l3.56 3.787c.083.088.128.205.128.33 0 .124-.045.241-.128.329l-.262.279c-.17.181-.448.181-.619 0l-2.99-3.18z'
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className='ml-2 inline-block'
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='8'
+                      height='5'
+                      viewBox='0 0 8 5'
+                    >
+                      <path
+                        fill='#FFF'
+                        d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z'
+                      />
+                    </svg>
+                  )}
                 </button>
-
-                  <ul
-                    className={`${
-                      selected === item ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    } absolute mt-4 w-48 bg-white text-gray-700 pl-5 py-4 shadow-sm space-y-4 transition-opacity duration-200 ease-in-out`}
-                  >
-                    {links[item].map((subLink) => (
-                      <li
-                        className='transition-colors duration-100 ease-in-out hover:text-purple'
-                        key={subLink}
-                      >
-                        <Link onClick={() => setSelected(null)} to={subLink.route}>{subLink.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
+                {selected === item && child}
               </li>
             ))}
+            <li>
+              <Link
+                className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
+                to='/careers'
+              >
+                Careers
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -159,7 +171,7 @@ function Header() {
               } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {links['products'].map((link) => (
-                <li key={link.title}>
+                <li key={`${link.title}-mobile`}>
                   <Link
                     className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
@@ -177,7 +189,7 @@ function Header() {
               } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {links['about us'].map((link) => (
-                <li key={link.title}>
+                <li key={`${link.title}-mobile`}>
                   <Link
                     className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
@@ -194,7 +206,7 @@ function Header() {
               } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               {links['careers'].map((link) => (
-                <li key={link.title}>
+                <li key={`${link.title}-mobile`}>
                   <Link
                     className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
@@ -207,8 +219,16 @@ function Header() {
           </nav>
         </div>
       )}
+
+      {/* Overlay */}
+      {selected && (
+        <div
+          className='fixed z-10 inset-0 h-screen'
+          onMouseOver={() => setSelected(null)}
+        />
+      )}
     </header>
   );
-}
+};
 
 export default Header;

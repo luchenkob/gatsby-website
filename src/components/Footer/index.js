@@ -55,10 +55,6 @@ const Footer = () => {
                 route: `/`,
                 title: `Terms of Use`,
               },
-              {
-                route: `/`,
-                title: `Policies & Procedures`,
-              },
             ].map((link) => (
               <li key={link.title}>
                 <Link
