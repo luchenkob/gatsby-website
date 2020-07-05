@@ -8,7 +8,8 @@ import SpecialImage from '../components/SpecialImage';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
-import background from '../images/home/png/image@3x.png';
+// import background from '../images/home/png/image@3x.png';
+import background from '../images/home/png/image-main@3x.png';
 import image from '../images/home/png/image_2.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';

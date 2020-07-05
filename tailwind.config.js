@@ -1,8 +1,6 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: [
-    './src/**/*.js',
-  ],
+  purge: ['./src/**/*.js'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -21,7 +19,7 @@ module.exports = {
     },
     fontFamily: {
       'open-sans': ['Open Sans'],
-      'poppins': ['Poppins']
+      poppins: ['Poppins'],
     },
     extend: {
       spacing: {
@@ -29,11 +27,10 @@ module.exports = {
         '2-75': '0.6875rem',
         '7-5': '1.875rem',
         '52': '13rem',
-        '11-5/12': '95%'
       }
-    }
+    },
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms")],
+  plugins: [require('@tailwindcss/custom-forms')],
 };
