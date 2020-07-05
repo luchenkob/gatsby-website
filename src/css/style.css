@@ -23,18 +23,39 @@ h3 {
 h4 {
     @apply text-sm font-semibold leading-snug;
 }
-p.big {
-    @apply font-light text-sm;
-}
 .caption {
     @apply text-xs font-bold;
 }
-/* 
+
+@screen md {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+}
+
+@screen lg {
+  body {
+    @apply text-sm;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+}
+
 @screen xl {
   h1 {
     @apply text-6xl;
   }
-} */
+}
 
 @tailwind components;
 

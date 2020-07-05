@@ -10,7 +10,7 @@ import ImageBox from '../components/Home/ImageBox';
 
 // import background from '../images/home/png/image@3x.png';
 import background from '../images/home/png/image-main@3x.png';
-import image from '../images/home/png/image_2.png';
+import image from '../images/home/png/image_2@3x.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';
 import onlineEducation from '../images/home/png/image-online-education@3x.png';
@@ -52,7 +52,7 @@ function IndexPage() {
         <section className='mt-6 mx-auto w-11/12 '>
           <AsSeenOn />
 
-          <p className='mt-12 big'>
+          <p className='mt-12 font-light text-sm md:text-lg'>
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>
@@ -77,7 +77,7 @@ function IndexPage() {
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
 
-          <div className='hidden md:flex flex-wrap mx-auto max-w-xl mt-8'>
+          <div className='hidden md:flex flex-wrap mx-auto max-w-2xl mt-8'>
             <TextBox
               text='Online education'
               imgSrc={iconGraduate}
@@ -100,8 +100,8 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 md:flex'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs md:self-center md:mt-0'>
+        <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52'>
+          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
             <h2 className='inline-block'>How we do it</h2>
             <p className='mt-3'>
               In a hyper-connected world, we adapt and empower business and
@@ -111,7 +111,7 @@ function IndexPage() {
               high-performance businesses.
             </p>
           </div>
-          <div className='mt-6 md:w-1/2 md:mt-0'>
+          <div className='mt-6 md:w-1/2 md:-mt-16'>
             <SpecialImage
               imgSrc={image}
               imgAlt='Man with laptop smiling while sitting on armchair'
@@ -121,7 +121,7 @@ function IndexPage() {
 
         <section className='mx-auto w-11/12 mt-12'>
           <h2 className='capitalize'>Brands we work with</h2>
-          <p className='mt-6'>
+          <p className='mt-6 max-w-md mx-auto'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.
@@ -140,7 +140,7 @@ function IndexPage() {
             </div>
           </div>
 
-          <div className='hidden md:flex mt-8 flex-row items-center justify-between w-4/5 max-w-xl mx-auto'>
+          <div className='hidden md:flex mt-8 flex-row items-center justify-between w-4/5 max-w-6xl mx-auto'>
             {[brand1, brand2, brand3, brand4, brand5, brand6].map(
               (logo, index) => (
                 <img

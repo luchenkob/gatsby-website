@@ -1,12 +1,18 @@
 import React from 'react';
 import PropType from 'prop-types';
 
-const SpecialImage = ({ imgSrc, imgAlt, bubbleRight = true }) => (
+const SpecialImage = ({ imgSrc, imgAlt, bubbleRight = true, bubbleSide = 'left' }) => (
   <div className='relative'>
     <img className='block w-screen' src={imgSrc} alt={imgAlt} />
     <div
-      className={`absolute z-10 -mt-4 bg-purple h-8 w-8 rounded-full ${
+      className={`md:hidden absolute z-10 -mt-4 bg-purple h-8 w-8 rounded-full ${
         bubbleRight ? 'right-0 mr-8' : 'left-0 ml-8'
+      }`}
+    ></div>
+
+<div
+      className={`hidden md:block absolute z-10 -mt-4 bg-purple h-10 w-10 rounded-full ${
+        bubbleSide === 'right' ? 'right-0 -mr-5 -mt-20' : 'left-0 -ml-5 -mt-20'
       }`}
     ></div>
   </div>
@@ -16,6 +22,7 @@ SpecialImage.propTypes = {
   imgSrc: PropType.string.isRequired,
   imgAlt: PropType.string.isRequired,
   bubbleRight: PropType.bool,
+  bubbleSide: PropType.string,
 };
 
 export default SpecialImage;

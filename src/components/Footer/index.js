@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+
+import MobileFooter from './MobileFooter';
+import DesktopFooter from './DesktopFooter'
 
 import facebook from '../../images/svg/fb.svg';
 import instagram from '../../images/svg/insta.svg';
@@ -7,121 +9,47 @@ import linkedin from '../../images/svg/linkedin_2.svg';
 import twitter from '../../images/svg/twitter_2.svg';
 
 const Footer = () => {
+  const links = {
+    products: [
+      {
+        route: `/e-learning`,
+        title: `E-learning`,
+      },
+      {
+        route: `/travel`,
+        title: `Travel`,
+      },
+      {
+        route: `/e-commerce`,
+        title: `E-commerce`,
+      },
+    ],
+    'about us': [
+      {
+        route: `/who_we_are`,
+        title: `Who we are`,
+      },
+      {
+        route: `/team_and_values`,
+        title: `Team and Values`,
+      },
+      {
+        route: `/contact_us`,
+        title: `Contact Us`,
+      },
+    ],
+  };
+
   return (
-    <footer className='mt-16 py-8 bg-gray-600 text-gray-300 text-xs'>
-      <nav className='mx-auto w-11/12 grid grid-cols-2 gap-12'>
-        <div className='flex flex-col space-y-4'>
-          <div>
-            <div className='caption uppercase text-gray-400'>Products</div>
-            <ul className='mt-2 flex flex-col space-y-2'>
-              {[
-                {
-                  route: `/e-learning`,
-                  title: `E-learning`,
-                },
-                {
-                  route: `/travel`,
-                  title: `Travel`,
-                },
-                {
-                  route: `/e-commerce`,
-                  title: `E-commerce`,
-                },
-              ].map((link) => (
-                <li key={link.title}>
-                  <Link
-                    className='block text-gray-800 no-underline'
-                    to={link.route}
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <footer className='mt-16 py-8 md:py-10 lg:py-16 bg-gray-600 text-gray-300'>
+      <div className='lg:hidden'>
+        <MobileFooter links={links} />
+      </div>
+      <div className='hidden lg:block'>
+        <DesktopFooter links={links} />
+      </div>
 
-          <div className=' col-span-2'>
-            <Link
-              className='block text-gray-800 no-underline'
-              to={'/careers'}
-            >
-              Careers
-            </Link>
-          </div>
-
-          <ul className='flex flex-col space-y-2'>
-            {[
-              {
-                route: `/`,
-                title: `Terms of Use`,
-              },
-            ].map((link) => (
-              <li key={link.title}>
-                <Link
-                  className='block text-gray-800 no-underline'
-                  to={link.route}
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className='flex flex-col justify-between'>
-          <div>
-            <div className='caption uppercase text-gray-400'>About us</div>
-            <ul className='mt-2 flex flex-col space-y-2'>
-              {[
-                {
-                  route: `/who_we_are`,
-                  title: `Who we are`,
-                },
-                {
-                  route: `/team_and_values`,
-                  title: `Team and Values`,
-                },
-                {
-                  route: `/contact_us`,
-                  title: `Contact Us`,
-                },
-              ].map((link) => (
-                <li key={link.title}>
-                  <Link
-                    className='block text-gray-800 no-underline'
-                    to={link.route}
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <ul className='flex flex-col space-y-2'>
-            {[
-              {
-                route: `/`,
-                title: `Privacy Policy`,
-              },
-              {
-                route: `/`,
-                title: `GDPR Policy`,
-              },
-            ].map((link) => (
-              <li key={link.title}>
-                <Link
-                  className='block text-gray-800 no-underline'
-                  to={link.route}
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-      <ul className='mx-auto w-11/12 mt-6 flex space-x-4 col-span-2'>
+      <ul className='mx-auto w-11/12 mt-6 flex space-x-4 md:space-x-8 md:mt-10 col-span-2 md:w-4/5 max-w-6xl'>
         <li>
           <img src={facebook} />
         </li>

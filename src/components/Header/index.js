@@ -50,10 +50,10 @@ const Header = () => {
 
   return (
     <header className='bg-transparent'>
-      <div className='relative flex flex-wrap items-center justify-between max-w-4xl pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
+      <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
-            <img className='h-6 md:h-8' src={logoWhite} />
+            <img className='h-6 lg:h-8' src={logoWhite} />
           </span>
         </Link>
 
@@ -74,7 +74,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <nav className='hidden relative z-30 md:block w-3/6 text-sm lg:text-lg'>
+        <nav className='hidden relative z-30 md:block w-2/6 text-xs lg:text-lg'>
           <ul className='flex w-full justify-between'>
             {Object.keys(links).map((item) => (
               <li className='relative' key={`${item}-desktop`}>
@@ -134,7 +134,7 @@ const Header = () => {
       {/* Mobile Nav */}
       {isExpanded && (
         <div className='fixed z-20 inset-0 bg-white w-screen h-full overflow-hidden px-3 pt-3 md:px-8 text-left'>
-          <div className='relative flex flex-wrap items-center justify-between max-w-4xl pt-2 pb-4 mx-auto border-b'>
+          <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto border-b'>
             <Link to='/'>
               <span className='text-xl font-bold tracking-tight'>
                 <img className='h-6' src={logoPurple} />
