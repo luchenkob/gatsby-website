@@ -87,10 +87,10 @@ function ELearningPage() {
               Our team of experts have hands-on experience in delivering
               different <strong>e-learning solutions that maximize.</strong>
             </p>
-            <ul className='block mt-2 list-none space-y-4' style={{}}>
+            <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
-                  <div className='inline-block h-1 w-1 rounded-full bg-purple'></div>
+                  <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
                   <span className='ml-2'>{item}</span>
                 </li>
               ))}

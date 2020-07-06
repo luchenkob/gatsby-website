@@ -22,9 +22,7 @@ function ECommercePage() {
           }
         }
       }
-      desktopImage: file(
-        relativePath: { eq: "ecommerce/png/image-main.png" }
-      ) {
+      desktopImage: file(relativePath: { eq: "ecommerce/png/image-main.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -58,12 +56,18 @@ function ECommercePage() {
       />
 
       <section className='text-center'>
-        <BackgroundImage className='bg-center' Tag={`section`} id={`media-test`} fluid={sources} style={{
-          backgroundPosition: 'top'
-        }}>
+        <BackgroundImage
+          className='bg-center'
+          Tag={`section`}
+          id={`media-test`}
+          fluid={sources}
+          style={{
+            backgroundPosition: 'top',
+          }}
+        >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-              <h1>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className=' lg:w-860 lg:mt-152'>
                 Empowering
                 <br />
                 the ‘E’ for your
@@ -74,7 +78,7 @@ function ECommercePage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto w-11/12  max-w-xl'>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
           <p>
             We live in a world where individuals and businesses are validated
             purely based on their digital presence. If you have an idea for a
@@ -85,27 +89,28 @@ function ECommercePage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52 md:flex-row-reverse'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+          <div className='mt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
             <p>
               Count on our team and their digital know-how to craft your online
               presence because we:
             </p>
-            <ul className='block mt-2 text-xs list-none space-y-2' style={{}}>
+            <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
-                  <div className='inline-block h-1 w-1 rounded-full bg-purple'></div>
+                  <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
                   <span className='ml-2'>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className='mt-6 md:w-1/2 md:-mt-16'>
+          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
             <SpecialImage
               imgSrc={image}
               imgAlt='Man on phone smiling'
               bubbleRight={false}
               bubbleSide='right'
+              bubbleHigh={true}
             />
           </div>
         </section>
