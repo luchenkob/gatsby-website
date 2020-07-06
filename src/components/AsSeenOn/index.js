@@ -7,7 +7,7 @@ import logoABCNews from '../../images/brand_logos/1200-px-abc-news-solid-black-l
 
 const AsSeenOn = () => {
   return (
-    <div className='mt-4 flex flex-col md:flex-row space-y-4 md:items-center justify-between md:w-3/4 max-w-3xl mx-auto md:space-x-0'>
+    <div className='mt-4 flex flex-col md:flex-row space-y-4 md:items-center justify-between md:w-3/4 max-w-3xl mx-auto md:space-x-22'>
       <span className='text-xs tracking-wide uppercase pt-4'>As seen on</span>
       <div className='md:hidden flex items-start justify-center space-x-6'>
         <img alt="Brand logo" src={logoForbes} />

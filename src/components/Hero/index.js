@@ -10,7 +10,7 @@ const Hero = ({ backgroundUrl, children }) => {
     >
       <div className='mx-auto w-11/12 h-full'>
         <Header />
-        <main className=' md:w-3/5 h-full'>{children}</main>
+        <main className=' md:w-3/5 h-full max-w-200'>{children}</main>
       </div>
       
     </div>

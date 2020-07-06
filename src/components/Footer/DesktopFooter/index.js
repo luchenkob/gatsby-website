@@ -3,10 +3,10 @@ import PropType from 'prop-types';
 import { Link } from 'gatsby';
 
 const DesktopFooter = ({ links }) => (
-  <nav className='mx-auto flex justify-between w-4/5 max-w-6xl'>
+  <nav className='mx-auto flex justify-between w-4/5 max-w-5xl'>
     <div className='grid grid-cols-3 grid-flow-col gap-12'>
       <div>
-        <div className='caption uppercase text-gray-400'>Products</div>
+        <div className='caption uppercase text-gray-400 space-x-156'>Products</div>
         <ul className='mt-2 flex flex-col space-y-2'>
           {links['products'].map((link) => (
             <li key={link.title}>

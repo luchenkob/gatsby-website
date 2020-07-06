@@ -73,8 +73,8 @@ const Header = () => {
           </svg>
         </button>
 
-      <nav className='hidden relative z-30 md:block w-2/6 text-xs lg:text-lg'>
-          <ul className='flex w-full justify-between'>
+      <nav className='hidden relative z-30 md:block text-xs lg:text-lg'>
+          <ul className='flex space-x-16 justify-between'>
             {Object.keys(links).map((item) => (
               <li className='relative' key={`${item}-desktop`}>
                 <button

@@ -38,7 +38,7 @@ function IndexPage() {
         }
       }
     }
-    desktopImage: file(relativePath: { eq: "home/png/image-main@3x.png" }) {
+    desktopImage: file(relativePath: { eq: "home/png/image-main.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
@@ -80,12 +80,12 @@ function IndexPage() {
         <section className='mt-6 mx-auto w-11/12 '>
           <AsSeenOn />
 
-          <p className='mt-12 font-light text-sm md:text-lg max-w-2xl mx-auto'>
+          <p className='big mt-12 font-light text-sm md:text-3-5xl text-center'>
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>
 
-          <div className='md:hidden mx-auto w-11/12 max-w-xs mt-8 grid grid-flow-col grid-rows-4 grid-cols-2'>
+          <div className='md:hidden mx-auto w-11/12 mt-8 grid grid-flow-col grid-rows-4 grid-cols-2'>
             <TextBox
               text='Online education'
               imgSrc={iconGraduate}
@@ -105,7 +105,7 @@ function IndexPage() {
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
 
-          <div className='hidden md:flex flex-wrap mx-auto max-w-2xl mt-8'>
+          <div className='hidden md:flex flex-wrap mx-auto mt-8 w-843'>
             <TextBox
               text='Online education'
               imgSrc={iconGraduate}
@@ -144,7 +144,7 @@ function IndexPage() {
 
         <section className='mx-auto w-11/12 mt-12'>
           <h2 className='capitalize'>Brands we work with</h2>
-          <p className='mt-6 max-w-md mx-auto'>
+          <p className='mt-6 mx-auto lg:w-764 lg:mt-10'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.
@@ -163,7 +163,7 @@ function IndexPage() {
             </div>
           </div>
 
-          <div className='hidden md:flex mt-8 flex-row items-center justify-between w-4/5 max-w-6xl mx-auto'>
+          <div className='hidden md:flex mt-22 flex-row items-center justify-between w-4/5 max-w-5xl mx-auto'>
             {[brand1, brand2, brand3, brand4, brand5, brand6].map(
               (logo, index) => (
                 <img
