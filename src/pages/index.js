@@ -125,14 +125,14 @@ function IndexPage() {
 
           <div className='md:hidden mt-7-5 grid grid-flow-row gap-3'>
             <div className='flex items-center justify-center space-x-4'>
-              <img src={brand1} />
-              <img src={brand2} />
-              <img src={brand3} />
+              <img alt='Brand logo' src={brand1} />
+              <img alt='Brand logo' src={brand2} />
+              <img alt='Brand logo' src={brand3} />
             </div>
             <div className='flex items-center justify-center space-x-4'>
-              <img src={brand4} />
-              <img src={brand5} />
-              <img src={brand6} />
+              <img alt='Brand logo' src={brand4} />
+              <img alt='Brand logo' src={brand5} />
+              <img alt='Brand logo' src={brand6} />
             </div>
           </div>
 

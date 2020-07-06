@@ -52,7 +52,7 @@ const Header = () => {
       <div className='relative flex flex-wrap items-center justify-between pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
-            <img className='h-6 lg:h-8' src={logoWhite} />
+            <img className='h-6 lg:h-8' alt='Meliorism logo' src={logoWhite} />
           </span>
         </Link>
 
@@ -136,7 +136,7 @@ const Header = () => {
           <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto w-11/12 border-b'>
             <Link to='/'>
               <span className='text-xl font-bold tracking-tight'>
-                <img className='h-6' src={logoPurple} />
+                <img className='h-6' alt='Meliorism logo' src={logoPurple} />
               </span>
             </Link>
 
