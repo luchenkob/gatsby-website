@@ -19,8 +19,8 @@ function CareersPage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='flex h-64'>
-            <h1 className='mt-8 self-center '>
+          <div className='-mt-12 flex flex-col justify-center h-full'>
+            <h1>
               Grow
               <br />
               professionally

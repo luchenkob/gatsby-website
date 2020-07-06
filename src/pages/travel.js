@@ -22,7 +22,6 @@ function TravelPage() {
           <div className='-mt-12 flex flex-col justify-center h-full'>
             <h1>
               Web & App-Based Travel
-              <br />
               and Hospitality Solutions
             </h1>
             <p>for corporate travel and employee privileges</p>

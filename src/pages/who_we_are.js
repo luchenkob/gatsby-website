@@ -19,8 +19,8 @@ function WhoWeArePage() {
 
       <section className='text-center'>
         <Hero backgroundUrl={background}>
-          <div className='flex h-64'>
-            <h1 className='mt-8 self-center '>
+          <div className='-mt-12 flex flex-col justify-center h-full'>
+            <h1>
               Innovation
               <br />
               is in our DNA
@@ -29,7 +29,7 @@ function WhoWeArePage() {
         </Hero>
 
         <GraySection
-          text='            Meliorism is a premier all-in-one technology solutions provider with
+          text='Meliorism is a premier all-in-one technology solutions provider with
           a focus on delivering world-class, custom technology platforms that
           cater to the travel, online learning, and e-commerce transportation
           industries. Our sole aim is to provide cost-effective technology
