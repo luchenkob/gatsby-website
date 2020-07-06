@@ -47,25 +47,26 @@ function CareersPage() {
       />
 
       <section className='text-center'>
-        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
-          backgroundPosition: 'top'
-        }}>
+        <BackgroundImage
+          Tag={`section`}
+          id={`media-test`}
+          fluid={sources}
+          style={{
+            backgroundPosition: 'top',
+          }}
+        >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-              <h1>
-                Grow
-                <br />
-                professionally
-                <br />
-                and personally
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className='lg:mt-202 lg:w-734'>
+                Grow professionally and personally
               </h1>
             </div>
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto w-11/12'>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
           <h2>Life at Meliorism</h2>
-          <p className='mt-6 max-w-3xl mx-auto'>
+          <p className='mt-6 mx-auto lg:mt-10 lg:mb-270 lg:w-960'>
             Our benefits go beyond flexible schedules and unmatched
             compensation. We invest in people so they can live their best lives
             at work and home. At Meliorism, you&apos;re part of a smart,
@@ -76,18 +77,18 @@ function CareersPage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52 md:flex-row-reverse'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+          <div className='mt-10 mx-auto w-11/12  lg:self-center lg:mt-0 lg:w-580'>
             <h2 className='inline-block'>Talent Pool</h2>
-            <p>Get in touch with our Talent Acquisition team.</p>
-            <div className='mt-4'>
+            <p className='lg:mt-4'>Get in touch with our Talent Acquisition team.</p>
+            <div className='mt-4 lg:mt-8'>
               <Button
                 text='Check job openings'
                 toMail='careers@bemeliorism.com'
               />
             </div>
           </div>
-          <div className='mt-6 md:w-1/2 md:-mt-16'>
+          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
             <SpecialImage
               imgSrc={image}
               imgAlt='Group of professionals smiling'
