@@ -64,9 +64,7 @@ function IndexPage() {
       />
 
       <section className='text-center'>
-        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
-          backgroundPosition: 'top'
-        }}>
+        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full'>
               <h1>Driven by technology, powered by expertise</h1>
