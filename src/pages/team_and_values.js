@@ -63,7 +63,7 @@ function TeamAndValuesPage() {
               Leaders, Innovators, Creators, and Storytellers. All Under One
               Roof.
             </h1>
-            <p>
+            <p className='lg:mt-10'>
               We&apos;re a team of creators, innovators, and storytellers, based
               in the city of the future, Dubai, UAE. We come from all different
               backgrounds and have a wide variety of interests but are all

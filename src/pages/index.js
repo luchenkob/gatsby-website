@@ -68,7 +68,7 @@ function IndexPage() {
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full'>
               <h1>Driven by technology, powered by expertise</h1>
-              <p>
+              <p className='lg:mt-10'>
                 The most distinguished organizations recognize the edge of
                 technological evolution. As trusted leaders at the forefront of
                 technology progression, we help our customers stay competitive

@@ -70,7 +70,7 @@ function ELearningPage() {
               <br />
               Grow with it.
             </h1>
-            <p>Custom E-Learning Solutions to address tomorrow’s challenges</p>
+            <p className='lg:mt-10'>Custom E-Learning Solutions to address tomorrow’s challenges</p>
           </div>
         </Hero>
         </BackgroundImage >

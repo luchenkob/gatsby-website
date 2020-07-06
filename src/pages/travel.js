@@ -57,7 +57,7 @@ function TravelPage() {
               Web & App-Based Travel
               and Hospitality Solutions
             </h1>
-            <p>for corporate travel and employee privileges</p>
+            <p className='lg:mt-10'>for corporate travel and employee privileges</p>
           </div>
         </Hero>
         </BackgroundImage>
