@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql, useStaticQuery} from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -15,28 +15,31 @@ import iconInnovation from '../images/team_and_values/svg/icon-innovation.svg';
 import iconPeople from '../images/team_and_values/svg/icon-people.svg';
 import iconSearch from '../images/team_and_values/svg/icon-search.svg';
 
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image';
 
 function TeamAndValuesPage() {
-  const { mobileImage, desktopImage } = 
-    useStaticQuery(graphql`
-      query {
-        mobileImage: file(relativePath: { eq: "team_and_values/png/image-main@3x.png" }) {
-          childImageSharp {
-            fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        desktopImage: file(relativePath: { eq: "team_and_values/png/image-main.png" }) {
-          childImageSharp {
-            fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+    query {
+      mobileImage: file(
+        relativePath: { eq: "team_and_values/png/image-main@3x.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-    `)
+      desktopImage: file(
+        relativePath: { eq: "team_and_values/png/image-main.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
 
   const sources = [
     mobileImage.childImageSharp.fluid,
@@ -54,23 +57,28 @@ function TeamAndValuesPage() {
       />
 
       <section className='text-center'>
-      <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
-          backgroundPosition: 'top'
-        }}>
-        <Hero>
-          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start md:mt-0'>
-            <h1 className='md:w-960 md:mt-90'>
-              Leaders, Innovators, Creators, and Storytellers. All Under One
-              Roof.
-            </h1>
-            <p className='lg:mt-10 lg:w-800'>
-              We&apos;re a team of creators, innovators, and storytellers, based
-              in the city of the future, Dubai, UAE. We come from all different
-              backgrounds and have a wide variety of interests but are all
-              driven by our love for technology.
-            </p>
-          </div>
-        </Hero>
+        <BackgroundImage
+          Tag={`section`}
+          id={`media-test`}
+          fluid={sources}
+          style={{
+            backgroundPosition: 'top',
+          }}
+        >
+          <Hero>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start md:mt-0'>
+              <h1 className='md:w-960 md:mt-90'>
+                Leaders, Innovators, Creators, and Storytellers. All Under One
+                Roof.
+              </h1>
+              <p className='lg:mt-10 lg:w-800'>
+                We&apos;re a team of creators, innovators, and storytellers,
+                based in the city of the future, Dubai, UAE. We come from all
+                different backgrounds and have a wide variety of interests but
+                are all driven by our love for technology.
+              </p>
+            </div>
+          </Hero>
         </BackgroundImage>
 
         <GraySection
@@ -84,7 +92,9 @@ function TeamAndValuesPage() {
         </GraySection>
 
         <section className='mt-16 mx-auto w-11/12 tracking-tight md:mt-90'>
-          <AsSeenOn />
+          <div className='lg:w-1522 lg:mx-auto flex lg:justify-center'>
+            <AsSeenOn />
+          </div>
         </section>
 
         <section className='mt-12 mx-auto w-11/12 tracking-tight md:mt-165'>
