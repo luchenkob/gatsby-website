@@ -41,32 +41,38 @@ h5 {
   }
 }
 
-@screen xl {
+@screen lg {
   body {
     font-size: 18px;
+    line-height: 28px;
   }
   h1 {
     font-size: 72px;
+    line-height: 101px;
   }
   h2 {
-    font-size: 64px
+    font-size: 64px;
+    line-height: 89px;
   }
-  h3, h4 {
-    font-size: 32px
+  h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 43px;
   }
   h5 {
-    font-size: 20px
+    font-size: 20px;
+    line-height: 28px;
   }
   .big {
     width: 1522px;
   }
   .caption {
     font-size: 14px;
+    line-height: 24px;
   }
-}
-
-body.no-scroll {
-  @apply overflow-hidden
 }
 
 footer a:hover {

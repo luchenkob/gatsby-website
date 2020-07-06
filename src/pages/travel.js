@@ -52,12 +52,12 @@ function TravelPage() {
           backgroundPosition: 'top'
         }}>
         <Hero>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
+          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
             <h1>
               Web & App-Based Travel
               and Hospitality Solutions
             </h1>
-            <p className='lg:mt-10'>for corporate travel and employee privileges</p>
+            <p className='lg:mt-10 lg:w-800'>for corporate travel and employee privileges</p>
           </div>
         </Hero>
         </BackgroundImage>

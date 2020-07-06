@@ -62,7 +62,7 @@ function ELearningPage() {
           backgroundPosition: 'top'
         }}>
         <Hero>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
+          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
             <h1>
               E-learning
               <br />
@@ -70,7 +70,7 @@ function ELearningPage() {
               <br />
               Grow with it.
             </h1>
-            <p className='lg:mt-10'>Custom E-Learning Solutions to address tomorrow’s challenges</p>
+            <p className='lg:mt-10 lg:w-800'>Custom E-Learning Solutions to address tomorrow’s challenges</p>
           </div>
         </Hero>
         </BackgroundImage >

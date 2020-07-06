@@ -11,7 +11,7 @@ const TextBox = ({ text, imgSrc, hasTopBorder = true, hasBottomBorder = true }) 
       <h4 className='inline-block text-left md:text-xl'>
         {text}
       </h4>
-      <img className='mt-22 md:w-10 md:h-8' src={imgSrc} alt={`${text} icon`} />
+      <img className='mt-8 md:mt-22 md:w-10 md:h-8' src={imgSrc} alt={`${text} icon`} />
     </div>
   );
 };

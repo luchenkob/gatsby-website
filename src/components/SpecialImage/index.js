@@ -3,7 +3,7 @@ import PropType from 'prop-types';
 
 const SpecialImage = ({ imgSrc, imgAlt, bubbleRight = true, bubbleSide = 'left' }) => (
   <div className='relative'>
-    <img className='block w-screen' src={imgSrc} alt={imgAlt} />
+    <img className='block w-screen lg:h-full' src={imgSrc} alt={imgAlt} />
     <div
       className={`md:hidden absolute z-10 -mt-4 bg-purple h-8 w-8 rounded-full ${
         bubbleRight ? 'right-0 mr-8' : 'left-0 ml-8'

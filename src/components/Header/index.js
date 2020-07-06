@@ -49,10 +49,10 @@ const Header = () => {
         </Helmet>
       </div>
 
-      <div className='relative flex flex-wrap items-center justify-between pt-2 pb-4 mx-auto border-b border-white border-opacity-25'>
+      <div className='relative flex flex-wrap items-center justify-between pt-2 pb-4 md:py-6 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
-            <img className='h-6 lg:h-8' alt='Meliorism logo' src={logoWhite} />
+            <img className='h-6 lg:w-190 lg:h-12' alt='Meliorism logo' src={logoWhite} />
           </span>
         </Link>
 
@@ -73,10 +73,10 @@ const Header = () => {
           </svg>
         </button>
 
-      <nav className='hidden relative z-30 md:block text-xs lg:text-lg'>
-          <ul className='flex space-x-16 justify-between'>
+      <nav className='hidden relative z-30 md:block'>
+          <ul className='caption flex space-x-16 justify-between'>
             {Object.keys(links).map((item) => (
-              <li className='relative' key={`${item}-desktop`}>
+              <li className=' relative' key={`${item}-desktop`}>
                 <button
                   className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
                   onMouseOver={() => setSelected(item)}
@@ -118,7 +118,7 @@ const Header = () => {
                 )}
               </li>
             ))}
-            <li>
+            <li className='font-normal'>
               <Link
                 className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
                 to='/careers'

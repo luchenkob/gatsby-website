@@ -52,7 +52,7 @@ function WhoWeArePage() {
           backgroundPosition: 'top'
         }}>
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full'>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
               <h1>
                 Innovation
                 <br />

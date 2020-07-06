@@ -41,7 +41,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className='mt-16 py-8 md:py-10 lg:py-16 bg-gray-600 text-gray-300'>
+    <footer className='mt-16 md:mt-40 py-8 md:py-16 bg-gray-600 text-gray-300'>
       <div className='lg:hidden'>
         <MobileFooter links={links} />
       </div>
