@@ -10,6 +10,8 @@ module.exports = {
     author: `@knjo`,
   },
   plugins: [
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {

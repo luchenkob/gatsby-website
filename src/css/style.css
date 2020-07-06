@@ -60,16 +60,6 @@ body.no-scroll {
   @apply overflow-hidden
 }
 
-.hero {
-  height: 400px;
-}
-
-@screen lg {
-  .hero {
-    height: 800px;
-  }
-}
-
 footer a:hover {
   color: white
 }
