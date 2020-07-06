@@ -78,9 +78,11 @@ function CareersPage() {
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-          <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-580'>
+          <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-1/2 lg:pl-168'>
             <h2 className='inline-block'>Talent Pool</h2>
-            <p className='lg:mt-4'>Get in touch with our Talent Acquisition team.</p>
+            <p className='lg:mt-4'>
+              Get in touch with our Talent Acquisition team.
+            </p>
             <div className='mt-4 lg:mt-8'>
               <Button
                 text='Check job openings'
