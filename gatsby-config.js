@@ -1,6 +1,6 @@
 // const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
-
+const path = require('path')
 // resolveConfig(tailwindConfig);
 
 module.exports = {
@@ -10,6 +10,13 @@ module.exports = {
     author: `@knjo`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     `gatsby-plugin-eslint`,

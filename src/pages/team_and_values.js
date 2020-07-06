@@ -1,4 +1,5 @@
 import React from 'react';
+import {graphql, useStaticQuery} from 'gatsby'
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -8,14 +9,43 @@ import ValueBox from '../components/ValueBox';
 import SpecialImage from '../components/SpecialImage';
 import GraySection from '../components/GraySection';
 
-import background from '../images/team_and_values/png/image-main.png';
-import image from '../images/team_and_values/png/image.png';
+import image from '../images/team_and_values/png/image@3x.png';
 
 import iconInnovation from '../images/team_and_values/svg/icon-innovation.svg';
 import iconPeople from '../images/team_and_values/svg/icon-people.svg';
 import iconSearch from '../images/team_and_values/svg/icon-search.svg';
 
+import BackgroundImage from 'gatsby-background-image'
+
 function TeamAndValuesPage() {
+  const { mobileImage, desktopImage } = 
+    useStaticQuery(graphql`
+      query {
+        mobileImage: file(relativePath: { eq: "team_and_values/png/image-main@3x.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        desktopImage: file(relativePath: { eq: "team_and_values/png/image-main.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `)
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -24,7 +54,10 @@ function TeamAndValuesPage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
+      <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+        <Hero>
           <div className='-mt-12 flex flex-col justify-center h-full'>
             <h1>
               Leaders, Innovators, Creators, and Storytellers. All Under One
@@ -38,6 +71,7 @@ function TeamAndValuesPage() {
             </p>
           </div>
         </Hero>
+        </BackgroundImage>
 
         <GraySection
           text='Today, we have over 150 dedicated, passionate, and professional

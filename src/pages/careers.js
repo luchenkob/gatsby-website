@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -6,10 +7,38 @@ import Hero from '../components/Hero';
 import Button from '../components/Button';
 import SpecialImage from '../components/SpecialImage';
 
-import background from '../images/careers/png/image-main.png';
-import image from '../images/careers/png/image.png';
+import image from '../images/careers/png/image@3x.png';
+
+import BackgroundImage from 'gatsby-background-image';
 
 function CareersPage() {
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+    query {
+      mobileImage: file(relativePath: { eq: "careers/png/image-main@3x.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "careers/png/image-main.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -18,17 +47,21 @@ function CareersPage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
-            <h1>
-              Grow
-              <br />
-              professionally
-              <br />
-              and personally
-            </h1>
-          </div>
-        </Hero>
+        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+          <Hero>
+            <div className='-mt-12 flex flex-col justify-center h-full'>
+              <h1>
+                Grow
+                <br />
+                professionally
+                <br />
+                and personally
+              </h1>
+            </div>
+          </Hero>
+        </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12'>
           <h2>Life at Meliorism</h2>

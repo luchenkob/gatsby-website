@@ -1,15 +1,45 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 
-import background from '../images/who_we_are/png/image-main.png';
-import image from '../images/who_we_are/png/image.png';
+import image from '../images/who_we_are/png/image@3x.png';
+
 import SpecialImage from '../components/SpecialImage';
 import GraySection from '../components/GraySection';
 
+import BackgroundImage from 'gatsby-background-image';
+
 function WhoWeArePage() {
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+    query {
+      mobileImage: file(relativePath: { eq: "who_we_are/png/image-main@3x.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "who_we_are/png/image-main.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -18,15 +48,19 @@ function WhoWeArePage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
-            <h1>
-              Innovation
-              <br />
-              is in our DNA
-            </h1>
-          </div>
-        </Hero>
+        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+          <Hero>
+            <div className='-mt-12 flex flex-col justify-center h-full'>
+              <h1>
+                Innovation
+                <br />
+                is in our DNA
+              </h1>
+            </div>
+          </Hero>
+        </BackgroundImage>
 
         <GraySection
           text='Meliorism is a premier all-in-one technology solutions provider with

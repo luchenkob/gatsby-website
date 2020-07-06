@@ -1,15 +1,45 @@
 import React from 'react';
+import {graphql, useStaticQuery} from 'gatsby'
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SpecialImage from '../components/SpecialImage';
 
-import background from '../images/travel/png/image-main.png';
-import image from '../images/travel/png/image.png';
-import image2 from '../images/travel/png/image-2.png';
+import image from '../images/travel/png/image@3x.png';
+import image2 from '../images/travel/png/image-2@3x.png';
+
+import BackgroundImage from 'gatsby-background-image'
 
 function TravelPage() {
+  const { mobileImage, desktopImage } = 
+    useStaticQuery(graphql`
+      query {
+        mobileImage: file(relativePath: { eq: "travel/png/image-main@3x.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        desktopImage: file(relativePath: { eq: "travel/png/image-main.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `)
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -18,7 +48,10 @@ function TravelPage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
+      <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+        <Hero>
           <div className='-mt-12 flex flex-col justify-center h-full'>
             <h1>
               Web & App-Based Travel
@@ -27,6 +60,7 @@ function TravelPage() {
             <p>for corporate travel and employee privileges</p>
           </div>
         </Hero>
+        </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12'>
           <h2 className='md:text-3xl'>We built travel platforms that allow companies to reduce cost</h2>
@@ -56,7 +90,7 @@ function TravelPage() {
         </section>
 
         <section className='mt-12 text-left md:flex md:mt-52 md:flex-row-reverse max-w-4xl mx-auto'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0 md:ml-12 md:mr-0'>
             <h5>Loyalty rewards programs</h5>
             <p className='mt-4'>
               With our dynamic Loyalty Rewards Program your members will see

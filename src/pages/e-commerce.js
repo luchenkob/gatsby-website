@@ -1,14 +1,47 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SpecialImage from '../components/SpecialImage';
 
-import background from '../images/ecommerce/png/image-main.png';
-import image from '../images/ecommerce/png/image.png';
+import image from '../images/ecommerce/png/image@3x.png';
+
+import BackgroundImage from 'gatsby-background-image';
 
 function ECommercePage() {
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+    query {
+      mobileImage: file(
+        relativePath: { eq: "ecommerce/png/image-main@3x.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      desktopImage: file(
+        relativePath: { eq: "ecommerce/png/image-main.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   const listItems = [
     'Enable start-ups, brands and retailers',
     'Develop unique e-commerce eco-system',
@@ -25,17 +58,21 @@ function ECommercePage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
-            <h1>
-              Empowering
-              <br />
-              the ‘E’ for your
-              <br />
-              E-commerce Ideas
-            </h1>
-          </div>
-        </Hero>
+        <BackgroundImage className='bg-center' Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+          <Hero>
+            <div className='-mt-12 flex flex-col justify-center h-full'>
+              <h1>
+                Empowering
+                <br />
+                the ‘E’ for your
+                <br />
+                E-commerce Ideas
+              </h1>
+            </div>
+          </Hero>
+        </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12  max-w-xl'>
           <p>
@@ -51,8 +88,8 @@ function ECommercePage() {
         <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52 md:flex-row-reverse'>
           <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
             <p>
-            Count on our team and their digital know-how to craft your online
-            presence because we:
+              Count on our team and their digital know-how to craft your online
+              presence because we:
             </p>
             <ul className='block mt-2 text-xs list-none space-y-2' style={{}}>
               {listItems.map((item, index) => (
@@ -64,11 +101,11 @@ function ECommercePage() {
             </ul>
           </div>
           <div className='mt-6 md:w-1/2 md:-mt-16'>
-          <SpecialImage
+            <SpecialImage
               imgSrc={image}
               imgAlt='Man on phone smiling'
               bubbleRight={false}
-              bubbleSide="right"
+              bubbleSide='right'
             />
           </div>
         </section>

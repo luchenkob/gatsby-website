@@ -44,7 +44,7 @@ h5 {
   }
 
   h1 {
-    @apply text-6xl;
+    @apply text-5xl;
   }
 
   h2 {
@@ -53,6 +53,12 @@ h5 {
 
   h4 {
     @apply text-lg;
+  }
+}
+
+@screen xl {
+  h1 {
+    @apply text-6xl;
   }
 }
 

@@ -1,17 +1,16 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
 import SpecialImage from '../components/SpecialImage';
-import GraySection from '../components/GraySection'
+import GraySection from '../components/GraySection';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
-// import background from '../images/home/png/image@3x.png';
-import background from '../images/home/png/image-main@3x.png';
-import image from '../images/home/png/image_2@3x.png';
+import image from '../images/home/png/image_3@3x.png';
 
 import iconGraduate from '../images/home/svg/graduate.svg';
 import onlineEducation from '../images/home/png/image-online-education@3x.png';
@@ -27,7 +26,36 @@ import brand4 from '../images/home/png/avis-vector-logo.png';
 import brand5 from '../images/home/png/british-airways.png';
 import brand6 from '../images/home/png/carnival-corporation-plc.png';
 
+import BackgroundImage from 'gatsby-background-image';
+
 function IndexPage() {
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  query {
+    mobileImage: file(relativePath: { eq: "home/png/image.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    desktopImage: file(relativePath: { eq: "home/png/image-main@3x.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`);
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ];
+
   return (
     <Layout>
       <SEO
@@ -36,20 +64,21 @@ function IndexPage() {
       />
 
       <section className='text-center'>
-        <Hero backgroundUrl={background}>
-          <div className='-mt-12 flex flex-col justify-center h-full'>
-            <h1>
-              Driven by technology, powered by expertise
-            </h1>
-            <p>
-              The most distinguished organizations recognize the edge of
-              technological evolution. As trusted leaders at the forefront of
-              technology progression, we help our customers stay competitive
-              through innovative solutions and building capability.
-            </p>
-          </div>
-        </Hero>
-
+        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources} style={{
+          backgroundPosition: 'top'
+        }}>
+          <Hero>
+            <div className='-mt-12 flex flex-col justify-center h-full'>
+              <h1>Driven by technology, powered by expertise</h1>
+              <p>
+                The most distinguished organizations recognize the edge of
+                technological evolution. As trusted leaders at the forefront of
+                technology progression, we help our customers stay competitive
+                through innovative solutions and building capability.
+              </p>
+            </div>
+          </Hero>
+        </BackgroundImage>
         <section className='mt-6 mx-auto w-11/12 '>
           <AsSeenOn />
 
