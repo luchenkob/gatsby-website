@@ -11,8 +11,8 @@ const SpecialImage = ({ imgSrc, imgAlt, bubbleRight = true, bubbleSide = 'left' 
     ></div>
 
 <div
-      className={`hidden md:block absolute z-10 -mt-4 bg-purple h-10 w-10 lg:h-12 lg:w-12 rounded-full ${
-        bubbleSide === 'right' ? 'right-0 -mr-5 -mt-20 lg:-mr-6 lg:-mt-24' : 'left-0 -ml-5 -mt-20 lg:-mr-6 lg:-mt-24'
+      className={`hidden md:block absolute z-10 -mt-4 bg-purple h-10 w-10 lg:h-24 lg:w-24 rounded-full ${
+        bubbleSide === 'right' ? 'right-0 -mr-5 -mt-20 lg:-mr-12 lg:-mt-48' : 'left-0 -ml-5 -mt-20 lg:-ml-12 lg:-mt-48'
       }`}
     ></div>
   </div>
