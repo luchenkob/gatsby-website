@@ -58,8 +58,8 @@ function TeamAndValuesPage() {
           backgroundPosition: 'top'
         }}>
         <Hero>
-          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-            <h1>
+          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start md:mt-0'>
+            <h1 className='md:w-960 md:mt-90'>
               Leaders, Innovators, Creators, and Storytellers. All Under One
               Roof.
             </h1>
@@ -83,13 +83,13 @@ function TeamAndValuesPage() {
           <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
         </GraySection>
 
-        <section className='mt-16 mx-auto w-11/12 tracking-tight'>
+        <section className='mt-16 mx-auto w-11/12 tracking-tight md:mt-90'>
           <AsSeenOn />
         </section>
 
-        <section className='mt-12 mx-auto w-11/12 tracking-tight'>
+        <section className='mt-12 mx-auto w-11/12 tracking-tight md:mt-165'>
           <h2>Our Values</h2>
-          <div className='flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 max-w-xs w-11/12 mx-auto lg:flex-row lg:max-w-4xl lg:divide-x lg:divide-y-0'>
+          <div className='flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0 lg:mt-20'>
             <ValueBox
               heading='Innovation is our constant'
               text='Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill.'

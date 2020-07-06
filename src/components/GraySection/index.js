@@ -10,8 +10,8 @@ const GraySection = ({
 }) => (
   <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52'>
     {!childOnRight && <div className='mt-6 md:w-1/2 md:-mt-110'>{children}</div>}
-    <div className='mt-10 mx-auto w-11/12 md:w-1/2 lg:w-580 md:mt-289 md:mb-160'>
-      <h2 className='inline-block'>{heading}</h2>
+    <div className='mt-10 mx-auto w-11/12 md:w-1/2 lg:w-580 md:py-40 md:mt-0'>
+      {heading && <h2 className='inline-block'>{heading}</h2>}
       {text && <p className='mt-3'>{text}</p>}
       {secondText && (
         <>
