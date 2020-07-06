@@ -62,12 +62,10 @@ function ELearningPage() {
           backgroundPosition: 'top'
         }}>
         <Hero>
-          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-            <h1>
+          <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className='lg:w-916 lg:mt-168'>
               E-learning
-              <br />
               is growing.
-              <br />
               Grow with it.
             </h1>
             <p className='lg:mt-10 lg:w-800'>Custom E-Learning Solutions to address tomorrow’s challenges</p>
@@ -75,7 +73,7 @@ function ELearningPage() {
         </Hero>
         </BackgroundImage >
 
-        <section className='mt-12 mx-auto w-11/12 max-w-xl'>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916 lg:mb-270'>
           <p>
             Meliorism consolidates all e-learning needs into one advanced
             platform giving companies and organizations the right tools for a
@@ -83,13 +81,13 @@ function ELearningPage() {
           </p>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52'>
-          <div className='mt-10 mx-auto w-11/12 md:w-1/2 md:max-w-xs lg:max-w-sm md:self-center md:mt-0'>
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
+          <div className='mt-10 mx-auto w-11/12 lg:w-580 lg:mt-auto lg:mb-40 lg:mr-183'>
             <p>
               Our team of experts have hands-on experience in delivering
               different <strong>e-learning solutions that maximize.</strong>
             </p>
-            <ul className='block mt-2 text-xs list-none space-y-2' style={{}}>
+            <ul className='block mt-2 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
                   <div className='inline-block h-1 w-1 rounded-full bg-purple'></div>
@@ -98,18 +96,18 @@ function ELearningPage() {
               ))}
             </ul>
           </div>
-          <div className='mt-6 md:w-1/2 md:-mt-16'>
+          <div className='mt-6 md:w-1/2 md:-mt-110'>
             <SpecialImage imgSrc={image} imgAlt='Woman working on the laptop' />
           </div>
         </section>
 
-        <h2 className='mt-16 w-11/12 mx-auto'>
+        <h3 className='mt-16 w-11/12 mx-auto lg:mt-40'>
           Count on our expertise to build custom E-Learning solutions for your
           sector.
-        </h2>
+        </h3>
 
-        <section className='mt-10 text-left flex flex-col md:flex-row-reverse max-w-6xl mx-auto'>
-          <div className='mx-auto mt-2 text-left w-11/12 md:w-1/2 md:max-w-xs lg:max-w-md md:self-center md:mt-0'>
+        <section className='mt-10 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400'>
+          <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 lg:mr-auto'>
             <h5>Corporate sector</h5>
             <p className='mt-4'>
               Continuous workforce training poses several challenges in the
@@ -118,11 +116,14 @@ function ELearningPage() {
               onboarding and keep their team motivated.
             </p>
           </div>
+          <div className='lg:w-1/2'>
+
           <img
-            className='block mt-6 w-screen md:w-1/2'
+            className='block mt-6 w-screen lg:h-full lg:w-full object-center object-contain'
             src={image2}
             alt='People having a meeting'
-          />
+            />
+            </div>
         </section>
       </section>
     </Layout>
