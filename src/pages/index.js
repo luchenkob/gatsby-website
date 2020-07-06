@@ -26,6 +26,13 @@ import brand4 from '../images/home/png/avis-vector-logo.jpg';
 import brand5 from '../images/home/png/british-airways.jpg';
 import brand6 from '../images/home/png/carnival-corporation-plc.jpg';
 
+import brand1Mobile from '../images/brand_logos/mobile/1195-px-marriott-vacation-club-svg.jpg';
+import brand2Mobile from '../images/brand_logos/mobile/celebrity-cruise.jpg';
+import brand3Mobile from '../images/brand_logos/mobile/amazon.jpg';
+import brand4Mobile from '../images/brand_logos/mobile/avis-vector-logo.jpg';
+import brand5Mobile from '../images/brand_logos/mobile/british-airways.jpg';
+import brand6Mobile from '../images/brand_logos/mobile/carnival-corporation-plc.jpg';
+
 import BackgroundImage from 'gatsby-background-image';
 
 function IndexPage() {
@@ -153,16 +160,16 @@ function IndexPage() {
             the most reliable in the industry.
           </p>
 
-          <div className='md:hidden mt-7-5 grid grid-flow-row gap-3'>
+          <div className='md:hidden mt-7-5 flex flex-wrap items-center justify-center space-y-5'>
             <div className='flex items-center justify-center space-x-4'>
-              <img alt='Brand logo' src={brand1} />
-              <img alt='Brand logo' src={brand2} />
-              <img alt='Brand logo' src={brand3} />
+              <img alt='Brand logo' src={brand1Mobile} />
+              <img alt='Brand logo' src={brand2Mobile} />
+              <img alt='Brand logo' src={brand3Mobile} />
             </div>
             <div className='flex items-center space-x-4'>
-              <img alt='Brand logo' src={brand4} />
-              <img alt='Brand logo' src={brand5} />
-              <img alt='Brand logo' src={brand6} />
+              <img alt='Brand logo' src={brand4Mobile} />
+              <img alt='Brand logo' src={brand5Mobile} />
+              <img alt='Brand logo' src={brand6Mobile} />
             </div>
           </div>
 

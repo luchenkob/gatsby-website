@@ -7,10 +7,11 @@ const GraySection = ({
   secondText,
   children,
   childOnRight = true,
+  widthOfText
 }) => (
-  <section className='mt-12 text-left bg-gray-100 md:flex md:mt-52'>
-    {!childOnRight && <div className='mt-6 md:w-1/2 md:-mt-110'>{children}</div>}
-    <div className='mt-10 mx-auto w-11/12 md:w-1/2 lg:w-580 md:py-40 md:mt-0'>
+  <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
+    {!childOnRight && <div className='mt-6 lg:w-1/2 lg:-mt-110'>{children}</div>}
+    <div className={`${widthOfText ? 'lg:w-580' : 'lg:w-1/2'} pt-10 mx-auto w-11/12 lg:py-40 lg:mt-0`}>
       {heading && <h2 className='inline-block'>{heading}</h2>}
       {text && <p className='mt-3'>{text}</p>}
       {secondText && (
@@ -20,7 +21,7 @@ const GraySection = ({
       )}
     </div>
 
-    {childOnRight && <div className='mt-6 md:w-1/2 md:-mt-110'>{children}</div>}
+    {childOnRight && <div className='mt-6 lg:w-1/2 lg:-mt-110'>{children}</div>}
   </section>
 );
 
@@ -30,6 +31,7 @@ GraySection.propTypes = {
   secondText: PropType.string,
   children: PropType.node,
   childOnRight: PropType.bool,
+  widthOfText: PropType.string
 };
 
 export default GraySection;

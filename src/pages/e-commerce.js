@@ -90,7 +90,7 @@ function ECommercePage() {
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-          <div className='mt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
+          <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
             <p>
               Count on our team and their digital know-how to craft your online
               presence because we:

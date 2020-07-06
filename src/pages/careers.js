@@ -66,7 +66,7 @@ function CareersPage() {
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
           <h2>Life at Meliorism</h2>
-          <p className='mt-6 mx-auto lg:mt-10 lg:mb-270 lg:w-960'>
+          <p className='mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960'>
             Our benefits go beyond flexible schedules and unmatched
             compensation. We invest in people so they can live their best lives
             at work and home. At Meliorism, you&apos;re part of a smart,
@@ -78,7 +78,7 @@ function CareersPage() {
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-          <div className='mt-10 mx-auto w-11/12  lg:self-center lg:mt-0 lg:w-580'>
+          <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-580'>
             <h2 className='inline-block'>Talent Pool</h2>
             <p className='lg:mt-4'>Get in touch with our Talent Acquisition team.</p>
             <div className='mt-4 lg:mt-8'>

@@ -87,6 +87,7 @@ function TeamAndValuesPage() {
             dynamic in-house team is composed of departments that drive
             exceptional experiences for our customers--from Marketing to Tech,
             Finance, Legal, and Support.'
+            widthOfText="580"
         >
           <SpecialImage imgSrc={image} imgAlt='Women looking at phone' />
         </GraySection>
