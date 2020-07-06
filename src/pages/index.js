@@ -19,12 +19,12 @@ import retail from '../images/home/png/image-retail@3x.png';
 import iconTravel from '../images/home/svg/travel.svg';
 import travel from '../images/home/png/image-travel@3x.png';
 
-import brand1 from '../images/home/png/1195-px-marriott-vacation-club-svg.png';
-import brand2 from '../images/home/png/celebrity-cruise.png';
-import brand3 from '../images/home/png/amazon.png';
-import brand4 from '../images/home/png/avis-vector-logo.png';
-import brand5 from '../images/home/png/british-airways.png';
-import brand6 from '../images/home/png/carnival-corporation-plc.png';
+import brand1 from '../images/home/png/1195-px-marriott-vacation-club-svg.jpg';
+import brand2 from '../images/home/png/celebrity-cruise.jpg';
+import brand3 from '../images/home/png/amazon.jpg';
+import brand4 from '../images/home/png/avis-vector-logo.jpg';
+import brand5 from '../images/home/png/british-airways.jpg';
+import brand6 from '../images/home/png/carnival-corporation-plc.jpg';
 
 import BackgroundImage from 'gatsby-background-image';
 
@@ -66,7 +66,7 @@ function IndexPage() {
       <section className='text-center'>
         <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140 lg:w-860'>
               <h1>Driven by technology, powered by expertise</h1>
               <p className='lg:mt-10 lg:w-800'>
                 The most distinguished organizations recognize the edge of
@@ -77,10 +77,13 @@ function IndexPage() {
             </div>
           </Hero>
         </BackgroundImage>
-        <section className='mt-6 mx-auto w-11/12 '>
-          <AsSeenOn />
+        <section className='mt-6 mx-auto w-11/12 md:w-screen'>
+          <div className='md:ml-442 md:mr-0'>
 
-          <p className='big mt-12 font-light text-sm md:text-3-5xl text-center lg:mt-165 lg:px-56'>
+          <AsSeenOn />
+          </div>
+
+          <p className='big mt-12 font-light text-sm md:text-3-5xl text-center lg:mt-165 lg:px-56 lg:w-1522 mx-auto'>
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>
@@ -105,7 +108,7 @@ function IndexPage() {
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
 
-          <div className='hidden md:flex flex-wrap mx-auto mt-18 w-843'>
+          <div className='hidden md:flex flex-wrap mx-auto mt-18 w-843 mb-270'>
             <TextBox
               text='E-learning'
               imgSrc={iconGraduate}
@@ -163,7 +166,7 @@ function IndexPage() {
             </div>
           </div>
 
-          <div className='hidden md:flex mt-22 flex-row items-center justify-between w-4/5 max-w-5xl mx-auto'>
+          <div className='hidden md:flex mt-22 flex-row items-center space-x-18 justify-center mx-auto'>
             {[brand1, brand2, brand3, brand4, brand5, brand6].map(
               (logo, index) => (
                 <img
