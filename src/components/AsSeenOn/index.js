@@ -7,21 +7,21 @@ import logoABCNews from '../../images/brand_logos/1200-px-abc-news-solid-black-l
 
 const AsSeenOn = () => {
   return (
-    <div className='mt-4 flex flex-col md:flex-row space-y-4 md:items-center justify-between md:justify-start mx-auto md:space-x-22 md:mt-22'>
-      <span className='text-xs tracking-wide uppercase md:pt-4'>As seen on</span>
-      <div className='md:hidden flex items-start justify-center space-x-6'>
+    <div className='mt-4 flex flex-col lg:flex-row space-y-4 lg:items-center justify-between lg:justify-start mx-auto lg:space-x-22 lg:mt-22'>
+      <span className='text-xs tracking-wide uppercase lg:pt-4'>As seen on</span>
+      <div className='lg:hidden flex items-start justify-center space-x-6'>
         <img alt="Brand logo" src={logoForbes} />
         <img alt="Brand logo" src={logoEntrepreneur} />
       </div>
-      <div className='md:hidden flex items-center justify-center space-x-6'>
+      <div className='lg:hidden flex items-center justify-center space-x-6'>
         <img alt="Brand logo" src={logoYahooNews} />
         <img alt="Brand logo" src={logoABCNews} />
       </div>
 
-      <img className='hidden  md:block pb-1 w-93 h-6' alt="Brand logo" src={logoForbes} />
-      <img className='hidden  md:block w-162 h-8' alt="Brand logo" src={logoEntrepreneur} />
-      <img className='hidden  md:block w-183 h-30px' alt="Brand logo" src={logoYahooNews} />
-      <img className='hidden  md:block w-144 h-51px' alt="Brand logo" src={logoABCNews} />
+      <img className='hidden  lg:block pb-1 w-93 h-6' alt="Brand logo" src={logoForbes} />
+      <img className='hidden  lg:block w-162 h-8' alt="Brand logo" src={logoEntrepreneur} />
+      <img className='hidden  lg:block w-183 h-30px' alt="Brand logo" src={logoYahooNews} />
+      <img className='hidden  lg:block w-144 h-51px' alt="Brand logo" src={logoABCNews} />
     </div>
   );
 };

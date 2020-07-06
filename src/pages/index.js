@@ -78,7 +78,7 @@ function IndexPage() {
           </Hero>
         </BackgroundImage>
         <section className='mt-6 mx-auto w-11/12 md:w-screen'>
-          <div className='md:ml-442 md:mr-0'>
+          <div className='lg:w-1522 lg:mx-auto flex lg:justify-center'>
 
           <AsSeenOn />
           </div>
@@ -159,14 +159,14 @@ function IndexPage() {
               <img alt='Brand logo' src={brand2} />
               <img alt='Brand logo' src={brand3} />
             </div>
-            <div className='flex items-center justify-center space-x-4'>
+            <div className='flex items-center space-x-4'>
               <img alt='Brand logo' src={brand4} />
               <img alt='Brand logo' src={brand5} />
               <img alt='Brand logo' src={brand6} />
             </div>
           </div>
 
-          <div className='hidden md:flex mt-22 flex-row items-center space-x-18 justify-center mx-auto'>
+          <div className='hidden lg:flex mt-22 flex-row items-center space-x-18 justify-center w-1260 mx-auto'>
             {[brand1, brand2, brand3, brand4, brand5, brand6].map(
               (logo, index) => (
                 <img
