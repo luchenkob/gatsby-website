@@ -54,8 +54,8 @@ function ContactUsPage() {
           backgroundPosition: 'top'
         }}>
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-              <h1>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+            <h1 className='lg:mt-202 lg:w-545'>
                 We&apos;d love to
                 <br />
                 hear from you
@@ -64,12 +64,12 @@ function ContactUsPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12'>
+        <section className='mt-12 lg:mt-40 lg:w-1064 mx-auto'>
           <h2>Our team is always ready to help - get in touch</h2>
         </section>
 
-        <section className='mt-12 mx-auto w-11/12'>
-          <div className='mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 max-w-xs w-11/12 mx-auto lg:flex-row lg:max-w-4xl lg:divide-x lg:divide-y-0'>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-20'>
+          <div className='mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0'>
             <ContactBox
               heading='General Questions'
               text='Have a general question for us?'

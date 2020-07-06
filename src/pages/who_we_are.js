@@ -52,8 +52,8 @@ function WhoWeArePage() {
           backgroundPosition: 'top'
         }}>
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140'>
-              <h1>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className='lg:mt-202 lg:w-545'>
                 Innovation
                 <br />
                 is in our DNA
@@ -61,6 +61,8 @@ function WhoWeArePage() {
             </div>
           </Hero>
         </BackgroundImage>
+        
+        <div className='hidden  lg:block lg:mb-270' />
 
         <GraySection
           text='Meliorism is a premier all-in-one technology solutions provider with

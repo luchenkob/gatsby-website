@@ -66,8 +66,8 @@ function TeamAndValuesPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start md:mt-0'>
-              <h1 className='md:w-960 md:mt-90'>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className='lg:w-960 lg:mt-90'>
                 Leaders, Innovators, Creators, and Storytellers. All Under One
                 Roof.
               </h1>

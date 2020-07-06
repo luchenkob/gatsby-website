@@ -48,8 +48,7 @@ const Footer = () => {
       <div className='hidden lg:block'>
         <DesktopFooter links={links} />
       </div>
-      <ul className='mx-auto w-4/5 mt-6 flex justify-start  space-x-4 lg:space-x-6 lg:mt-10 col-span-2 lg:w-1260'>
-
+      <ul className='mx-auto w-11/12 md:w-4/5 mt-6 flex justify-start  space-x-4 lg:space-x-6 lg:mt-10 col-span-2 lg:w-1260'>
         <li>
           <img src={facebook} />
         </li>

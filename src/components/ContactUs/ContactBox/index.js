@@ -1,18 +1,18 @@
 import React from 'react';
 import PropType from 'prop-types';
 
-import ContactButton from '../../Button';
+import Button from '../../Button';
 
 const ContactBox = ({ heading, text, svgUrl, toMail }) => {
   return (
-    <div className='p-6 h-56 lg:h-64 flex flex-col items-start justify-between lg:w-1/3'>
+    <div className='p-6 h-56 flex flex-col items-start justify-between lg:p-10 lg:w-1/3 lg:h-316'>
       <div className='text-gray-700 text-left flex flex-col items-start'>
         <img src={svgUrl} alt='icon' />
-        <h4 className='mt-4'>{heading}</h4>
-        <p className='mt-2'>{text}</p>
+        <h4 className='mt-4 lg:mt-6'>{heading}</h4>
+        <p className='mt-2 lg:mt-4'>{text}</p>
       </div>
 
-      <ContactButton text='Contact Us' toMail={toMail} />
+      <Button text='Contact Us' toMail={toMail} />
     </div>
   );
 };
