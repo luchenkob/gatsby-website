@@ -1,0 +1,85 @@
+/*! purgecss start ignore */
+@tailwind base;
+body {
+    @apply font-open-sans text-xs text-gray-700;
+}
+
+h1,
+h2,
+h3,
+p {
+  @apply font-poppins;
+}
+
+h1 {
+  @apply text-2xl font-semibold;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-lg;
+}
+h4 {
+    @apply text-sm font-semibold leading-snug;
+}
+h5 {
+  @apply font-semibold;
+}
+.caption {
+    @apply text-xs font-bold;
+}
+
+@screen md {
+  .textBox {
+    height: 241px;      
+    width: 281px;
+  }
+  .imageBox {
+    height: 240px;      
+    width: 280px;
+  }
+}
+
+@screen lg {
+  body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  h1 {
+    font-size: 72px;
+    line-height: 101px;
+  }
+  h2 {
+    font-size: 64px;
+    line-height: 89px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 43px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .big {
+    line-height: 48px;
+  }
+  .caption {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+footer a:hover {
+  color: white
+}
+
+@tailwind components;
+
+/*! purgecss end ignore */
+@tailwind utilities;
