@@ -84,26 +84,12 @@ const Header = () => {
                 <button
                   className={`${
                     selected && selected !== item ? 'opacity-75' : 'opacity-100'
-                  } capitalize focus:outline-none transition-opacity duration-200 ease-in-out`}
+                  } capitalize focus:outline-none transition-opacity duration-300 ease-in-out`}
                   onMouseOver={() => setSelected(item)}
                 >
                   {item}
-                  {selected === item ? (
                     <svg
-                      className='ml-2 inline-block'
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='8'
-                      height='5'
-                      viewBox='0 0 8 5'
-                    >
-                      <path
-                        fill='#FFF'
-                        d='M4.002 1.68L1.009 4.864C.927 4.952.817 5 .699 5 .582 5 .472 4.952.39 4.864l-.262-.279C.045 4.498 0 4.381 0 4.255c0-.124.045-.24.128-.328L3.69.136C3.774.048 3.884 0 4.001 0c.118 0 .229.048.311.136l3.56 3.787c.083.088.128.205.128.33 0 .124-.045.241-.128.329l-.262.279c-.17.181-.448.181-.619 0l-2.99-3.18z'
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      className='ml-2 inline-block'
+                      className={`ml-2 inline-block transition-transform duration-300 ease-in-out transform ${selected === item ? 'rotate-180' : ''}`}
                       xmlns='http://www.w3.org/2000/svg'
                       width='8'
                       height='5'
@@ -114,7 +100,6 @@ const Header = () => {
                         d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z'
                       />
                     </svg>
-                  )}
                 </button>
                 {selected === item && (
                   <DropDownMenu
@@ -130,7 +115,7 @@ const Header = () => {
                   selected && selected !== 'careers'
                     ? 'opacity-75'
                     : 'opacity-100'
-                } capitalize focus:outline-none transition-opacity duration-200 ease-in-out`}
+                } capitalize focus:outline-none transition-opacity duration-300 ease-in-out`}
                 onMouseOver={() => setSelected('careers')}
                 onClick={() => setSelected(null)}
                 to="/careers"
