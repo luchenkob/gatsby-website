@@ -8,7 +8,7 @@ const ValueBox = ({ heading, text, svgUrl }) => {
         <h5>{heading}</h5>
         <p className='mt-2 md:mt-4'>{text}</p>
       </div>
-      <img className='mt-8 lg:mt-16 w-12 h-10 lg:w-16 lg:h-12' src={svgUrl} alt='icon' />
+      <img className='mt-8 lg:mt-auto w-12 h-10 lg:w-16 lg:h-12' src={svgUrl} alt='icon' />
     </div>
   );
 };

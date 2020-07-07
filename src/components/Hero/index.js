@@ -5,7 +5,7 @@ import Header from '../Header';
 const Hero = ({ children }) => {
   return (
     <div
-      className='hero pt-3 text-left w-screen text-white h-400 xl:h-800'
+      className='hero pt-3 text-left w-screen text-white h-400 lg:h-800'
     >
       <div className='mx-auto w-11/12 h-full lg:w-full lg:px-130'>
         <Header />
