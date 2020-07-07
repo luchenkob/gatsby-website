@@ -2,8 +2,7 @@ import React from 'react';
 import PropType from 'prop-types';
 import Header from '../Header';
 
-const Hero = ({ backgroundUrl, children }) => {
-  console.log(backgroundUrl)
+const Hero = ({ children }) => {
   return (
     <div
       className='hero pt-3 text-left w-screen text-white h-400 xl:h-800'
@@ -18,7 +17,6 @@ const Hero = ({ backgroundUrl, children }) => {
 };
 
 Hero.propTypes = {
-  backgroundUrl: PropType.string.isRequired,
   children: PropType.node.isRequired,
 };
 

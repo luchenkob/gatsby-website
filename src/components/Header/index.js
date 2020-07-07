@@ -45,14 +45,18 @@ const Header = () => {
     <header className='bg-transparent'>
       <div>
         <Helmet>
-          <style>{`${isExpanded ?  'body { overflow: hidden; }' : ''}`}</style>
+          <style>{`${isExpanded ? 'body { overflow: hidden; }' : ''}`}</style>
         </Helmet>
       </div>
 
       <div className='relative flex flex-wrap items-center justify-between pt-2 pb-4 md:py-6 mx-auto border-b border-white border-opacity-25'>
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
-            <img className='h-6 lg:w-190 lg:h-12' alt='Meliorism logo' src={logoWhite} />
+            <img
+              className='h-6 lg:w-190 lg:h-12'
+              alt='Meliorism logo'
+              src={logoWhite}
+            />
           </span>
         </Link>
 
@@ -73,12 +77,14 @@ const Header = () => {
           </svg>
         </button>
 
-      <nav className='hidden relative z-30 md:block'>
-          <ul className='caption flex space-x-16 justify-between'>
+        <nav className='hidden relative z-30 md:block'>
+          <ul className='flex space-x-16 justify-between'>
             {Object.keys(links).map((item) => (
               <li className=' relative' key={`${item}-desktop`}>
                 <button
-                  className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
+                  className={`${
+                    selected && selected !== item ? 'opacity-75' : 'opacity-100'
+                  } capitalize focus:outline-none transition-opacity duration-200 ease-in-out`}
                   onMouseOver={() => setSelected(item)}
                 >
                   {item}
@@ -120,8 +126,14 @@ const Header = () => {
             ))}
             <li className='font-normal'>
               <Link
-                className='capitalize opacity-75 focus:outline-none transition-opacity duration-200 ease-in-out hover:opacity-100'
-                to='/careers'
+                className={`${
+                  selected && selected !== 'careers'
+                    ? 'opacity-75'
+                    : 'opacity-100'
+                } capitalize focus:outline-none transition-opacity duration-200 ease-in-out`}
+                onMouseOver={() => setSelected('careers')}
+                onClick={() => setSelected(null)}
+                to="/careers"
               >
                 Careers
               </Link>
@@ -158,7 +170,7 @@ const Header = () => {
             </button>
           </div>
           <nav className='flex flex-col text-xs w-11/12 mx-auto max-w-6xl'>
-            <div className='mt-6 caption uppercase text-menuGray'>Products</div>
+            <div className='mt-6 uppercase text-menuGray'>Products</div>
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
@@ -176,7 +188,7 @@ const Header = () => {
               ))}
             </ul>
 
-            <div className='mt-6 caption uppercase text-menuGray'>About us</div>
+            <div className='mt-6  uppercase text-menuGray'>About us</div>
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
