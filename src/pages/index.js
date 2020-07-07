@@ -37,23 +37,23 @@ import BackgroundImage from 'gatsby-background-image';
 
 function IndexPage() {
   const { mobileImage, desktopImage } = useStaticQuery(graphql`
-  query {
-    mobileImage: file(relativePath: { eq: "home/png/image.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+    query {
+      mobileImage: file(relativePath: { eq: "home/png/image.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "home/png/image-main.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
       }
     }
-    desktopImage: file(relativePath: { eq: "home/png/image-main.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`);
+  `);
 
   const sources = [
     mobileImage.childImageSharp.fluid,
@@ -86,8 +86,7 @@ function IndexPage() {
         </BackgroundImage>
         <section className='mt-6 mx-auto w-11/12 md:w-screen'>
           <div className='lg:w-1522 lg:mx-auto flex lg:justify-center'>
-
-          <AsSeenOn />
+            <AsSeenOn />
           </div>
 
           <p className='big mt-12 font-light text-sm md:text-3-5xl text-center lg:mt-165 lg:px-56 lg:w-1522 mx-auto'>
@@ -145,7 +144,7 @@ function IndexPage() {
               technology solutions to improve our customers’ effective processes
               and dynamic outcomes. Ultimately, allowing them to become
               high-performance businesses.'
-              widthOfText='580'
+          widthOfText='580'
         >
           <SpecialImage
             imgSrc={image}
@@ -155,7 +154,7 @@ function IndexPage() {
 
         <section className='mx-auto w-11/12 mt-12 lg:mt-40'>
           <h2 className='capitalize'>Brands we work with</h2>
-          <p className='mt-6 mx-auto lg:w-764 lg:mt-10 lg:w-800'>
+          <p className='mt-6 mx-auto lg:mt-10 lg:w-800'>
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.
