@@ -26,7 +26,7 @@ const GraySection = ({
 );
 
 GraySection.propTypes = {
-  heading: PropType.string.isRequired,
+  heading: PropType.string,
   text: PropType.string,
   secondText: PropType.string,
   children: PropType.node,
