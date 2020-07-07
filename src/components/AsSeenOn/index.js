@@ -12,7 +12,7 @@ import logoABCNewsMobile from '../../images/brand_logos/mobile/1200-px-abc-news-
 const AsSeenOn = () => {
   return (
     <div className='mt-4 flex flex-col lg:flex-row space-y-4 lg:items-center justify-between lg:justify-start mx-auto lg:space-x-22 lg:mt-22'>
-      <span className='text-xs tracking-wide uppercase lg:pt-4'>As seen on</span>
+      <span className='tracking-wide uppercase lg:pt-4'>As seen on</span>
       <div className='lg:hidden flex items-start justify-center space-x-6'>
         <img alt="Brand logo" src={logoForbesMobile} />
         <img alt="Brand logo" src={logoEntrepreneurMobile} />
