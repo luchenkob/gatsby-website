@@ -145,6 +145,7 @@ function IndexPage() {
               technology solutions to improve our customers’ effective processes
               and dynamic outcomes. Ultimately, allowing them to become
               high-performance businesses.'
+              widthOfText='580'
         >
           <SpecialImage
             imgSrc={image}
