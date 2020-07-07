@@ -12,11 +12,11 @@ import ImageBox from '../components/Home/ImageBox';
 
 import image from '../images/home/png/image_3@3x.png';
 
-import iconGraduate from '../images/home/svg/graduate.svg';
+import iconGraduate from '../images/home/svg/online-education.svg';
 import onlineEducation from '../images/home/png/image-online-education@3x.png';
 import iconRetail from '../images/home/svg/retail.svg';
 import retail from '../images/home/png/image-retail@3x.png';
-import iconTravel from '../images/home/svg/travel.svg';
+import iconTravel from '../images/home/svg/travel_2.svg';
 import travel from '../images/home/png/image-travel@3x.png';
 
 import brand1 from '../images/home/png/1195-px-marriott-vacation-club-svg.jpg';
