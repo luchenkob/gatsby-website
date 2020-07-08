@@ -23,6 +23,9 @@ module.exports = {
       poppins: ["Poppins"],
     },
     extend: {
+      screens: {
+        'desktop': '1920px'
+      },
       spacing: {
         "2-5": "0.625rem",
         "2-75": "0.6875rem",

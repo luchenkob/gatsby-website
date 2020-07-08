@@ -71,7 +71,8 @@ function IndexPage() {
       />
 
       <section className="text-center">
-        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
+        <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}
+        >
           <Hero>
             <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start 
             lg:mt-0">
@@ -87,6 +88,8 @@ function IndexPage() {
             </div>
           </Hero>
         </BackgroundImage>
+        
+        
         <section className="mt-6 mx-auto w-11/12 md:w-screen">
           <div className="lg:w-1522 lg:mx-auto flex lg:justify-center">
             <AsSeenOn />
