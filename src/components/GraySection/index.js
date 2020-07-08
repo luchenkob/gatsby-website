@@ -1,5 +1,5 @@
-import React from 'react';
-import PropType from 'prop-types';
+import React from "react";
+import PropType from "prop-types";
 
 const GraySection = ({
   heading,
@@ -7,13 +7,19 @@ const GraySection = ({
   secondText,
   children,
   childOnRight = true,
-  widthOfText
+  widthOfText,
 }) => (
-  <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
-    {!childOnRight && <div className='mt-6 lg:w-1/2 lg:-mt-110'>{children}</div>}
-    <div className={`${widthOfText ? 'lg:w-580' : 'lg:w-1/2'} pt-10 mx-auto w-11/12 lg:py-40 lg:mt-0`}>
-      {heading && <h2 className='inline-block'>{heading}</h2>}
-      {text && <p className='mt-3 lg:mt-0'>{text}</p>}
+  <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52">
+    {!childOnRight && (
+      <div className="mt-6 lg:w-1/2 lg:-mt-110">{children}</div>
+    )}
+    <div
+      className={`${
+        widthOfText ? "lg:w-580" : "lg:w-1/2"
+      } pt-10 mx-auto w-11/12 lg:py-40 lg:mt-0`}
+    >
+      {heading && <h2 className="inline-block">{heading}</h2>}
+      {text && <p className="mt-3 lg:mt-0">{text}</p>}
       {secondText && (
         <>
           <br /> <p>{secondText}</p>
@@ -21,7 +27,7 @@ const GraySection = ({
       )}
     </div>
 
-    {childOnRight && <div className='mt-6 lg:w-1/2 lg:-mt-110'>{children}</div>}
+    {childOnRight && <div className="mt-6 lg:w-1/2 lg:-mt-110">{children}</div>}
   </section>
 );
 
@@ -31,7 +37,7 @@ GraySection.propTypes = {
   secondText: PropType.string,
   children: PropType.node,
   childOnRight: PropType.bool,
-  widthOfText: PropType.string
+  widthOfText: PropType.string,
 };
 
 export default GraySection;

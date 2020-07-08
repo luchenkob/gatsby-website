@@ -1,13 +1,14 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import PropType from 'prop-types';
 
 import DropDownMenu from './DropDownMenu';
 
 import logoWhite from '../../images/menu/logo-white.png';
 import logoPurple from '../../images/menu/logo-purple.png';
 
-const Header = () => {
+const Header = ({ isBackgroundWhite = false }) => {
   const [isExpanded, toggleExpansion] = useState(false);
   const [selected, setSelected] = useState(null);
   const links = {
@@ -49,31 +50,33 @@ const Header = () => {
         </Helmet>
       </div>
 
-      <div className='relative flex flex-wrap items-center justify-between pt-2 pb-4 md:py-6 mx-auto border-b border-white border-opacity-25'>
+      <div
+        className={`relative flex flex-wrap items-center justify-between py-4 lg:py-6 mx-auto border-b border-opacity-25 ${
+          isBackgroundWhite ? 'border-gray-600' : 'border-white'
+        }`}
+      >
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
             <img
               className='h-6 lg:w-190 lg:h-12'
               alt='Meliorism logo'
-              src={logoWhite}
+              src={isBackgroundWhite ? logoPurple : logoWhite}
             />
           </span>
         </Link>
 
         <button
-          className='flex items-center text-white focus:outline-none md:hidden'
+          className={`flex items-center text-white focus:outline-none md:hidden ${isBackgroundWhite ? 'text-gray-600' : 'white'}`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
+            className='fill-current'
             xmlns='http://www.w3.org/2000/svg'
             width='16'
             height='11'
             viewBox='0 0 16 11'
           >
-            <path
-              fill='#FFF'
-              d='M16 10v1H0v-1h16zm0-5v1H0V5h16zm0-5v1H0V0h16z'
-            />
+            <path d='M16 10v1H0v-1h16zm0-5v1H0V5h16zm0-5v1H0V0h16z' />
           </svg>
         </button>
 
@@ -88,18 +91,17 @@ const Header = () => {
                   onMouseOver={() => setSelected(item)}
                 >
                   {item}
-                    <svg
-                      className={`ml-2 inline-block transition-transform duration-300 ease-in-out transform ${selected === item ? 'rotate-180' : ''}`}
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='8'
-                      height='5'
-                      viewBox='0 0 8 5'
-                    >
-                      <path
-                        fill='#FFF'
-                        d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z'
-                      />
-                    </svg>
+                  <svg
+                    className={`ml-2 inline-block transition-transform duration-300 ease-in-out transform fill-current ${
+                      selected === item ? 'rotate-180' : ''
+                    }`}
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='8'
+                    height='5'
+                    viewBox='0 0 8 5'
+                  >
+                    <path d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z' />
+                  </svg>
                 </button>
                 {selected === item && (
                   <DropDownMenu
@@ -118,7 +120,7 @@ const Header = () => {
                 } capitalize focus:outline-none transition-opacity duration-300 ease-in-out`}
                 onMouseOver={() => setSelected('careers')}
                 onClick={() => setSelected(null)}
-                to="/careers"
+                to='/careers'
               >
                 Careers
               </Link>
@@ -129,8 +131,8 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {isExpanded && (
-        <div className='fixed z-20 inset-0 bg-white w-screen h-full px-3 pt-3 md:px-8 text-left'>
-          <div className='relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto w-11/12 border-b'>
+        <div className='fixed z-20 inset-0 bg-white w-screen h-full text-left px-10px'>
+          <div className='relative flex flex-wrap items-center justify-between py-4 mx-auto w-11/12 border-b'>
             <Link to='/'>
               <span className='text-xl font-bold tracking-tight'>
                 <img className='h-6' alt='Meliorism logo' src={logoPurple} />
@@ -164,7 +166,7 @@ const Header = () => {
               {links['products'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -182,7 +184,7 @@ const Header = () => {
               {links['about us'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -197,7 +199,7 @@ const Header = () => {
               } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               <Link
-                className='block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+                className='block no-underline md:inline-block md:mt-0 md:ml-6'
                 to='/careers'
               >
                 Careers
@@ -216,6 +218,10 @@ const Header = () => {
       )}
     </header>
   );
+};
+
+Header.propTypes = {
+  isBackgroundWhite: PropType.bool,
 };
 
 export default Header;
