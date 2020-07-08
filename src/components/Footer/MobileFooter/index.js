@@ -27,7 +27,7 @@ const MobileFooter = ({ links }) => (
         </Link>
       </div>
 
-      <Link className="block text-gray-800 no-underline" to={"/"}>
+      <Link className="block text-gray-800 no-underline" to={"/terms_of_use"}>
         Terms of Use
       </Link>
     </div>

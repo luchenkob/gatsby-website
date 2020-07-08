@@ -73,7 +73,7 @@ function ELearningPage() {
               <h1 className="lg:w-916 lg:mt-168">
                 E-learning is growing. Grow with it.
               </h1>
-              <p className="lg:mt-10 lg:w-800">
+              <p className="mt-6 lg:mt-10 lg:w-800">
                 Custom E-Learning Solutions to address tomorrow’s challenges
               </p>
             </div>

@@ -60,7 +60,7 @@ function TravelPage() {
               <h1 className="lg:w-916 lg:mt-168">
                 Web & App-Based Travel and Hospitality Solutions
               </h1>
-              <p className="lg:mt-10 lg:w-800">
+              <p className="mt-6 lg:mt-10 lg:w-800">
                 for corporate travel and employee privileges
               </p>
             </div>

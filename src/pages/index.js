@@ -73,9 +73,12 @@ function IndexPage() {
       <section className="text-center">
         <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-140 lg:w-860">
-              <h1>Driven by technology, powered by expertise</h1>
-              <p className="lg:mt-10 lg:w-800">
+            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start 
+            lg:mt-0">
+              <h1 className="lg:w-860 lg:mt-140">
+                Driven by technology, powered by expertise
+              </h1>
+              <p className="mt-6 lg:mt-10 lg:w-800">
                 The most distinguished organizations recognize the edge of
                 technological evolution. As trusted leaders at the forefront of
                 technology progression, we help our customers stay competitive

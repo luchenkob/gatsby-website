@@ -1,13 +1,14 @@
-import { Link } from "gatsby";
-import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Link } from 'gatsby';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import PropType from 'prop-types';
 
-import DropDownMenu from "./DropDownMenu";
+import DropDownMenu from './DropDownMenu';
 
-import logoWhite from "../../images/menu/logo-white.png";
-import logoPurple from "../../images/menu/logo-purple.png";
+import logoWhite from '../../images/menu/logo-white.png';
+import logoPurple from '../../images/menu/logo-purple.png';
 
-const Header = () => {
+const Header = ({ isBackgroundWhite = false }) => {
   const [isExpanded, toggleExpansion] = useState(false);
   const [selected, setSelected] = useState(null);
   const links = {
@@ -25,7 +26,7 @@ const Header = () => {
         title: `E-commerce`,
       },
     ],
-    "about us": [
+    'about us': [
       {
         route: `/who_we_are`,
         title: `Who we are`,
@@ -42,65 +43,64 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-transparent">
+    <header className='bg-transparent'>
       <div>
         <Helmet>
-          <style>{`${isExpanded ? "body { overflow: hidden; }" : ""}`}</style>
+          <style>{`${isExpanded ? 'body { overflow: hidden; }' : ''}`}</style>
         </Helmet>
       </div>
 
-      <div className="relative flex flex-wrap items-center justify-between pt-2 pb-4 md:py-6 mx-auto border-b border-white border-opacity-25">
-        <Link to="/">
-          <span className="text-xl font-bold tracking-tight">
+      <div
+        className={`relative flex flex-wrap items-center justify-between py-4 lg:py-6 mx-auto border-b border-opacity-25 ${
+          isBackgroundWhite ? 'border-gray-600' : 'border-white'
+        }`}
+      >
+        <Link to='/'>
+          <span className='text-xl font-bold tracking-tight'>
             <img
-              className="h-6 lg:w-190 lg:h-12"
-              alt="Meliorism logo"
-              src={logoWhite}
+              className='h-6 lg:w-190 lg:h-12'
+              alt='Meliorism logo'
+              src={isBackgroundWhite ? logoPurple : logoWhite}
             />
           </span>
         </Link>
 
         <button
-          className="flex items-center text-white focus:outline-none md:hidden"
+          className={`flex items-center text-white focus:outline-none md:hidden ${isBackgroundWhite ? 'text-gray-600' : 'white'}`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="11"
-            viewBox="0 0 16 11"
+            className='fill-current'
+            xmlns='http://www.w3.org/2000/svg'
+            width='16'
+            height='11'
+            viewBox='0 0 16 11'
           >
-            <path
-              fill="#FFF"
-              d="M16 10v1H0v-1h16zm0-5v1H0V5h16zm0-5v1H0V0h16z"
-            />
+            <path d='M16 10v1H0v-1h16zm0-5v1H0V5h16zm0-5v1H0V0h16z' />
           </svg>
         </button>
 
-        <nav className="hidden relative z-30 md:block">
-          <ul className="flex space-x-16 justify-between">
+        <nav className='hidden relative z-30 md:block'>
+          <ul className='flex space-x-16 justify-between'>
             {Object.keys(links).map((item) => (
-              <li className=" relative" key={`${item}-desktop`}>
+              <li className=' relative' key={`${item}-desktop`}>
                 <button
                   className={`${
-                    selected && selected !== item ? "opacity-75" : "opacity-100"
+                    selected && selected !== item ? 'opacity-75' : 'opacity-100'
                   } capitalize focus:outline-none transition-opacity duration-300 ease-in-out`}
                   onMouseOver={() => setSelected(item)}
                 >
                   {item}
                   <svg
-                    className={`ml-2 inline-block transition-transform duration-300 ease-in-out transform ${
-                      selected === item ? "rotate-180" : ""
+                    className={`ml-2 inline-block transition-transform duration-300 ease-in-out transform fill-current ${
+                      selected === item ? 'rotate-180' : ''
                     }`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="5"
-                    viewBox="0 0 8 5"
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='8'
+                    height='5'
+                    viewBox='0 0 8 5'
                   >
-                    <path
-                      fill="#FFF"
-                      d="M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z"
-                    />
+                    <path d='M4.002 3.32L1.009.136C.927.048.817 0 .699 0 .582 0 .472.048.39.136L.128.415C.045.502 0 .619 0 .745c0 .124.045.24.128.328L3.69 4.864c.083.088.193.136.31.136.118 0 .229-.048.311-.136l3.56-3.787C7.955.989 8 .872 8 .747c0-.124-.045-.241-.128-.329L7.61.14c-.17-.181-.448-.181-.619 0l-2.99 3.18z' />
                   </svg>
                 </button>
                 {selected === item && (
@@ -111,16 +111,16 @@ const Header = () => {
                 )}
               </li>
             ))}
-            <li className="font-normal">
+            <li className='font-normal'>
               <Link
                 className={`${
-                  selected && selected !== "careers"
-                    ? "opacity-75"
-                    : "opacity-100"
+                  selected && selected !== 'careers'
+                    ? 'opacity-75'
+                    : 'opacity-100'
                 } capitalize focus:outline-none transition-opacity duration-300 ease-in-out`}
-                onMouseOver={() => setSelected("careers")}
+                onMouseOver={() => setSelected('careers')}
                 onClick={() => setSelected(null)}
-                to="/careers"
+                to='/careers'
               >
                 Careers
               </Link>
@@ -131,42 +131,42 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {isExpanded && (
-        <div className="fixed z-20 inset-0 bg-white w-screen h-full px-3 pt-3 md:px-8 text-left">
-          <div className="relative flex flex-wrap items-center justify-between max-w-6xl pt-2 pb-4 mx-auto w-11/12 border-b">
-            <Link to="/">
-              <span className="text-xl font-bold tracking-tight">
-                <img className="h-6" alt="Meliorism logo" src={logoPurple} />
+        <div className='fixed z-20 inset-0 bg-white w-screen h-full text-left px-10px'>
+          <div className='relative flex flex-wrap items-center justify-between py-4 mx-auto w-11/12 border-b'>
+            <Link to='/'>
+              <span className='text-xl font-bold tracking-tight'>
+                <img className='h-6' alt='Meliorism logo' src={logoPurple} />
               </span>
             </Link>
 
             <button
-              className="flex items-center text-white focus:outline-none md:hidden"
+              className='flex items-center text-white focus:outline-none md:hidden'
               onClick={() => toggleExpansion(!isExpanded)}
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
+                xmlns='http://www.w3.org/2000/svg'
+                width='12'
+                height='12'
+                viewBox='0 0 12 12'
               >
                 <path
-                  fill="#131414"
-                  d="M11.294 0L12 .706 6.705 6 12 11.294l-.706.706L6 6.705.706 12 0 11.294 5.294 6 0 .706.706 0 6 5.294 11.294 0z"
+                  fill='#131414'
+                  d='M11.294 0L12 .706 6.705 6 12 11.294l-.706.706L6 6.705.706 12 0 11.294 5.294 6 0 .706.706 0 6 5.294 11.294 0z'
                 />
               </svg>
             </button>
           </div>
-          <nav className="flex flex-col text-xs w-11/12 mx-auto max-w-6xl">
-            <div className="mt-6 uppercase text-menuGray">Products</div>
+          <nav className='flex flex-col text-xs w-11/12 mx-auto max-w-6xl'>
+            <div className='mt-6 uppercase text-menuGray'>Products</div>
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
               } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
-              {links["products"].map((link) => (
+              {links['products'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className="block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6"
+                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -175,16 +175,16 @@ const Header = () => {
               ))}
             </ul>
 
-            <div className="mt-6  uppercase text-menuGray">About us</div>
+            <div className='mt-6  uppercase text-menuGray'>About us</div>
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
               } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
-              {links["about us"].map((link) => (
+              {links['about us'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className="block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6"
+                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -199,8 +199,8 @@ const Header = () => {
               } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
             >
               <Link
-                className="block text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6"
-                to="/careers"
+                className='block no-underline md:inline-block md:mt-0 md:ml-6'
+                to='/careers'
               >
                 Careers
               </Link>
@@ -212,12 +212,16 @@ const Header = () => {
       {/* Overlay */}
       {selected && (
         <div
-          className="fixed z-10 inset-0 h-screen"
+          className='fixed z-10 inset-0 h-screen'
           onMouseOver={() => setSelected(null)}
         />
       )}
     </header>
   );
+};
+
+Header.propTypes = {
+  isBackgroundWhite: PropType.bool,
 };
 
 export default Header;
