@@ -52,11 +52,11 @@ const MobileFooter = ({ links }) => (
       <ul className="flex flex-col space-y-2">
         {[
           {
-            route: `/`,
+            route: `/privacy_policy`,
             title: `Privacy Policy`,
           },
           {
-            route: `/`,
+            route: `/gdpr_policy`,
             title: `GDPR Policy`,
           },
         ].map((link) => (
