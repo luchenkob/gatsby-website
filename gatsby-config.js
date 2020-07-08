@@ -1,6 +1,6 @@
 // const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
-const path = require('path')
+const path = require("path");
 // resolveConfig(tailwindConfig);
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
@@ -27,11 +27,11 @@ module.exports = {
         fonts: [
           {
             family: `Poppins`,
-            variants: [`300`, `400`, `600`]
+            variants: [`300`, `400`, `600`],
           },
           {
             family: `Open Sans`,
-            variants: [`400`, `600`, `700`]
+            variants: [`400`, `600`, `700`],
           },
         ],
       },

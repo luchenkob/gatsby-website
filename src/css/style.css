@@ -1,7 +1,7 @@
 /*! purgecss start ignore */
 @tailwind base;
 body {
-    @apply font-open-sans text-xs text-gray-700;
+  @apply font-open-sans text-xs text-gray-700;
 }
 
 h1,
@@ -21,22 +21,22 @@ h3 {
   @apply text-lg;
 }
 h4 {
-    @apply text-sm font-semibold leading-snug;
+  @apply text-sm font-semibold leading-snug;
 }
 h5 {
   @apply font-semibold;
 }
 .caption {
-    @apply text-xs font-bold;
+  @apply text-xs font-bold;
 }
 
 @screen md {
   .textBox {
-    height: 241px;      
+    height: 241px;
     width: 281px;
   }
   .imageBox {
-    height: 240px;      
+    height: 240px;
     width: 280px;
   }
 }
@@ -76,7 +76,7 @@ h5 {
 }
 
 footer a:hover {
-  color: white
+  color: white;
 }
 
 @tailwind components;
