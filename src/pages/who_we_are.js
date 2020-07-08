@@ -1,16 +1,16 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import Hero from '../components/Hero';
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import Hero from "../components/Hero";
 
-import image from '../images/who_we_are/png/image@3x.png';
+import image from "../images/who_we_are/png/image@3x.png";
 
-import SpecialImage from '../components/SpecialImage';
-import GraySection from '../components/GraySection';
+import SpecialImage from "../components/SpecialImage";
+import GraySection from "../components/GraySection";
 
-import BackgroundImage from 'gatsby-background-image';
+import BackgroundImage from "gatsby-background-image";
 
 function WhoWeArePage() {
   const { mobileImage, desktopImage } = useStaticQuery(graphql`
@@ -48,21 +48,21 @@ function WhoWeArePage() {
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title='Who We Are'
+        title="Who We Are"
       />
 
-      <section className='text-center'>
+      <section className="text-center">
         <BackgroundImage
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{
-            backgroundPosition: 'top',
+            backgroundPosition: "top",
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <h1 className='lg:mt-202 lg:w-545'>
+            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
+              <h1 className="lg:mt-202 lg:w-545">
                 Innovation
                 <br />
                 is in our DNA
@@ -71,42 +71,42 @@ function WhoWeArePage() {
           </Hero>
         </BackgroundImage>
 
-        <div className='lg:hidden  block'>
+        <div className="lg:hidden  block">
           <GraySection
-            text='Meliorism is a premier all-in-one technology solutions provider with
+            text="Meliorism is a premier all-in-one technology solutions provider with
           a focus on delivering world-class, custom technology platforms that
           cater to the travel, online learning, and e-commerce transportation
           industries. Our sole aim is to provide cost-effective technology
-          services.'
-            secondText='Our team has a relentless focus on delivering scalable and reliable
+          services."
+            secondText="Our team has a relentless focus on delivering scalable and reliable
           technology platforms, which can be the growth engine for aspiring
-          digital companies.'
+          digital companies."
           >
             <SpecialImage
               imgSrc={image}
-              imgAlt='Woman on her phone smiling sitting in a cafe'
-              bubbleSide='right'
+              imgAlt="Woman on her phone smiling sitting in a cafe"
+              bubbleSide="right"
             />
           </GraySection>
         </div>
 
-        <div className='hidden  lg:block lg:mt-270'>
+        <div className="hidden  lg:block lg:mt-270">
           <GraySection
-            text='Meliorism is a premier all-in-one technology solutions provider with
+            text="Meliorism is a premier all-in-one technology solutions provider with
           a focus on delivering world-class, custom technology platforms that
           cater to the travel, online learning, and e-commerce transportation
           industries. Our sole aim is to provide cost-effective technology
-          services.'
-            secondText='Our team has a relentless focus on delivering scalable and reliable
+          services."
+            secondText="Our team has a relentless focus on delivering scalable and reliable
           technology platforms, which can be the growth engine for aspiring
-          digital companies.'
+          digital companies."
             childOnRight={false}
-            widthOfText='580'
+            widthOfText="580"
           >
             <SpecialImage
               imgSrc={image}
-              imgAlt='Woman on her phone smiling sitting in a cafe'
-              bubbleSide='right'
+              imgAlt="Woman on her phone smiling sitting in a cafe"
+              bubbleSide="right"
             />
           </GraySection>
         </div>
