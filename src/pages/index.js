@@ -73,12 +73,12 @@ function IndexPage() {
       <section className="text-center">
         <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start 
-            lg:mt-0">
-              <h1 className="lg:w-860 lg:mt-140">
+            <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start 
+            xl:mt-0">
+              <h1 className="xl:w-860 xl:mt-140">
                 Driven by technology, powered by expertise
               </h1>
-              <p className="mt-6 lg:mt-10 lg:w-800">
+              <p className="mt-6 xl:mt-10 xl:w-800">
                 The most distinguished organizations recognize the edge of
                 technological evolution. As trusted leaders at the forefront of
                 technology progression, we help our customers stay competitive
@@ -87,17 +87,17 @@ function IndexPage() {
             </div>
           </Hero>
         </BackgroundImage>
-        <section className="mt-6 mx-auto w-11/12 md:w-screen">
-          <div className="lg:w-1522 lg:mx-auto flex lg:justify-center">
+        <section className="mt-6 mx-auto w-11/12 xl:w-screen">
+          <div className="xl:w-1522 xl:mx-auto flex xl:justify-center">
             <AsSeenOn />
           </div>
 
-          <p className="big mt-12 font-light text-sm md:text-3-5xl text-center lg:mt-165 lg:px-56 lg:w-1522 mx-auto">
+          <p className="big mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 mx-auto">
             Helping you build a thriving digital business, both in what you do
             and how you do it through innovative solutions designed for:
           </p>
 
-          <div className="md:hidden mx-auto w-11/12 mt-8 grid grid-flow-col grid-rows-4 grid-cols-2">
+          <div className="xl:hidden mx-auto max-w-xs xl:max-w-none mt-8 grid grid-flow-col-dense grid-rows-4 grid-cols-2 gap-0">
             <TextBox
               text="E-learning"
               imgSrc={iconGraduate}
@@ -117,7 +117,7 @@ function IndexPage() {
             <TextBox text="Travel" imgSrc={iconTravel} hasTopBorder={false} />
           </div>
 
-          <div className="hidden md:flex flex-wrap mx-auto mt-18 w-843 mb-270">
+          <div className="hidden xl:flex flex-wrap mx-auto mt-18 w-843 mb-270">
             <TextBox
               text="E-learning"
               imgSrc={iconGraduate}
@@ -155,15 +155,15 @@ function IndexPage() {
           />
         </GraySection>
 
-        <section className="mx-auto w-11/12 mt-12 lg:mt-40">
+        <section className="mx-auto w-11/12 mt-12 xl:mt-40">
           <h2 className="capitalize">Brands we work with</h2>
-          <p className="mt-6 mx-auto lg:mt-10 lg:w-800">
+          <p className="mt-6 mx-auto xl:mt-10 xl:w-800">
             World-leading technology partners. We know that to deliver
             outstanding business outcomes for our clients, we need to work with
             the most reliable in the industry.
           </p>
 
-          <div className="md:hidden mt-7-5 flex flex-wrap items-center justify-center space-y-5">
+          <div className="xl:hidden mt-7-5 flex flex-wrap items-center justify-center space-y-5 max-w-md mx-auto">
             <div className="flex items-center justify-center space-x-4">
               <img alt="Brand logo" src={brand1Mobile} />
               <img alt="Brand logo" src={brand2Mobile} />
@@ -176,12 +176,12 @@ function IndexPage() {
             </div>
           </div>
 
-          <div className="hidden lg:flex mt-22 flex-row items-center space-x-18 justify-center w-1260 mx-auto">
+          <div className="hidden xl:flex mt-22 flex-row items-center space-x-18 justify-center w-1260 mx-auto">
             {[brand1, brand2, brand3, brand4, brand5, brand6].map(
               (logo, index) => (
                 <img
                   key={index}
-                  className="hidden md:block"
+                  className="hidden xl:block"
                   src={logo}
                   alt="Brand logo"
                 />

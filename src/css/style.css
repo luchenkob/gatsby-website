@@ -30,7 +30,7 @@ h5 {
   @apply text-xs font-bold;
 }
 
-@screen md {
+@screen xl {
   .textBox {
     height: 241px;
     width: 281px;
@@ -39,9 +39,6 @@ h5 {
     height: 240px;
     width: 280px;
   }
-}
-
-@screen lg {
   body {
     font-size: 18px;
     line-height: 28px;

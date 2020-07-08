@@ -66,12 +66,12 @@ function TeamAndValuesPage() {
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
-              <h1 className="lg:w-960 lg:mt-90">
+            <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0">
+              <h1 className="xl:w-960 xl:mt-90">
                 Leaders, Innovators, Creators, and Storytellers. All Under One
                 Roof.
               </h1>
-              <p className="mt-6 lg:mt-10 lg:w-800">
+              <p className="mt-6 xl:mt-10 xl:w-800">
                 We&apos;re a team of creators, innovators, and storytellers,
                 based in the city of the future, Dubai, UAE. We come from all
                 different backgrounds and have a wide variety of interests but
@@ -92,15 +92,15 @@ function TeamAndValuesPage() {
           <SpecialImage imgSrc={image} imgAlt="Women looking at phone" />
         </GraySection>
 
-        <section className="mt-16 mx-auto w-11/12 tracking-tight md:mt-90">
-          <div className="lg:w-1522 lg:mx-auto flex lg:justify-center">
+        <section className="mt-16 mx-auto w-11/12 tracking-tight xl:mt-90">
+          <div className="xl:w-1522 xl:mx-auto flex xl:justify-center">
             <AsSeenOn />
           </div>
         </section>
 
-        <section className="mt-12 mx-auto w-11/12 tracking-tight md:mt-165">
+        <section className="mt-12 mx-auto w-11/12 tracking-tight xl:mt-165">
           <h2>Our Values</h2>
-          <div className="flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0 lg:mt-20">
+          <div className="flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:max-w-4xl xl:w-1260 xl:divide-x xl:divide-y-0 xl:mt-20 xl:max-w-none">
             <ValueBox
               heading="Innovation is our constant"
               text="Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill."

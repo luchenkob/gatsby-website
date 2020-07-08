@@ -76,7 +76,7 @@ function ContactUsPage() {
         </section>
 
         <section className="mt-12 mx-auto w-11/12 lg:mt-20">
-          <div className="mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0">
+          <div className="mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 w-11/12 max-w-4xl mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0 xl:max-w-none">
             <ContactBox
               heading="General Questions"
               text="Have a general question for us?"

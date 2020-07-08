@@ -3,7 +3,7 @@ import PropType from "prop-types";
 import { Link } from "gatsby";
 
 const MobileFooter = ({ links }) => (
-  <nav className="mx-auto w-11/12 grid grid-cols-2 gap-12 md:w-4/5 max-w-6xl">
+  <nav className="mx-auto w-11/12 grid grid-cols-2 gap-12 xl:w-4/5">
     <div className="flex flex-col space-y-4">
       <div>
         <div className="caption uppercase text-gray-400">Products</div>

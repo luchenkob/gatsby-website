@@ -89,7 +89,7 @@ function ELearningPage() {
         </section>
 
         <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52">
-          <div className="mt-10 mx-auto w-11/12 lg:w-580 lg:mt-auto lg:mb-40 lg:mr-183">
+          <div className="mt-10 mx-auto w-11/12 max-w-sm lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none">
             <p>
               Our team of experts have hands-on experience in delivering
               different <strong>e-learning solutions that maximize.</strong>
@@ -103,7 +103,7 @@ function ELearningPage() {
               ))}
             </ul>
           </div>
-          <div className="mt-6 md:w-1/2 md:-mt-110">
+          <div className="mt-6 lg:w-1/2 lg:-mt-110">
             <SpecialImage imgSrc={image} imgAlt="Woman working on the laptop" />
           </div>
         </section>

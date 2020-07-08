@@ -36,14 +36,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-16 md:mt-40 py-8 md:py-16 bg-gray-600 text-gray-300">
-      <div className="lg:hidden">
+    <footer className="mt-16 xl:mt-40 py-8 xl:py-16 bg-gray-600 text-gray-300">
+      <div className="xl:hidden">
         <MobileFooter links={links} />
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden xl:block">
         <DesktopFooter links={links} />
       </div>
-      <ul className="mx-auto w-11/12 md:w-4/5 mt-6 flex justify-start  space-x-4 lg:space-x-6 lg:mt-10 col-span-2 lg:w-1260">
+      <ul className="mx-auto w-11/12 mt-6 flex justify-start  space-x-4 xl:space-x-6 xl:mt-10 col-span-2 xl:w-1260">
         <li>
           <a
             className="h-10 w-10 rounded-full bg-gray-500 text-white flex items-center justify-center transition-colors hover:bg-white hover:text-gray-500"

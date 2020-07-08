@@ -61,8 +61,8 @@ function WhoWeArePage() {
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
-              <h1 className="lg:mt-202 lg:w-545">
+            <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0">
+              <h1 className="xl:mt-202 xl:w-545">
                 Innovation
                 <br />
                 is in our DNA
@@ -71,7 +71,7 @@ function WhoWeArePage() {
           </Hero>
         </BackgroundImage>
 
-        <div className="lg:hidden  block">
+        <div className="xl:hidden  block">
           <GraySection
             text="Meliorism is a premier all-in-one technology solutions provider with
           a focus on delivering world-class, custom technology platforms that
@@ -90,7 +90,7 @@ function WhoWeArePage() {
           </GraySection>
         </div>
 
-        <div className="hidden  lg:block lg:mt-270">
+        <div className="hidden xl:block xl:mt-270">
           <GraySection
             text="Meliorism is a premier all-in-one technology solutions provider with
           a focus on delivering world-class, custom technology platforms that
