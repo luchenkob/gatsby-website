@@ -11,7 +11,7 @@ const GraySection = ({
 }) => (
   <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52">
     {!childOnRight && (
-      <div className="mt-6 lg:w-1/2 lg:mt-100 xl:-mt-110">{children}</div>
+      <div className="mt-6 lg:w-1/2 lg:-mt-6 xl:-mt-110">{children}</div>
     )}
     <div
       className={`${

@@ -1,5 +1,6 @@
 import React from "react";
 import PropType from "prop-types";
+import Img from 'gatsby-image'
 
 const SpecialImage = ({
   imgSrc,
@@ -10,7 +11,7 @@ const SpecialImage = ({
   bubbleHigh = false,
 }) => (
   <div className="relative">
-    <img className="block w-screen lg:h-full" src={imgSrc} alt={imgAlt} />
+    <Img className="block w-screen lg:h-full" fluid={imgSrc} alt={imgAlt} />
     <div
       className={`lg:hidden absolute z-10 -mt-4 bg-purple h-8 w-8 rounded-full ${
         bubbleRight ? "right-0 mr-8" : "left-0 ml-8"

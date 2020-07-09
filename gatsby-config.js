@@ -1,7 +1,9 @@
-// const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
 const path = require("path");
-// resolveConfig(tailwindConfig);
+require('dotenv').config({
+  path: `.env`,
+})
+const tailwindConfig = require("./tailwind.config.js");
+
 
 module.exports = {
   siteMetadata: {
@@ -35,6 +37,20 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: '@prismicio/gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'bemeliorismwebsite', // required
+        defaultLang: 'en-us', // optional, but recommended
+        accessToken: `${process.env.API_KEY}`, // optional
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        sharpKeys: [
+          /image|photo|picture|background/, // (default)
+          'profilepic',
+        ],
+      }
     },
     // {
     //   resolve: `gatsby-plugin-manifest`,
