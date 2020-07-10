@@ -94,10 +94,7 @@ function TravelPage() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `react`,]}
-        title='Travel'
-      />
+      <SEO keywords={[`gatsby`, `react`]} title='Travel' />
 
       <section className='text-center'>
         <BackgroundImage
@@ -136,7 +133,7 @@ function TravelPage() {
           </div>
           <div className='lg:w-1/2'>
             <Img
-              className='block mt-6 w-screen lg:full lg:h-full'
+              className='block mt-6 w-screen lg:w-full lg:h-full'
               fluid={section2.fluidImage}
               alt={section2.imageAlt}
             />
@@ -149,14 +146,14 @@ function TravelPage() {
             <div className='mt-4 space-y-4'>
               {RichText.render(section3.text)}
             </div>
-            <div className='mt-6 lg:w-1/2 lg:mt-0'>
-              <SpecialImage
-                imgSrc={section3.fluidImage}
-                imgAlt={section3.imageAlt}
-                bubbleSide='right'
-                bubbleSize='64px'
-              />
-            </div>
+          </div>
+          <div className='mt-6 lg:w-1/2 lg:mt-0'>
+            <SpecialImage
+              imgSrc={section3.fluidImage}
+              imgAlt={section3.imageAlt}
+              bubbleSide='right'
+              bubbleSize='64px'
+            />
           </div>
         </section>
       </section>
