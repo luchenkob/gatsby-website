@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import {RichText} from 'prismic-reactjs'
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -18,33 +19,68 @@ import iconSearch from "../images/team_and_values/svg/icon-search.svg";
 import BackgroundImage from "gatsby-background-image";
 
 function TeamAndValuesPage() {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { prismic } = useStaticQuery(graphql`
     query {
-      mobileImage: file(
-        relativePath: { eq: "team_and_values/png/image-main@3x.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+      prismic {
+        team_and_values_page(lang: "en-us", uid: "team-and-values-page") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
-        }
-      }
-      desktopImage: file(
-        relativePath: { eq: "team_and_values/png/image-main.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_text
+          section_1_image
+          section_1_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_2_heading
+          values {
+            value_heading
+            value_text
           }
         }
       }
     }
   `);
+  const document = prismic.team_and_values_page;
+
+  const { hero, section1, section2 } = {
+    hero: {
+      heading: document.heading,
+      text: document.text,
+    },
+    section1: {
+      text: document.section_1_text,
+      fluidImage: document.section_1_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_1_image.alt,
+    },
+    section2: {
+      heading: document.section_2_heading,
+      values: document.values
+    },
+  };
 
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
-      ...desktopImage.childImageSharp.fluid,
+      ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ];
@@ -68,28 +104,20 @@ function TeamAndValuesPage() {
           <Hero>
             <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0">
               <h1 className="xl:w-960 xl:mt-90">
-                Leaders, Innovators, Creators, and Storytellers. All Under One
-                Roof.
+                {RichText.asText(hero.heading)}
               </h1>
               <p className="mt-6 xl:mt-10 xl:w-800">
-                We&apos;re a team of creators, innovators, and storytellers,
-                based in the city of the future, Dubai, UAE. We come from all
-                different backgrounds and have a wide variety of interests but
-                are all driven by our love for technology.
+                {RichText.asText(hero.text)}
               </p>
             </div>
           </Hero>
         </BackgroundImage>
 
         <GraySection
-          text="Today, we have over 150 dedicated, passionate, and professional
-            people employed in our numerous offices across Dubai and beyond. Our
-            dynamic in-house team is composed of departments that drive
-            exceptional experiences for our customers--from Marketing to Tech,
-            Finance, Legal, and Support."
+          text={section1.text}
           widthOfText="580"
         >
-          <SpecialImage imgSrc={image} imgAlt="Women looking at phone" />
+          <SpecialImage imgSrc={section1.fluidImage} imgAlt={section1.imageAlt} />
         </GraySection>
 
         <section className="mt-16 mx-auto w-11/12 tracking-tight xl:mt-90">
@@ -99,21 +127,21 @@ function TeamAndValuesPage() {
         </section>
 
         <section className="mt-12 mx-auto w-11/12 tracking-tight xl:mt-165">
-          <h2>Our Values</h2>
+        <h2>{RichText.asText(section2.heading)}</h2>
           <div className="flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:max-w-4xl xl:w-1260 xl:divide-x xl:divide-y-0 xl:mt-20 xl:max-w-none">
             <ValueBox
-              heading="Innovation is our constant"
-              text="Doing things better is a challenge, and demands constant evaluation and experimentation. We don’t standstill."
+              heading={section2.values[0].value_heading}
+              text={section2.values[0].value_text}
               svgUrl={iconInnovation}
             />
             <ValueBox
-              heading="People are our engine"
-              text="Technological innovation is driven by people. We each take pride in what we deliver and we are inspired by the contributions of others."
+              heading={section2.values[1].value_heading}
+              text={section2.values[1].value_text}
               svgUrl={iconPeople}
             />
             <ValueBox
-              heading="Insight is out guide"
-              text="Understanding the needs of others is critical to doing great work. We make an impact when we invest in knowing our clients and our team.."
+              heading={section2.values[2].value_heading}
+              text={section2.values[2].value_text}
               svgUrl={iconSearch}
             />
           </div>
