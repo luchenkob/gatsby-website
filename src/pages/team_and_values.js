@@ -10,9 +10,9 @@ import ValueBox from "../components/ValueBox";
 import SpecialImage from "../components/SpecialImage";
 import GraySection from "../components/GraySection";
 
-import iconInnovation from "../images/team_and_values/svg/icon-innovation.svg";
-import iconPeople from "../images/team_and_values/svg/icon-people.svg";
-import iconSearch from "../images/team_and_values/svg/icon-search.svg";
+import iconInnovation from "../images/team_and_values/icon-innovation.svg";
+import iconPeople from "../images/team_and_values/icon-people.svg";
+import iconSearch from "../images/team_and_values/icon-search.svg";
 
 import BackgroundImage from "gatsby-background-image";
 

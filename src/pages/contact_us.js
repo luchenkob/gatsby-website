@@ -7,9 +7,9 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import ContactBox from '../components/ContactUs/ContactBox';
 
-import iconQuestion from '../images/contact_us/svg/icon-questions.svg';
-import iconSales from '../images/contact_us/svg/icon-sales.svg';
-import iconMedia from '../images/contact_us/svg/icon-media.svg';
+import iconQuestion from '../images/contact_us/icon-questions.svg';
+import iconSales from '../images/contact_us/icon-sales.svg';
+import iconMedia from '../images/contact_us/icon-media.svg';
 
 import BackgroundImage from 'gatsby-background-image';
 
