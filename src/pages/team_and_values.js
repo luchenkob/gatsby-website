@@ -86,7 +86,7 @@ function TeamAndValuesPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`gatsby`, `react`,]}
         title="Team and Values"
       />
 

@@ -72,7 +72,7 @@ function WhoWeArePage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`gatsby`, `react`,]}
         title='Who We Are'
       />
 

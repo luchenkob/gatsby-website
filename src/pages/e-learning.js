@@ -100,7 +100,7 @@ function ELearningPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`gatsby`, `react`,]}
         title='E-learning'
       />
 
