@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import {RichText} from 'prismic-reactjs'
+import { RichText } from 'prismic-reactjs';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -63,7 +63,7 @@ function IndexPage() {
                 section_1_text
                 section_2_heading
                 section_2_text
-                section_2_image 
+                section_2_image
                 section_2_imageSharp {
                   childImageSharp {
                     fluid(quality: 100) {
@@ -82,7 +82,7 @@ function IndexPage() {
   `);
   const document = prismic._allDocuments.edges[0].node;
 
-  const pageContent = {
+  const { hero, section1, section2, section3 } = {
     hero: {
       heading: document.heading,
       text: document.text,
@@ -93,7 +93,8 @@ function IndexPage() {
     section2: {
       heading: document.section_2_heading,
       text: document.section_2_text,
-      fluidImage: document.section_2_imageSharp.childImageSharp.fluid
+      fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_2_image.alt
     },
     section3: {
       heading: document.section_3_heading,
@@ -102,7 +103,7 @@ function IndexPage() {
   };
 
   const sources = [
-   document.background_mobileSharp.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
       ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
@@ -123,8 +124,12 @@ function IndexPage() {
               className='-mt-12 flex flex-col justify-center h-full xl:justify-start 
             xl:mt-0'
             >
-              <h1 className='xl:w-860 xl:mt-140'>{RichText.asText(pageContent.hero.heading)}</h1>
-              <p className='mt-6 xl:mt-10 xl:w-800'>{RichText.asText(pageContent.hero.text)}</p>
+              <div className='xl:w-860 xl:mt-140'>
+                {RichText.render(hero.heading)}
+              </div>
+              <p className='mt-6 xl:mt-10 xl:w-800'>
+                {RichText.asText(hero.text)}
+              </p>
             </div>
           </Hero>
         </BackgroundImage>
@@ -134,7 +139,7 @@ function IndexPage() {
           </div>
 
           <p className='big mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 mx-auto'>
-            {RichText.asText(pageContent.section1.text)}
+            {RichText.asText(section1.text)}
           </p>
 
           <div className='xl:hidden mx-auto max-w-xs xl:max-w-none mt-8 grid grid-flow-col-dense grid-rows-4 grid-cols-2 gap-0'>
@@ -181,20 +186,20 @@ function IndexPage() {
         </section>
 
         <GraySection
-          heading={pageContent.section2.heading}
-          text={pageContent.section2.text}
+          heading={section2.heading}
+          text={section2.text}
           widthOfText='580'
         >
           <SpecialImage
-            imgSrc={pageContent.section2.fluidImage}
-            imgAlt='Man with laptop smiling while sitting on armchair'
+            imgSrc={section2.fluidImage}
+            imgAlt={section2.imageAlt}
           />
         </GraySection>
 
         <section className='mx-auto w-11/12 mt-12 xl:mt-40'>
-          <h2 className='capitalize'>{RichText.asText(pageContent.section3.heading)}</h2>
+          <h2 className='capitalize'>{RichText.asText(section3.heading)}</h2>
           <p className='mt-6 mx-auto xl:mt-10 xl:w-800'>
-            {RichText.asText(pageContent.section3.text)}
+            {RichText.asText(section3.text)}
           </p>
 
           <div className='xl:hidden mt-7-5 flex flex-wrap items-center justify-center space-y-5 max-w-md mx-auto'>

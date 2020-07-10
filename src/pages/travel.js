@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -110,9 +110,9 @@ function TravelPage() {
         >
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <h1 className='lg:w-916 lg:mt-168'>
-                {RichText.asText(hero.heading)}
-              </h1>
+              <div className='lg:w-916 lg:mt-168'>
+                {RichText.render(hero.heading)}
+              </div>
               <p className='mt-6 lg:mt-10 lg:w-800'>
                 {RichText.asText(hero.text)}
               </p>
@@ -121,11 +121,7 @@ function TravelPage() {
         </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-1260'>
-          <h2>
-            {section1.heading[0].text}
-            <br />
-            {section1.heading[1].text}
-          </h2>
+          {RichText.render(section1.heading)}
           <p className='mt-6  mx-auto lg:mt-10'>
             {RichText.asText(section1.text)}
           </p>
@@ -134,7 +130,9 @@ function TravelPage() {
         <section className='mx-auto  mt-10 text-left flex flex-col lg:flex-row lg:mt-104 lg:w-1260 lg:h-400'>
           <div className='mx-auto mt-2 text-left w-11/12 lg:w-1/2 lg:self-center lg:mr-100'>
             <h5>{RichText.asText(section2.heading)}</h5>
-            <p className='mt-4'>{RichText.asText(section2.text)}</p>
+            <div className='mt-4 space-y-4'>
+              {RichText.render(section2.text)}
+            </div>
           </div>
           <div className='lg:w-1/2'>
             <Img
@@ -148,15 +146,17 @@ function TravelPage() {
         <section className='mt-12 text-left mx-auto lg:flex lg:flex-row-reverse lg:mt-104 lg:w-1260 lg:h-400'>
           <div className='mt-10 mx-auto w-11/12 lg:w-1/2 lg:self-center lg:ml-100'>
             <h5>{RichText.asText(section3.heading)}</h5>
-            <p className='mt-4'>{RichText.asText(section3.text)}</p>
-          </div>
-          <div className='mt-6 lg:w-1/2 lg:mt-0'>
-            <SpecialImage
-              imgSrc={section3.fluidImage}
-              imgAlt={section3.imageAlt}
-              bubbleSide='right'
-              bubbleSize='64px'
-            />
+            <div className='mt-4 space-y-4'>
+              {RichText.render(section3.text)}
+            </div>
+            <div className='mt-6 lg:w-1/2 lg:mt-0'>
+              <SpecialImage
+                imgSrc={section3.fluidImage}
+                imgAlt={section3.imageAlt}
+                bubbleSide='right'
+                bubbleSize='64px'
+              />
+            </div>
           </div>
         </section>
       </section>

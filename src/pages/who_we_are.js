@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -86,17 +87,15 @@ function WhoWeArePage() {
         >
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0'>
-              <h1 className='xl:mt-202 xl:w-545'>
-                {hero.heading[0].text}
-                <br />
-                {hero.heading[1].text}
-              </h1>
+              <div className='xl:mt-202 xl:w-545'>
+                {RichText.render(hero.heading)}
+              </div>
             </div>
           </Hero>
         </BackgroundImage>
 
         <div className='xl:hidden  block'>
-          <GraySection text={section1.text} >
+          <GraySection text={section1.text}>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}
@@ -106,7 +105,7 @@ function WhoWeArePage() {
         </div>
 
         <div className='hidden xl:block xl:mt-270'>
-          <GraySection text={section1.text} >
+          <GraySection text={section1.text}>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}

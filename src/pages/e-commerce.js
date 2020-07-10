@@ -95,24 +95,20 @@ function ECommercePage() {
         >
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <h1 className=' lg:w-860 lg:mt-152'>
-                {hero.heading[0].text}
-                <br />
-                {hero.heading[1].text}
-                <br />
-                {hero.heading[2].text}
-              </h1>
+              <div className=' lg:w-860 lg:mt-152'>
+                {RichText.render(hero.heading)}
+              </div>
             </div>
           </Hero>
         </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
-          <p>{RichText.asText(section1.text)}</p>
+          {RichText.render(section1.text)}
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
           <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
-            <p>{RichText.asText(section2.text)}</p>
+            {RichText.render(section2.text)}
             <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>

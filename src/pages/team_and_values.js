@@ -10,8 +10,6 @@ import ValueBox from "../components/ValueBox";
 import SpecialImage from "../components/SpecialImage";
 import GraySection from "../components/GraySection";
 
-import image from "../images/team_and_values/png/image@3x.png";
-
 import iconInnovation from "../images/team_and_values/svg/icon-innovation.svg";
 import iconPeople from "../images/team_and_values/svg/icon-people.svg";
 import iconSearch from "../images/team_and_values/svg/icon-search.svg";
@@ -103,9 +101,9 @@ function TeamAndValuesPage() {
         >
           <Hero>
             <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0">
-              <h1 className="xl:w-960 xl:mt-90">
-                {RichText.asText(hero.heading)}
-              </h1>
+              <div className="xl:w-960 xl:mt-90">
+                {RichText.render(hero.heading)}
+              </div>
               <p className="mt-6 xl:mt-10 xl:w-800">
                 {RichText.asText(hero.text)}
               </p>

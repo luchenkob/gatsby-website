@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -65,10 +65,10 @@ function ELearningPage() {
   if (!prismic) return null;
   const document = prismic.eLearning_page;
 
-  const pageContent = {
+  const { hero, section1, section2, section3 } = {
     hero: {
       heading: document.heading,
-      text: document.text
+      text: document.text,
     },
     section1: {
       text: document.section_1_text,
@@ -76,14 +76,14 @@ function ELearningPage() {
     section2: {
       text: document.section_2_text,
       fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
-      imageAlt: document.section_2_image.alt
+      imageAlt: document.section_2_image.alt,
     },
     section3: {
       heading: document.section_3_heading,
       subheading: document.section_3_subheading,
       text: document.section_3_text,
       fluidImage: document.section_3_imageSharp.childImageSharp.fluid,
-      imageAlt: document.section_3_image.alt
+      imageAlt: document.section_3_image.alt,
     },
   };
 
@@ -115,21 +115,23 @@ function ELearningPage() {
         >
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <h1 className='lg:w-916 lg:mt-168'>{RichText.asText(pageContent.hero.heading)}</h1>
+              <div className='lg:w-916 lg:mt-168'>
+                {RichText.render(hero.heading)}
+              </div>
               <p className='mt-6 lg:mt-10 lg:w-800'>
-                {RichText.asText(pageContent.hero.text)}
+                {RichText.asText(hero.text)}
               </p>
             </div>
           </Hero>
         </BackgroundImage>
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916 lg:mb-270'>
-          <p>{RichText.asText(pageContent.section1.text)}</p>
+          <p>{RichText.asText(section1.text)}</p>
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
           <div className='mt-10 mx-auto w-11/12 max-w-sm lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none'>
-            {RichText.render(pageContent.section2.text)}
+            {RichText.render(section2.text)}
             <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
@@ -141,27 +143,25 @@ function ELearningPage() {
           </div>
           <div className='mt-6 lg:w-1/2 lg:-mt-110'>
             <SpecialImage
-              imgSrc={pageContent.section2.fluidImage}
-              imgAlt={pageContent.section2.imageAlt}
+              imgSrc={section2.fluidImage}
+              imgAlt={section2.imageAlt}
             />
           </div>
         </section>
 
         <h3 className='mt-16 w-11/12 mx-auto lg:mt-40'>
-          {RichText.asText(pageContent.section3.heading)}
+          {RichText.asText(section3.heading)}
         </h3>
 
         <section className='mt-10 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400'>
           <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 lg:mr-auto'>
-            <h5>{RichText.asText(pageContent.section3.subheading)}</h5>
-            <div className='mt-4'>
-              {RichText.render(pageContent.section3.text)}
-            </div>
+            <h5>{RichText.asText(section3.subheading)}</h5>
+            <div className='mt-4'>{RichText.render(section3.text)}</div>
           </div>
           <div className='lg:w-1/2'>
             <Img
               className='block mt-6 w-screen lg:h-full lg:w-full object-center object-contain'
-              fluid={pageContent.section3.fluidImage}
+              fluid={section3.fluidImage}
               alt='People having a meeting'
             />
           </div>

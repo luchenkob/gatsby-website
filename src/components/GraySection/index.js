@@ -19,16 +19,8 @@ const GraySection = ({
       } pt-10 mx-auto w-11/12 lg:max-w-md lg:self-center xl:pt-40 xl:mt-0 xl:max-w-none`}
     >
       {heading && <h2 className='inline-block'>{RichText.asText(heading)}</h2>}
-      {/* If there are two paragraphs in text, add a <br /> in between */}
-      {text && text.length === 1 ? (
-        <p className='mt-3 xl:mt-0'>{RichText.asText(text)}</p>
-      ) : (
-        <p className='mt-3 xl:mt-0'>{text[0].text}</p>
-      )}
-      {text.length > 1 && (
-        <>
-          <br /> <p>{text[1].text}</p>
-        </>
+      {text && (
+        <div className='mt-3 xl:mt-0 space-y-4'>{RichText.render(text)}</div>
       )}
     </div>
 
@@ -40,10 +32,7 @@ const GraySection = ({
 
 GraySection.propTypes = {
   heading: PropTypes.string,
-  text: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object
-  ]),
+  text: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   secondText: PropTypes.string,
   children: PropTypes.node,
   childOnRight: PropTypes.bool,

@@ -1,40 +1,79 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Hero from "../components/Hero";
-import Button from "../components/Button";
-import SpecialImage from "../components/SpecialImage";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import Button from '../components/Button';
+import SpecialImage from '../components/SpecialImage';
 
-import image from "../images/careers/png/image@3x.png";
-
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from 'gatsby-background-image';
 
 function CareersPage() {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { prismic } = useStaticQuery(graphql`
     query {
-      mobileImage: file(relativePath: { eq: "careers/png/image-main@3x.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+      prismic {
+        careers_page(lang: "en-us", uid: "careers-page") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
-        }
-      }
-      desktopImage: file(relativePath: { eq: "careers/png/image-main.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_heading
+          section_1_text
+          section_2_heading
+          section_2_text
+          section_2_email
+          section_2_image
+          section_2_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `);
+  const document = prismic.careers_page;
+
+  const { hero, section1, section2 } = {
+    hero: {
+      heading: document.heading,
+      text: document.text,
+    },
+    section1: {
+      heading: document.section_1_heading,
+      text: document.section_1_text,
+    },
+    section2: {
+      heading: document.section_2_heading,
+      text: document.section_2_text,
+      email: document.section_2_email,
+      fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_2_image.alt,
+    },
+  };
 
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
-      ...desktopImage.childImageSharp.fluid,
+      ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ];
@@ -43,58 +82,52 @@ function CareersPage() {
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Careers"
+        title='Careers'
       />
 
-      <section className="text-center">
+      <section className='text-center'>
         <BackgroundImage
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{
-            backgroundPosition: "top",
+            backgroundPosition: 'top',
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
-              <h1 className="lg:mt-202 lg:w-734">
-                Grow professionally and personally
-              </h1>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <div className='lg:mt-202 lg:w-734'>
+                {RichText.render(hero.heading)}
+              </div>
             </div>
           </Hero>
         </BackgroundImage>
 
-        <section className="mt-12 mx-auto w-11/12 lg:mt-40">
-          <h2>Life at Meliorism</h2>
-          <p className="mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960">
-            Our benefits go beyond flexible schedules and unmatched
-            compensation. We invest in people so they can live their best lives
-            at work and home. At Meliorism, you&apos;re part of a smart,
-            motivated team of people who spend their days mastering digital
-            technology—and having a good time doing it. With competitive
-            benefits, an open culture, great office location, and passionate
-            coworkers, work just doesn&apos;t feel like work.
-          </p>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
+          {RichText.render(section1.heading)}
+          <div className='mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960'>
+{RichText.render(section1.text)}
+          </div>
         </section>
 
-        <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse">
-          <div className="pt-10 px-10px lg:self-center lg:mt-0 lg:w-1/2 lg:pl-168">
-            <h2 className="inline-block">Talent Pool</h2>
-            <p className="lg:mt-4">
-              Get in touch with our Talent Acquisition team.
-            </p>
-            <div className="mt-4 lg:mt-8">
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+          <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-1/2 lg:pl-168'>
+            {RichText.render(section2.heading)}
+            <div className='lg:mt-4'>
+              {RichText.render(section2.text)}
+            </div>
+            <div className='mt-4 lg:mt-8'>
               <Button
-                text="Check job openings"
-                toMail="careers@bemeliorism.com"
+                text='Check job openings'
+                toMail={section2.email}
               />
             </div>
           </div>
-          <div className="mt-6 lg:w-1/2 lg:-mt-110">
+          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
             <SpecialImage
-              imgSrc={image}
-              imgAlt="Group of professionals smiling"
-              bubbleSide="right"
+              imgSrc={section2.fluidImage}
+              imgAlt={section2.imageAlt}
+              bubbleSide='right'
             />
           </div>
         </section>
