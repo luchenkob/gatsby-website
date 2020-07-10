@@ -67,7 +67,7 @@ module.exports = {
         background_color: tailwindConfig.theme.colors.white,
         theme_color: tailwindConfig.theme.colors.purple,
         display: `minimal-ui`,
-        icon: `src/images/menu/logo-purple.png`,
+        icon: `src/images/menu/favicon.png`,
       },
     },
     {
