@@ -50,6 +50,12 @@ module.exports = {
           /image|photo|picture|background/, // (default)
           'profilepic',
         ],
+        pages: [{
+          type: 'Policy',
+          match: '/policy/:uid',
+          previewPath: '/policy',
+          component: require.resolve('./src/templates/policy.js'),
+        }],
       }
     },
     // {

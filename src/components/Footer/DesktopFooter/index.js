@@ -47,15 +47,15 @@ const DesktopFooter = ({ links }) => (
       <ul className="flex flex-col space-y-2">
         {[
           {
-            route: `/terms_of_use`,
+            route: `/policy/terms-of-use`,
             title: `Terms of Use`,
           },
           {
-            route: `/privacy_policy`,
+            route: `/policy/privacy-policy`,
             title: `Privacy Policy`,
           },
           {
-            route: `/gdpr_policy`,
+            route: `/policy/gdpr-policy`,
             title: `GDPR Policy`,
           },
         ].map((link) => (

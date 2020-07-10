@@ -27,7 +27,7 @@ const MobileFooter = ({ links }) => (
         </Link>
       </div>
 
-      <Link className="block text-gray-800 no-underline" to={"/terms_of_use"}>
+      <Link className="block text-gray-800 no-underline" to={"/policy/terms-of-use"}>
         Terms of Use
       </Link>
     </div>
@@ -52,11 +52,11 @@ const MobileFooter = ({ links }) => (
       <ul className="flex flex-col space-y-2">
         {[
           {
-            route: `/privacy_policy`,
+            route: `/policy/privacy-policy`,
             title: `Privacy Policy`,
           },
           {
-            route: `/gdpr_policy`,
+            route: `/policy/gdpr-policy`,
             title: `GDPR Policy`,
           },
         ].map((link) => (
