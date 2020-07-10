@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const TextBox = ({
   text,
@@ -24,10 +24,10 @@ const TextBox = ({
 };
 
 TextBox.propTypes = {
-  text: PropType.string.isRequired,
-  imgSrc: PropType.string.isRequired,
-  hasTopBorder: PropType.bool,
-  hasBottomBorder: PropType.bool,
+  text: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  hasTopBorder: PropTypes.bool,
+  hasBottomBorder: PropTypes.bool,
 };
 
 export default TextBox;

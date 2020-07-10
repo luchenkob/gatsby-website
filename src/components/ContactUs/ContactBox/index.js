@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 import Button from "../../Button";
 
@@ -18,10 +18,10 @@ const ContactBox = ({ heading, text, svgUrl, toMail }) => {
 };
 
 ContactBox.propTypes = {
-  heading: PropType.string.isRequired,
-  text: PropType.string.isRequired,
-  svgUrl: PropType.string.isRequired,
-  toMail: PropType.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  svgUrl: PropTypes.string.isRequired,
+  toMail: PropTypes.string.isRequired,
 };
 
 export default ContactBox;

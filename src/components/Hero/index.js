@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import Header from "../Header";
 
 const Hero = ({ children }) => {
@@ -14,7 +14,7 @@ const Hero = ({ children }) => {
 };
 
 Hero.propTypes = {
-  children: PropType.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Hero;

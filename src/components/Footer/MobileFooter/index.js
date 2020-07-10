@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const MobileFooter = ({ links }) => (
@@ -72,7 +72,7 @@ const MobileFooter = ({ links }) => (
 );
 
 MobileFooter.propTypes = {
-  links: PropType.object.isRequired,
+  links: PropTypes.object.isRequired,
 };
 
 export default MobileFooter;

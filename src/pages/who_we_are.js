@@ -1,45 +1,69 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Hero from "../components/Hero";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
 
-import image from "../images/who_we_are/png/image@3x.png";
+import SpecialImage from '../components/SpecialImage';
+import GraySection from '../components/GraySection';
 
-import SpecialImage from "../components/SpecialImage";
-import GraySection from "../components/GraySection";
-
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from 'gatsby-background-image';
 
 function WhoWeArePage() {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { prismic } = useStaticQuery(graphql`
     query {
-      mobileImage: file(
-        relativePath: { eq: "who_we_are/png/image-main@3x.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+      prismic {
+        who_we_are_page(lang: "en-us", uid: "who-we-are-page") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
-        }
-      }
-      desktopImage: file(
-        relativePath: { eq: "who_we_are/png/image-main.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_text
+          section_1_image
+          section_1_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `);
+  const document = prismic.who_we_are_page;
+
+  const { hero, section1 } = {
+    hero: {
+      heading: document.heading,
+      text: document.text,
+    },
+    section1: {
+      text: document.section_1_text,
+      fluidImage: document.section_1_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_1_image.alt,
+    },
+  };
 
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
-      ...desktopImage.childImageSharp.fluid,
+      ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ];
@@ -48,65 +72,45 @@ function WhoWeArePage() {
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Who We Are"
+        title='Who We Are'
       />
 
-      <section className="text-center">
+      <section className='text-center'>
         <BackgroundImage
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{
-            backgroundPosition: "top",
+            backgroundPosition: 'top',
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0">
-              <h1 className="xl:mt-202 xl:w-545">
-                Innovation
+            <div className='-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0'>
+              <h1 className='xl:mt-202 xl:w-545'>
+                {hero.heading[0].text}
                 <br />
-                is in our DNA
+                {hero.heading[1].text}
               </h1>
             </div>
           </Hero>
         </BackgroundImage>
 
-        <div className="xl:hidden  block">
-          <GraySection
-            text="Meliorism is a premier all-in-one technology solutions provider with
-          a focus on delivering world-class, custom technology platforms that
-          cater to the travel, online learning, and e-commerce transportation
-          industries. Our sole aim is to provide cost-effective technology
-          services."
-            secondText="Our team has a relentless focus on delivering scalable and reliable
-          technology platforms, which can be the growth engine for aspiring
-          digital companies."
-          >
+        <div className='xl:hidden  block'>
+          <GraySection text={section1.text} >
             <SpecialImage
-              imgSrc={image}
-              imgAlt="Woman on her phone smiling sitting in a cafe"
-              bubbleSide="right"
+              imgSrc={section1.fluidImage}
+              imgAlt={section1.imageAlt}
+              bubbleSide='right'
             />
           </GraySection>
         </div>
 
-        <div className="hidden xl:block xl:mt-270">
-          <GraySection
-            text="Meliorism is a premier all-in-one technology solutions provider with
-          a focus on delivering world-class, custom technology platforms that
-          cater to the travel, online learning, and e-commerce transportation
-          industries. Our sole aim is to provide cost-effective technology
-          services."
-            secondText="Our team has a relentless focus on delivering scalable and reliable
-          technology platforms, which can be the growth engine for aspiring
-          digital companies."
-            childOnRight={false}
-            widthOfText="580"
-          >
+        <div className='hidden xl:block xl:mt-270'>
+          <GraySection text={section1.text} >
             <SpecialImage
-              imgSrc={image}
-              imgAlt="Woman on her phone smiling sitting in a cafe"
-              bubbleSide="right"
+              imgSrc={section1.fluidImage}
+              imgAlt={section1.imageAlt}
+              bubbleSide='right'
             />
           </GraySection>
         </div>

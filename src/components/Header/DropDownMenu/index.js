@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const DropDownMenu = ({ setSelected, links }) => {
@@ -26,8 +26,8 @@ const DropDownMenu = ({ setSelected, links }) => {
 };
 
 DropDownMenu.propTypes = {
-  setSelected: PropType.func.isRequired,
-  links: PropType.array.isRequired,
+  setSelected: PropTypes.func.isRequired,
+  links: PropTypes.array.isRequired,
 };
 
 export default DropDownMenu;

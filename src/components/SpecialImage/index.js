@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import Img from 'gatsby-image'
 
 const SpecialImage = ({
@@ -47,12 +47,12 @@ const SpecialImage = ({
 );
 
 SpecialImage.propTypes = {
-  imgSrc: PropType.string.isRequired,
-  imgAlt: PropType.string.isRequired,
-  bubbleRight: PropType.bool,
-  bubbleSide: PropType.string,
-  bubbleSize: PropType.string,
-  bubbleHigh: PropType.bool,
+  imgSrc: PropTypes.object.isRequired,
+  imgAlt: PropTypes.string.isRequired,
+  bubbleRight: PropTypes.bool,
+  bubbleSide: PropTypes.string,
+  bubbleSize: PropTypes.string,
+  bubbleHigh: PropTypes.bool,
 };
 
 export default SpecialImage;

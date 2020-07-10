@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 
 import DropDownMenu from './DropDownMenu';
 
@@ -221,7 +221,7 @@ const Header = ({ isBackgroundWhite = false }) => {
 };
 
 Header.propTypes = {
-  isBackgroundWhite: PropType.bool,
+  isBackgroundWhite: PropTypes.bool,
 };
 
 export default Header;

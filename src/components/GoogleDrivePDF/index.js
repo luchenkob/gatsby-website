@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Header from '../Header';
 
@@ -23,8 +23,8 @@ const GoogleDrivePDF = ({ title, docId }) => {
 };
 
 GoogleDrivePDF.propTypes = {
-  title: PropType.string.isRequired,
-  docId: PropType.string.isRequired,
+  title: PropTypes.string.isRequired,
+  docId: PropTypes.string.isRequired,
 };
 
 export default GoogleDrivePDF;

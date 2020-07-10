@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const ValueBox = ({ heading, text, svgUrl }) => {
   return (
@@ -18,9 +18,9 @@ const ValueBox = ({ heading, text, svgUrl }) => {
 };
 
 ValueBox.propTypes = {
-  heading: PropType.string.isRequired,
-  text: PropType.string.isRequired,
-  svgUrl: PropType.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  svgUrl: PropTypes.string.isRequired,
 };
 
 export default ValueBox;

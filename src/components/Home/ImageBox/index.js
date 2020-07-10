@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const ImageBox = ({ arrowDirection, imgSrc }) => {
   return (
@@ -47,8 +47,8 @@ const ImageBox = ({ arrowDirection, imgSrc }) => {
 };
 
 ImageBox.propTypes = {
-  imgSrc: PropType.string.isRequired,
-  arrowDirection: PropType.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  arrowDirection: PropTypes.string.isRequired,
 };
 
 export default ImageBox;
