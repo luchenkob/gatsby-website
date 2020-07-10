@@ -154,8 +154,8 @@ function ELearningPage() {
           {RichText.asText(section3.heading)}
         </h3>
 
-        <section className='mt-6 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 xl:w-1260 xl:h-400'>
-          <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 xl:ml-100 xl:mr-auto'>
+        <section className='mt-6 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:max-w-4xl xl:w-1260 xl:h-400'>
+          <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 xl:mr-auto'>
             <h5>{RichText.asText(section3.subheading)}</h5>
             <div className='mt-2 lg:mt-4'>{RichText.render(section3.text)}</div>
           </div>
