@@ -96,7 +96,7 @@ function CareersPage() {
         >
           <Hero>
             <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className='lg:mt-202 lg:w-734'>
+              <div className='w-8/12 lg:mt-202 lg:w-734'>
                 {RichText.render(hero.heading)}
               </div>
             </div>
@@ -113,7 +113,7 @@ function CareersPage() {
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
           <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-1/2 lg:pl-168'>
             {RichText.render(section2.heading)}
-            <div className='lg:mt-4'>
+            <div className='mt-2 lg:mt-4'>
               {RichText.render(section2.text)}
             </div>
             <div className='mt-4 lg:mt-8'>

@@ -102,14 +102,14 @@ function ECommercePage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
-          {RichText.render(section1.text)}
-        </section>
+        <div className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
+          {RichText.asText(section1.text)}
+        </div>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
           <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
             {RichText.render(section2.text)}
-            <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
+            <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
                   <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>

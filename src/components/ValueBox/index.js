@@ -10,7 +10,7 @@ const ValueBox = ({ heading, text, svgUrl }) => {
         <p className="mt-2 xl:mt-4">{RichText.asText(text)}</p>
       </div>
       <img
-        className="mt-8 xl:mt-auto w-12 h-10 xl:w-16 xl:h-12"
+        className="mt-8 xl:mt-auto w-auto h-10 xl:w-16 xl:h-12"
         src={svgUrl}
         alt="icon"
       />

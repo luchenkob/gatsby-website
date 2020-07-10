@@ -117,7 +117,7 @@ function TravelPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-1260'>
+        <section className='mt-12 mx-2 lg:mt-40 lg:w-1260'>
           {RichText.render(section1.heading)}
           <p className='mt-6  mx-auto lg:mt-10'>
             {RichText.asText(section1.text)}
@@ -125,9 +125,9 @@ function TravelPage() {
         </section>
 
         <section className='mx-auto  mt-10 text-left flex flex-col lg:flex-row lg:mt-104 lg:w-1260 lg:h-400'>
-          <div className='mx-auto mt-2 text-left w-11/12 lg:w-1/2 lg:self-center lg:mr-100'>
+          <div className='mx-auto text-left w-11/12 lg:w-1/2 lg:self-center lg:mr-100'>
             <h5>{RichText.asText(section2.heading)}</h5>
-            <div className='mt-4 space-y-4'>
+            <div className='mt-2 lg:mt-4 space-y-4'>
               {RichText.render(section2.text)}
             </div>
           </div>
@@ -141,9 +141,9 @@ function TravelPage() {
         </section>
 
         <section className='mt-12 text-left mx-auto lg:flex lg:flex-row-reverse lg:mt-104 lg:w-1260 lg:h-400'>
-          <div className='mt-10 mx-auto w-11/12 lg:w-1/2 lg:self-center lg:ml-100'>
+          <div className='mx-auto w-11/12 lg:w-1/2 lg:self-center lg:ml-100'>
             <h5>{RichText.asText(section3.heading)}</h5>
-            <div className='mt-4 space-y-4'>
+            <div className='mt-2 lg:mt-4 space-y-4'>
               {RichText.render(section3.text)}
             </div>
           </div>

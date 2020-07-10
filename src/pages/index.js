@@ -133,16 +133,17 @@ function IndexPage() {
             </div>
           </Hero>
         </BackgroundImage>
+        
         <section className='mt-6 mx-auto w-11/12 xl:w-screen'>
           <div className='xl:w-1522 xl:mx-auto flex xl:justify-center'>
             <AsSeenOn />
           </div>
 
-          <p className='big mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 mx-auto'>
+          <p className='big -mx-2 mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 lg:mx-auto'>
             {RichText.asText(section1.text)}
           </p>
 
-          <div className='xl:hidden mx-auto max-w-xs xl:max-w-none mt-8 grid grid-flow-col-dense grid-rows-4 grid-cols-2 gap-0'>
+          <div className='xl:hidden mx-auto max-w-xs xl:max-w-none mt-6 grid grid-flow-col-dense grid-rows-4 grid-cols-2 gap-0'>
             <TextBox
               text='E-learning'
               imgSrc={iconGraduate}

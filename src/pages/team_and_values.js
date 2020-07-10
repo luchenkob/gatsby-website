@@ -126,7 +126,7 @@ function TeamAndValuesPage() {
 
         <section className="mt-12 mx-auto w-11/12 tracking-tight xl:mt-165">
         <h2>{RichText.asText(section2.heading)}</h2>
-          <div className="flex flex-col mt-8 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:max-w-4xl xl:w-1260 xl:divide-x xl:divide-y-0 xl:mt-20 xl:max-w-none">
+          <div className="flex flex-col mt-6 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:max-w-4xl xl:w-1260 xl:divide-x xl:divide-y-0 xl:mt-20 xl:max-w-none">
             <ValueBox
               heading={section2.values[0].value_heading}
               text={section2.values[0].value_text}

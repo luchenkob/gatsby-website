@@ -130,9 +130,9 @@ function ELearningPage() {
         </section>
 
         <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
-          <div className='mt-10 mx-auto w-11/12 max-w-sm lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none'>
+          <div className='pt-10 mx-auto w-11/12 max-w-sm lg:pt-0 lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none'>
             {RichText.render(section2.text)}
-            <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
+            <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4' style={{}}>
               {listItems.map((item, index) => (
                 <li key={index} className='flex items-center'>
                   <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
@@ -150,14 +150,14 @@ function ELearningPage() {
           </div>
         </section>
 
-        <h3 className='mt-16 w-11/12 mx-auto lg:mt-40'>
+        <h3 className='mt-16 mx-5 sm:w-11/12 lg:mx-auto lg:mt-40'>
           {RichText.asText(section3.heading)}
         </h3>
 
-        <section className='mt-10 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400'>
+        <section className='mt-6 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400'>
           <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 lg:mr-auto'>
             <h5>{RichText.asText(section3.subheading)}</h5>
-            <div className='mt-4'>{RichText.render(section3.text)}</div>
+            <div className='mt-2 lg:mt-4'>{RichText.render(section3.text)}</div>
           </div>
           <div className='lg:w-1/2'>
             <Img

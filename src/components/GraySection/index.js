@@ -11,13 +11,13 @@ const GraySection = ({
 }) => (
   <section className='mt-12 text-left lg:flex lg:mt-52 lg:pt-110'>
     {!childOnRight && (
-      <div className='mt-6 lg:w-1/2 lg:-mt-6 xl:-mt-110'>{children}</div>
+      <div className='lg:w-1/2 lg:-mt-6 xl:-mt-110'>{children}</div>
     )}
     <div className='bg-gray-100 w-screen lg:w-1/2'>
     <div
       className={`${
         widthOfText ? 'lg:w-1/2  xl:w-580' : 'xl:w-1/2'
-      } bg-gray-100 pt-10 mx-auto w-11/12 lg:max-w-md lg:self-center lg:pt-40 xl:mt-0 xl:max-w-none`}
+      } bg-gray-100 pt-10 pb-6 mx-auto w-11/12 lg:max-w-md lg:self-center lg:pt-40 xl:mt-0 xl:max-w-none`}
     >
       {heading && <h2 className='inline-block xl:mb-10'>{RichText.asText(heading)}</h2>}
       {text && (
@@ -27,7 +27,7 @@ const GraySection = ({
     </div>
 
     {childOnRight && (
-      <div className='mt-6 lg:w-1/2 lg:-mt-6 xl:-mt-110'>{children}</div>
+      <div className='lg:w-1/2 lg:-mt-6 xl:-mt-110'>{children}</div>
     )}
   </section>
 );
