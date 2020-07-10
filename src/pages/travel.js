@@ -117,15 +117,15 @@ function TravelPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-2 lg:mt-40 lg:w-1260'>
+        <section className='mt-12 mx-auto lg:mt-40 xl:w-1260'>
           {RichText.render(section1.heading)}
           <p className='mt-6  mx-auto lg:mt-10'>
             {RichText.asText(section1.text)}
           </p>
         </section>
 
-        <section className='mx-auto  mt-10 text-left flex flex-col lg:flex-row lg:mt-104 lg:w-1260 lg:h-400'>
-          <div className='mx-auto text-left w-11/12 lg:w-1/2 lg:self-center lg:mr-100'>
+        <section className='mx-auto  mt-10 text-left flex flex-col lg:flex-row lg:mt-104 xl:w-1260 lg:h-400'>
+          <div className='mx-auto text-left w-11/12 lg:ml-12 xl:ml-0 lg:w-1/2 lg:self-center lg:mr-100'>
             <h5>{RichText.asText(section2.heading)}</h5>
             <div className='mt-2 lg:mt-4 space-y-4'>
               {RichText.render(section2.text)}

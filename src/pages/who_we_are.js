@@ -91,7 +91,7 @@ function WhoWeArePage() {
           </Hero>
         </BackgroundImage>
 
-        <div className='xl:hidden  block'>
+        <div className='lg:hidden  block'>
           <GraySection text={section1.text}>
             <SpecialImage
               imgSrc={section1.fluidImage}
@@ -101,10 +101,10 @@ function WhoWeArePage() {
           </GraySection>
         </div>
 
-        <div className='hidden xl:block xl:mt-270'>
+        <div className='hidden lg:block lg:mt-270'>
           <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-            <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:px-190  lg:py-40 '>
-              <div className='w-580 space-y-8'>{RichText.render(section1.text)}</div>
+            <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:px-100 xl:px-190  lg:py-40 '>
+              <div className='xl:w-580 space-y-8'>{RichText.render(section1.text)}</div>
             </div>
             <div className='mt-6 lg:w-1/2 lg:-mt-110'>
               <SpecialImage

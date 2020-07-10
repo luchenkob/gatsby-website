@@ -96,7 +96,7 @@ function ContactUsPage() {
           {RichText.render(section1.heading)}
         </section>
 
-        <div className='mt-6 mx-auto w-11/12 lg:mt-20 flex flex-col border-gray-200 border divide-y divide-gray-200 lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0 xl:max-w-none'>
+        <div className='mt-6 mx-auto w-11/12 lg:mt-20 flex flex-col border-gray-200 border divide-y divide-gray-200 lg:flex-row lg:max-w-4xl xl:w-1260 lg:divide-x lg:divide-y-0 xl:max-w-none'>
             <ContactBox
               heading={section1.contacts[0].contact_heading}
               text={section1.contacts[0].contact_text}
