@@ -58,18 +58,18 @@ module.exports = {
         }],
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-tailwind`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: fullConfig.theme.colors.white,
-    //     theme_color: fullConfig.theme.colors.purple,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/tailwind-icon.png`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Meliorism`,
+        short_name: `Meliorism`,
+        start_url: `/`,
+        background_color: tailwindConfig.theme.colors.white,
+        theme_color: tailwindConfig.theme.colors.purple,
+        display: `minimal-ui`,
+        icon: `src/images/menu/logo-purple.png`,
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
