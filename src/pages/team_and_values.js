@@ -115,7 +115,7 @@ function TeamAndValuesPage() {
           text={section1.text}
           widthOfText="580"
         >
-          <SpecialImage imgSrc={section1.fluidImage} imgAlt={section1.imageAlt} />
+          <SpecialImage imgSrc={section1.fluidImage} imgAlt={section1.imageAlt} imgHeight="570" />
         </GraySection>
 
         <section className="mt-16 mx-auto w-11/12 tracking-tight xl:mt-90">

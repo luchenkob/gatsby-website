@@ -11,8 +11,8 @@ const SpecialImage = ({
   bubbleHigh = false,
   imgHeight = "full"
 }) => (
-  <div className="relative">
-    <Img className={`block w-screen lg:h-${imgHeight} lg:w-full`} fluid={imgSrc} alt={imgAlt} />
+  <div className={`relative lg:h-${imgHeight}`}>
+    <Img className={`block w-screen lg:h-full lg:w-full`} fluid={imgSrc} alt={imgAlt} />
     <div
       className={`lg:hidden absolute z-10 -mt-4 bg-purple h-8 w-8 rounded-full ${
         bubbleRight ? "right-0 mr-8" : "left-0 ml-8"

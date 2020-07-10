@@ -17,7 +17,7 @@ const GraySection = ({
     <div
       className={`${
         widthOfText ? 'lg:w-1/2  xl:w-580' : 'xl:w-1/2'
-      } bg-gray-100 pt-10 mx-auto w-11/12 lg:max-w-md lg:self-center lg:py-40 xl:mt-0 xl:max-w-none`}
+      } bg-gray-100 pt-10 mx-auto w-11/12 lg:max-w-md lg:self-center lg:pt-40 xl:mt-0 xl:max-w-none`}
     >
       {heading && <h2 className='inline-block xl:mb-10'>{RichText.asText(heading)}</h2>}
       {text && (

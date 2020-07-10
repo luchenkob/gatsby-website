@@ -71,10 +71,7 @@ function WhoWeArePage() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `react`,]}
-        title='Who We Are'
-      />
+      <SEO keywords={[`gatsby`, `react`]} title='Who We Are' />
 
       <section className='text-center'>
         <BackgroundImage
@@ -105,13 +102,18 @@ function WhoWeArePage() {
         </div>
 
         <div className='hidden xl:block xl:mt-270'>
-          <GraySection text={section1.text}>
-            <SpecialImage
-              imgSrc={section1.fluidImage}
-              imgAlt={section1.imageAlt}
-              bubbleSide='right'
-            />
-          </GraySection>
+          <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+            <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:px-190  lg:py-40 '>
+              <div className='w-580 space-y-8'>{RichText.render(section1.text)}</div>
+            </div>
+            <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+              <SpecialImage
+                imgSrc={section1.fluidImage}
+                imgAlt={section1.imageAlt}
+                bubbleSide='right'
+              />
+            </div>
+          </section>
         </div>
       </section>
     </Layout>

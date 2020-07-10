@@ -125,6 +125,7 @@ function ECommercePage() {
               bubbleRight={false}
               bubbleSide='right'
               bubbleHigh={true}
+              imgHeight="686"
             />
           </div>
         </section>

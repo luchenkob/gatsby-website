@@ -145,6 +145,7 @@ function ELearningPage() {
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
+              imgHeight="806"
             />
           </div>
         </section>
