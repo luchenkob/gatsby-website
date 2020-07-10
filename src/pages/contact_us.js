@@ -54,7 +54,7 @@ function ContactUsPage() {
       text: document.text,
     },
     section1: {
-      text: document.section_1_heading,
+      heading: document.section_1_heading,
       contacts: document.contacts
     },
   };
@@ -66,7 +66,6 @@ function ContactUsPage() {
       media: `(min-width: 768px)`,
     },
   ];
-  console.log(section1)
 
   return (
     <Layout>
@@ -94,28 +93,28 @@ function ContactUsPage() {
         </BackgroundImage>
 
         <section className='mt-12 lg:mt-40 lg:w-1064 mx-auto'>
-          <h2>Our team is always ready to help - get in touch</h2>
+          {RichText.render(section1.heading)}
         </section>
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-20'>
           <div className='mt-8 flex flex-col border-gray-200 border divide-y divide-gray-200 w-11/12 max-w-4xl mx-auto lg:flex-row lg:w-1260 lg:divide-x lg:divide-y-0 xl:max-w-none'>
             <ContactBox
-              heading='General Questions'
-              text='Have a general question for us?'
+              heading={section1.contacts[0].contact_heading}
+              text={section1.contacts[0].contact_text}
               svgUrl={iconQuestion}
-              toMail='info@bemeliorism.com'
+              toMail={section1.contacts[0].contact_email}
             />
             <ContactBox
-              heading='Sales'
-              text="We'd love to talk about how we can work together."
+              heading={section1.contacts[1].contact_heading}
+              text={section1.contacts[1].contact_text}
               svgUrl={iconSales}
-              toMail='sales@bemeliorism.com'
+              toMail={section1.contacts[1].contact_email}
             />
             <ContactBox
-              heading='Media and Press'
-              text='Get news, company info, and media resources.'
+              heading={section1.contacts[2].contact_heading}
+              text={section1.contacts[2].contact_text}
               svgUrl={iconMedia}
-              toMail='media@bemeliorism.com'
+              toMail={section1.contacts[2].contact_email}
             />
           </div>
         </section>

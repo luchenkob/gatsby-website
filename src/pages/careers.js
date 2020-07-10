@@ -119,7 +119,7 @@ function CareersPage() {
             <div className='mt-4 lg:mt-8'>
               <Button
                 text='Check job openings'
-                toMail={section2.email}
+                toMail={RichText.asText(section2.email)}
               />
             </div>
           </div>
