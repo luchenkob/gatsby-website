@@ -1,133 +1,168 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
+import Img from 'gatsby-image'
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Hero from "../components/Hero";
-import SpecialImage from "../components/SpecialImage";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import SpecialImage from '../components/SpecialImage';
 
-import image from "../images/elearning/png/image@3x.png";
-import image2 from "../images/elearning/png/image-2@3x.png";
-
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from 'gatsby-background-image';
 
 function ELearningPage() {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { prismic } = useStaticQuery(graphql`
     query {
-      mobileImage: file(
-        relativePath: { eq: "elearning/png/image-main@3x.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+      prismic {
+        eLearning_page(lang: "en-us", uid: "e-learning-page") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
-        }
-      }
-      desktopImage: file(relativePath: { eq: "elearning/png/image-main.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_text
+          section_2_text
+          section_2_image
+          section_2_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_3_heading
+          section_3_subheading
+          section_3_text
+          section_3_image
+          section_3_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          features {
+            feature_text
           }
         }
       }
     }
   `);
 
+  if (!prismic) return null;
+  const document = prismic.eLearning_page;
+
+  const pageContent = {
+    hero: {
+      heading: document.heading,
+      text: document.text
+    },
+    section1: {
+      text: document.section_1_text,
+    },
+    section2: {
+      text: document.section_2_text,
+      fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_2_image.alt
+    },
+    section3: {
+      heading: document.section_3_heading,
+      subheading: document.section_3_subheading,
+      text: document.section_3_text,
+      fluidImage: document.section_3_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_3_image.alt
+    },
+  };
+
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
-      ...desktopImage.childImageSharp.fluid,
+      ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ];
 
-  const listItems = [
-    "Live Streaming Videos",
-    "Virtual Classroom",
-    "Web Application/Portal",
-    "User Engagement",
-    "Library For Pre-recorder Session",
-    "Live Session",
-    "Accessibility",
-    "Cost-effectiveness",
-  ];
+  const listItems = document.features.map((item) => item.feature_text);
 
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="E-learning"
+        title='E-learning'
       />
 
-      <section className="text-center">
+      <section className='text-center'>
         <BackgroundImage
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{
-            backgroundPosition: "top",
+            backgroundPosition: 'top',
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
-              <h1 className="lg:w-916 lg:mt-168">
-                E-learning is growing. Grow with it.
-              </h1>
-              <p className="mt-6 lg:mt-10 lg:w-800">
-                Custom E-Learning Solutions to address tomorrow’s challenges
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <h1 className='lg:w-916 lg:mt-168'>{RichText.asText(pageContent.hero.heading)}</h1>
+              <p className='mt-6 lg:mt-10 lg:w-800'>
+                {RichText.asText(pageContent.hero.text)}
               </p>
             </div>
           </Hero>
         </BackgroundImage>
 
-        <section className="mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916 lg:mb-270">
-          <p>
-            Meliorism consolidates all e-learning needs into one advanced
-            platform giving companies and organizations the right tools for a
-            simpler and more connected learning experience.
-          </p>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916 lg:mb-270'>
+          <p>{RichText.asText(pageContent.section1.text)}</p>
         </section>
 
-        <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52">
-          <div className="mt-10 mx-auto w-11/12 max-w-sm lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none">
-            <p>
-              Our team of experts have hands-on experience in delivering
-              different <strong>e-learning solutions that maximize.</strong>
-            </p>
-            <ul className="block mt-2 lg:mt-6 list-none space-y-4" style={{}}>
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
+          <div className='mt-10 mx-auto w-11/12 max-w-sm lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none'>
+            {RichText.render(pageContent.section2.text)}
+            <ul className='block mt-2 lg:mt-6 list-none space-y-4' style={{}}>
               {listItems.map((item, index) => (
-                <li key={index} className="flex items-center">
-                  <div className="inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple"></div>
-                  <span className="ml-2">{item}</span>
+                <li key={index} className='flex items-center'>
+                  <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
+                  <span className='ml-2'>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-6 lg:w-1/2 lg:-mt-110">
-            <SpecialImage imgSrc={image} imgAlt="Woman working on the laptop" />
+          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+            <SpecialImage
+              imgSrc={pageContent.section2.fluidImage}
+              imgAlt={pageContent.section2.imageAlt}
+            />
           </div>
         </section>
 
-        <h3 className="mt-16 w-11/12 mx-auto lg:mt-40">
-          Count on our expertise to build custom E-Learning solutions for your
-          sector.
+        <h3 className='mt-16 w-11/12 mx-auto lg:mt-40'>
+          {RichText.asText(pageContent.section3.heading)}
         </h3>
 
-        <section className="mt-10 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400">
-          <div className="mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 lg:mr-auto">
-            <h5>Corporate sector</h5>
-            <p className="mt-4">
-              Continuous workforce training poses several challenges in the
-              corporate context. Our top-notch knowledge portals, certification
-              solutions, and coaching platforms help employers streamline
-              onboarding and keep their team motivated.
-            </p>
+        <section className='mt-10 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:w-1260 lg:h-400'>
+          <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 lg:mr-auto'>
+            <h5>{RichText.asText(pageContent.section3.subheading)}</h5>
+            <div className='mt-4'>
+              {RichText.render(pageContent.section3.text)}
+            </div>
           </div>
-          <div className="lg:w-1/2">
-            <img
-              className="block mt-6 w-screen lg:h-full lg:w-full object-center object-contain"
-              src={image2}
-              alt="People having a meeting"
+          <div className='lg:w-1/2'>
+            <Img
+              className='block mt-6 w-screen lg:h-full lg:w-full object-center object-contain'
+              fluid={pageContent.section3.fluidImage}
+              alt='People having a meeting'
             />
           </div>
         </section>

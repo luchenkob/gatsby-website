@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import {RichText} from 'prismic-reactjs'
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -9,8 +10,6 @@ import SpecialImage from '../components/SpecialImage';
 import GraySection from '../components/GraySection';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
-
-// import image from '../images/home/png/image_3@3x.png';
 
 import iconGraduate from '../images/home/svg/online-education.svg';
 import onlineEducation from '../images/home/png/image-online-education@3x.png';
@@ -85,20 +84,20 @@ function IndexPage() {
 
   const pageContent = {
     hero: {
-      heading: document.heading[0].text,
-      text: document.text[0].text,
+      heading: document.heading,
+      text: document.text,
     },
     section1: {
-      text: document.section_1_text[0].text,
+      text: document.section_1_text,
     },
     section2: {
-      heading: document.section_2_heading[0].text,
-      text: document.section_2_text[0].text,
+      heading: document.section_2_heading,
+      text: document.section_2_text,
       fluidImage: document.section_2_imageSharp.childImageSharp.fluid
     },
     section3: {
-      heading: document.section_3_heading[0].text,
-      text: document.section_3_text[0].text,
+      heading: document.section_3_heading,
+      text: document.section_3_text,
     },
   };
 
@@ -124,8 +123,8 @@ function IndexPage() {
               className='-mt-12 flex flex-col justify-center h-full xl:justify-start 
             xl:mt-0'
             >
-              <h1 className='xl:w-860 xl:mt-140'>{pageContent.hero.heading}</h1>
-              <p className='mt-6 xl:mt-10 xl:w-800'>{pageContent.hero.text}</p>
+              <h1 className='xl:w-860 xl:mt-140'>{RichText.asText(pageContent.hero.heading)}</h1>
+              <p className='mt-6 xl:mt-10 xl:w-800'>{RichText.asText(pageContent.hero.text)}</p>
             </div>
           </Hero>
         </BackgroundImage>
@@ -135,7 +134,7 @@ function IndexPage() {
           </div>
 
           <p className='big mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 mx-auto'>
-            {pageContent.section1.text}
+            {RichText.asText(pageContent.section1.text)}
           </p>
 
           <div className='xl:hidden mx-auto max-w-xs xl:max-w-none mt-8 grid grid-flow-col-dense grid-rows-4 grid-cols-2 gap-0'>
@@ -193,9 +192,9 @@ function IndexPage() {
         </GraySection>
 
         <section className='mx-auto w-11/12 mt-12 xl:mt-40'>
-          <h2 className='capitalize'>{pageContent.section3.heading}</h2>
+          <h2 className='capitalize'>{RichText.asText(pageContent.section3.heading)}</h2>
           <p className='mt-6 mx-auto xl:mt-10 xl:w-800'>
-            {pageContent.section3.text}
+            {RichText.asText(pageContent.section3.text)}
           </p>
 
           <div className='xl:hidden mt-7-5 flex flex-wrap items-center justify-center space-y-5 max-w-md mx-auto'>
