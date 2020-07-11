@@ -1,9 +1,9 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const ImageBox = ({ arrowDirection, imgSrc }) => {
   return (
-    <div className="h-32 relative md:w-1/3 md:h-241">
+    <div className="h-32 relative xl:w-1/3 xl:h-241">
       <img
         className="absolute w-full h-full object-cover"
         src={imgSrc}
@@ -13,7 +13,7 @@ const ImageBox = ({ arrowDirection, imgSrc }) => {
       {arrowDirection === "down" && (
         <div className="absolute top-0 z-20 w-full">
           <svg
-            className="w-10px h-5px md:h-10px md:w-20px block mx-auto"
+            className="w-10px h-5px xl:h-10px xl:w-20px block mx-auto"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 10 5"
           >
@@ -47,8 +47,8 @@ const ImageBox = ({ arrowDirection, imgSrc }) => {
 };
 
 ImageBox.propTypes = {
-  imgSrc: PropType.string.isRequired,
-  arrowDirection: PropType.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  arrowDirection: PropTypes.string.isRequired,
 };
 
 export default ImageBox;

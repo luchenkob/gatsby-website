@@ -1,9 +1,9 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const MobileFooter = ({ links }) => (
-  <nav className="mx-auto w-11/12 grid grid-cols-2 gap-12 md:w-4/5 max-w-6xl">
+  <nav className="mx-auto w-11/12 grid grid-cols-2 gap-12 xl:w-4/5">
     <div className="flex flex-col space-y-4">
       <div>
         <div className="caption uppercase text-gray-400">Products</div>
@@ -27,7 +27,7 @@ const MobileFooter = ({ links }) => (
         </Link>
       </div>
 
-      <Link className="block text-gray-800 no-underline" to={"/terms_of_use"}>
+      <Link className="block text-gray-800 no-underline" to={"/policy/terms-of-use"}>
         Terms of Use
       </Link>
     </div>
@@ -52,11 +52,11 @@ const MobileFooter = ({ links }) => (
       <ul className="flex flex-col space-y-2">
         {[
           {
-            route: `/privacy_policy`,
+            route: `/policy/privacy-policy`,
             title: `Privacy Policy`,
           },
           {
-            route: `/gdpr_policy`,
+            route: `/policy/gdpr-policy`,
             title: `GDPR Policy`,
           },
         ].map((link) => (
@@ -72,7 +72,7 @@ const MobileFooter = ({ links }) => (
 );
 
 MobileFooter.propTypes = {
-  links: PropType.object.isRequired,
+  links: PropTypes.object.isRequired,
 };
 
 export default MobileFooter;

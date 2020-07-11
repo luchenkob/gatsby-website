@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const Button = ({ text, toMail }) => {
   const handleClick = () => {
@@ -8,7 +8,7 @@ const Button = ({ text, toMail }) => {
 
   return (
     <button
-      className="h-10 w-40 lg:h-14 lg:w-52 bg-purple text-white font-semibold transition-colors duration-200 ease-in-out hover:bg-darkPurple"
+      className="h-10 w-40 xl:h-14 xl:w-52 bg-purple text-white font-semibold transition-colors duration-200 ease-in-out hover:bg-darkPurple"
       type="button"
       onClick={handleClick}
     >
@@ -18,8 +18,8 @@ const Button = ({ text, toMail }) => {
 };
 
 Button.propTypes = {
-  text: PropType.string.isRequired,
-  toMail: PropType.string.isRequired,
+  text: PropTypes.string.isRequired,
+  toMail: PropTypes.string.isRequired,
 };
 
 export default Button;

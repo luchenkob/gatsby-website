@@ -1,116 +1,131 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Hero from "../components/Hero";
-import SpecialImage from "../components/SpecialImage";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import SpecialImage from '../components/SpecialImage';
 
-import image from "../images/ecommerce/png/image@3x.png";
-
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from 'gatsby-background-image';
 
 function ECommercePage() {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { prismic } = useStaticQuery(graphql`
     query {
-      mobileImage: file(
-        relativePath: { eq: "ecommerce/png/image-main@3x.png" }
-      ) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+      prismic {
+        eCommerce_page(lang: "en-us", uid: "e-commerce-page") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
-        }
-      }
-      desktopImage: file(relativePath: { eq: "ecommerce/png/image-main.png" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_text
+          section_2_text
+          section_2_image
+          section_2_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          features {
+            feature_text
           }
         }
       }
     }
   `);
+  const document = prismic.eCommerce_page;
+
+  const { hero, section1, section2 } = {
+    hero: {
+      heading: document.heading,
+      text: document.text,
+    },
+    section1: {
+      text: document.section_1_text,
+    },
+    section2: {
+      text: document.section_2_text,
+      fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
+      imageAlt: document.section_2_image.alt,
+    },
+  };
 
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    document.background_mobileSharp.childImageSharp.fluid,
     {
-      ...desktopImage.childImageSharp.fluid,
+      ...document.background_desktopSharp.childImageSharp.fluid,
       media: `(min-width: 768px)`,
     },
   ];
 
-  const listItems = [
-    "Enable start-ups, brands and retailers",
-    "Develop unique e-commerce eco-system",
-    "Ensure strong SEO performance",
-    "Warrant seamless user experience",
-    "Offer AI-based analytic dashboard",
-  ];
+  const listItems = document.features.map((item) => item.feature_text);
 
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="E-commerce"
+        keywords={[`gatsby`, `react`,]}
+        title='E-commerce'
       />
 
-      <section className="text-center">
+      <section className='text-center'>
         <BackgroundImage
-          className="bg-center"
+          className='bg-center'
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{
-            backgroundPosition: "top",
+            backgroundPosition: 'top',
           }}
         >
           <Hero>
-            <div className="-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0">
-              <h1 className=" lg:w-860 lg:mt-152">
-                Empowering
-                <br />
-                the ‘E’ for your
-                <br />
-                E-commerce Ideas
-              </h1>
+            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
+              <div className=' lg:w-860 lg:mt-152'>
+                {RichText.render(hero.heading)}
+              </div>
             </div>
           </Hero>
         </BackgroundImage>
 
-        <section className="mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270">
-          <p>
-            We live in a world where individuals and businesses are validated
-            purely based on their digital presence. If you have an idea for a
-            business or own one already, then Meliorism is here to guide you and
-            empower you through the online platform to stay at the top of your
-            game. We leverage unique solutions created for your unique business
-            model.
-          </p>
-        </section>
+        <div className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
+          {RichText.asText(section1.text)}
+        </div>
 
-        <section className="mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse">
-          <div className="pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40">
-            <p>
-              Count on our team and their digital know-how to craft your online
-              presence because we:
-            </p>
-            <ul className="block mt-2 lg:mt-6 list-none space-y-4" style={{}}>
+        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+          <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
+            {RichText.render(section2.text)}
+            <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4' style={{}}>
               {listItems.map((item, index) => (
-                <li key={index} className="flex items-center">
-                  <div className="inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple"></div>
-                  <span className="ml-2">{item}</span>
+                <li key={index} className='flex items-center'>
+                  <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
+                  <span className='ml-2'>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-6 lg:w-1/2 lg:-mt-110">
+          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
             <SpecialImage
-              imgSrc={image}
-              imgAlt="Man on phone smiling"
+              imgSrc={section2.fluidImage}
+              imgAlt={section2.imageAlt}
               bubbleRight={false}
-              bubbleSide="right"
+              bubbleSide='right'
               bubbleHigh={true}
+              imgHeight="686"
             />
           </div>
         </section>

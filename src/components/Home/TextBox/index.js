@@ -1,5 +1,5 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const TextBox = ({
   text,
@@ -9,13 +9,13 @@ const TextBox = ({
 }) => {
   return (
     <div
-      className={`md:h-241 md:w-1/3 p-4 md:p-10 h-32 flex flex-col items-start border-gray-200 border-l border-r ${
+      className={`xl:h-241 xl:w-1/3 p-4 xl:p-10 h-32 flex flex-col items-start border-gray-200 border-l border-r ${
         hasTopBorder ? "border-t" : ""
       } ${hasBottomBorder ? "border-b" : ""}`}
     >
-      <h4 className="inline-block text-left md:text-xl">{text}</h4>
+      <h4 className="inline-block text-left xl:text-xl">{text}</h4>
       <img
-        className="mt-8 md:mt-22 md:w-10 md:h-8"
+        className="mt-8 xl:mt-22 xl:w-10 xl:h-8"
         src={imgSrc}
         alt={`${text} icon`}
       />
@@ -24,10 +24,10 @@ const TextBox = ({
 };
 
 TextBox.propTypes = {
-  text: PropType.string.isRequired,
-  imgSrc: PropType.string.isRequired,
-  hasTopBorder: PropType.bool,
-  hasBottomBorder: PropType.bool,
+  text: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  hasTopBorder: PropTypes.bool,
+  hasBottomBorder: PropTypes.bool,
 };
 
 export default TextBox;

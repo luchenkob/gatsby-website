@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 
 import DropDownMenu from './DropDownMenu';
 
@@ -51,14 +51,14 @@ const Header = ({ isBackgroundWhite = false }) => {
       </div>
 
       <div
-        className={`relative flex flex-wrap items-center justify-between py-4 lg:py-6 mx-auto border-b border-opacity-25 ${
+        className={`relative flex flex-wrap items-center justify-between py-4 xl:py-6 mx-auto border-b border-opacity-25 ${
           isBackgroundWhite ? 'border-gray-600' : 'border-white'
         }`}
       >
         <Link to='/'>
           <span className='text-xl font-bold tracking-tight'>
             <img
-              className='h-6 lg:w-190 lg:h-12'
+              className='h-6 xl:w-190 xl:h-12'
               alt='Meliorism logo'
               src={isBackgroundWhite ? logoPurple : logoWhite}
             />
@@ -66,7 +66,7 @@ const Header = ({ isBackgroundWhite = false }) => {
         </Link>
 
         <button
-          className={`flex items-center text-white focus:outline-none md:hidden ${isBackgroundWhite ? 'text-gray-600' : 'white'}`}
+          className={`flex items-center text-white focus:outline-none lg:hidden ${isBackgroundWhite ? 'text-gray-600' : 'white'}`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -80,7 +80,7 @@ const Header = ({ isBackgroundWhite = false }) => {
           </svg>
         </button>
 
-        <nav className='hidden relative z-30 md:block'>
+        <nav className='hidden relative z-30 lg:block'>
           <ul className='flex space-x-16 justify-between'>
             {Object.keys(links).map((item) => (
               <li className=' relative' key={`${item}-desktop`}>
@@ -140,7 +140,7 @@ const Header = ({ isBackgroundWhite = false }) => {
             </Link>
 
             <button
-              className='flex items-center text-white focus:outline-none md:hidden'
+              className='flex items-center text-white focus:outline-none xl:hidden'
               onClick={() => toggleExpansion(!isExpanded)}
             >
               <svg
@@ -161,12 +161,12 @@ const Header = ({ isBackgroundWhite = false }) => {
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-4 text-gray-700 xl:flex xl:items-center w-full space-y-4`}
             >
               {links['products'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block no-underline xl:inline-block xl:mt-0 xl:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -179,12 +179,12 @@ const Header = ({ isBackgroundWhite = false }) => {
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } mt-4 text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-4 text-gray-700 xl:flex xl:items-center w-full space-y-4`}
             >
               {links['about us'].map((link) => (
                 <li key={`${link.title}-mobile`}>
                   <Link
-                    className='block no-underline md:inline-block md:mt-0 md:ml-6'
+                    className='block no-underline xl:inline-block xl:mt-0 xl:ml-6'
                     to={link.route}
                   >
                     {link.title}
@@ -196,10 +196,10 @@ const Header = ({ isBackgroundWhite = false }) => {
             <ul
               className={`${
                 isExpanded ? `block` : `hidden`
-              } mt-6 text-gray-700 md:flex md:items-center w-full space-y-4`}
+              } mt-6 text-gray-700 xl:flex xl:items-center w-full space-y-4`}
             >
               <Link
-                className='block no-underline md:inline-block md:mt-0 md:ml-6'
+                className='block no-underline xl:inline-block xl:mt-0 xl:ml-6'
                 to='/careers'
               >
                 Careers
@@ -221,7 +221,7 @@ const Header = ({ isBackgroundWhite = false }) => {
 };
 
 Header.propTypes = {
-  isBackgroundWhite: PropType.bool,
+  isBackgroundWhite: PropTypes.bool,
 };
 
 export default Header;

@@ -1,7 +1,9 @@
-// const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
 const path = require("path");
-// resolveConfig(tailwindConfig);
+require('dotenv').config({
+  path: `.env`,
+})
+const tailwindConfig = require("./tailwind.config.js");
+
 
 module.exports = {
   siteMetadata: {
@@ -36,18 +38,38 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-tailwind`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: fullConfig.theme.colors.white,
-    //     theme_color: fullConfig.theme.colors.purple,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/tailwind-icon.png`,
-    //   },
-    // },
+    {
+      resolve: '@prismicio/gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'bemeliorismwebsite', // required
+        defaultLang: 'en-us', // optional, but recommended
+        accessToken: `${process.env.API_KEY}`, // optional
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        sharpKeys: [
+          /image|photo|picture|background/, // (default)
+          'profilepic',
+        ],
+        pages: [{
+          type: 'Policy',
+          match: '/policy/:uid',
+          previewPath: '/policy',
+          component: require.resolve('./src/templates/policy.js'),
+        }],
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Meliorism`,
+        short_name: `Meliorism`,
+        start_url: `/`,
+        background_color: tailwindConfig.theme.colors.white,
+        theme_color: tailwindConfig.theme.colors.purple,
+        display: `minimal-ui`,
+        icon: `src/images/menu/favicon.png`,
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
