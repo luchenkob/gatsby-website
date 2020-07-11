@@ -8,7 +8,6 @@ import Hero from "../components/Hero";
 import AsSeenOn from "../components/AsSeenOn";
 import ValueBox from "../components/ValueBox";
 import SpecialImage from "../components/SpecialImage";
-import GraySection from "../components/GraySection";
 
 import iconInnovation from "../images/team_and_values/icon-innovation.svg";
 import iconPeople from "../images/team_and_values/icon-people.svg";
@@ -111,12 +110,19 @@ function TeamAndValuesPage() {
           </Hero>
         </BackgroundImage>
 
-        <GraySection
-          text={section1.text}
-          widthOfText="580"
-        >
-          <SpecialImage imgSrc={section1.fluidImage} imgAlt={section1.imageAlt} imgHeight="570" />
-        </GraySection>
+        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190'>
+            {RichText.asText(section1.text)}
+            </div>
+          </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-1 desktop:mt-0'>
+            <SpecialImage
+              imgSrc={section1.fluidImage}
+              imgAlt={section1.imageAlt}
+            />
+          </div>
+        </section>
 
         <section className="mt-16 mx-auto w-11/12 tracking-tight xl:mt-90">
           <div className="xl:w-1522 xl:mx-auto flex xl:justify-center">
