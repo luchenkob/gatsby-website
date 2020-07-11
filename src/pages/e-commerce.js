@@ -78,10 +78,14 @@ function ECommercePage() {
 
   return (
     <Layout>
+<<<<<<< HEAD
+      <SEO keywords={[`gatsby`, `react`]} title='E-commerce' />
+=======
       <SEO
         keywords={[`gatsby`, `react`,]}
         title='E-commerce'
       />
+>>>>>>> upstream/master
 
       <section className='text-center'>
         <BackgroundImage
@@ -105,20 +109,24 @@ function ECommercePage() {
         <div className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
           {RichText.asText(section1.text)}
         </div>
-
-        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-          <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:mb-40 lg:px-40'>
-            {RichText.render(section2.text)}
-            <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4' style={{}}>
-              {listItems.map((item, index) => (
-                <li key={index} className='flex items-center'>
-                  <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
-                  <span className='ml-2'>{item}</span>
-                </li>
-              ))}
-            </ul>
+        
+        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto'>
+              {RichText.render(section2.text)}
+              <ul
+                className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4'
+              >
+                {listItems.map((item, index) => (
+                  <li key={index} className='flex items-center'>
+                    <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
+                    <span className='ml-2'>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
@@ -129,6 +137,7 @@ function ECommercePage() {
             />
           </div>
         </section>
+
       </section>
     </Layout>
   );

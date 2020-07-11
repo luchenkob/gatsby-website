@@ -7,7 +7,7 @@ body {
 h1,
 h2,
 h3,
-p {
+{
   @apply font-poppins;
 }
 
@@ -28,6 +28,10 @@ h5 {
 }
 .caption {
   @apply text-xs font-bold;
+}
+
+.big {
+  @apply font-poppins font-light
 }
 
 @screen xl {
