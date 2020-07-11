@@ -163,7 +163,7 @@ function ELearningPage() {
             <Img
               className='block mt-6 w-screen lg:h-full lg:w-full object-center object-contain'
               fluid={section3.fluidImage}
-              alt='People having a meeting'
+              alt={section3.imageAlt}
             />
           </div>
         </section>
