@@ -129,8 +129,9 @@ function ELearningPage() {
           <p>{RichText.asText(section1.text)}</p>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52'>
-          <div className='pt-10 mx-auto w-11/12 max-w-sm xl:pt-0 lg:w-580 xl:mt-auto xl:mb-40 lg:mr-183 xl:max-w-none'>
+        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190'>
             {RichText.render(section2.text)}
             <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4' style={{}}>
               {listItems.map((item, index) => (
@@ -140,12 +141,12 @@ function ELearningPage() {
                 </li>
               ))}
             </ul>
+            </div>
           </div>
-          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-1 '>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
-              imgHeight="806"
             />
           </div>
         </section>

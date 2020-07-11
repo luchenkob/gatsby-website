@@ -30,6 +30,10 @@ h5 {
   @apply text-xs font-bold;
 }
 
+.big {
+  @apply font-poppins font-light
+}
+
 @screen xl {
   .textBox {
     height: 241px;

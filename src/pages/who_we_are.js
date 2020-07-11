@@ -7,7 +7,6 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 
 import SpecialImage from '../components/SpecialImage';
-import GraySection from '../components/GraySection';
 
 import BackgroundImage from 'gatsby-background-image';
 
@@ -91,30 +90,23 @@ function WhoWeArePage() {
           </Hero>
         </BackgroundImage>
 
-        <div className='lg:hidden  block'>
-          <GraySection text={section1.text}>
+        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto space-y-4 lg:space-y-8'>
+              {RichText.render(section1.text)}
+            </div>
+          </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}
+              bubbleRight={false}
               bubbleSide='right'
+              bubbleHigh={true}
             />
-          </GraySection>
-        </div>
+          </div>
+        </section>
 
-        <div className='hidden lg:block lg:mt-270'>
-          <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-            <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:px-100 xl:px-190  lg:py-40 '>
-              <div className='xl:w-580 space-y-8'>{RichText.render(section1.text)}</div>
-            </div>
-            <div className='mt-6 lg:w-1/2 lg:-mt-110'>
-              <SpecialImage
-                imgSrc={section1.fluidImage}
-                imgAlt={section1.imageAlt}
-                bubbleSide='right'
-              />
-            </div>
-          </section>
-        </div>
       </section>
     </Layout>
   );

@@ -6,8 +6,8 @@ const ValueBox = ({ heading, text, svgUrl }) => {
   return (
     <div className="p-6 h-56 lg:h-320 flex flex-col items-start lg:w-1/3 lg:p-10">
       <div className="text-gray-700 text-left flex flex-col">
-        {RichText.render(heading)}
-        <div className="mt-2 lg:mt-4">{RichText.asText(text)}</div>
+        <h5>{RichText.asText(heading)}</h5>
+        <p className="mt-2 lg:mt-4">{RichText.asText(text)}</p>
       </div>
       <img
         className="mt-8 lg:mt-auto w-auto h-10 lg:w-16 lg:h-12"

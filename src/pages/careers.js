@@ -80,10 +80,7 @@ function CareersPage() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `react`,]}
-        title='Careers'
-      />
+      <SEO keywords={[`gatsby`, `react`]} title='Careers' />
 
       <section className='text-center'>
         <BackgroundImage
@@ -105,25 +102,25 @@ function CareersPage() {
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
           {RichText.render(section1.heading)}
-          <div className='mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960'>
-{RichText.render(section1.text)}
+          <div className='mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960 px-6'>
+            {RichText.render(section1.text)}
           </div>
         </section>
 
-        <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
-          <div className='pt-10 px-10px lg:self-center lg:mt-0 lg:w-1/2 lg:pl-168'>
-            {RichText.render(section2.heading)}
-            <div className='mt-2 lg:mt-4'>
-              {RichText.render(section2.text)}
-            </div>
+        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto'>
+              {RichText.render(section2.heading)}
+            <div className='mt-2 lg:mt-4'>{RichText.render(section2.text)}</div>
             <div className='mt-4 lg:mt-8'>
               <Button
                 text='Check job openings'
                 toMail={RichText.asText(section2.email)}
               />
             </div>
+            </div>
           </div>
-          <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
@@ -131,6 +128,7 @@ function CareersPage() {
             />
           </div>
         </section>
+
       </section>
     </Layout>
   );
