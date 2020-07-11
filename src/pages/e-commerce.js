@@ -78,7 +78,14 @@ function ECommercePage() {
 
   return (
     <Layout>
+<<<<<<< HEAD
       <SEO keywords={[`gatsby`, `react`]} title='E-commerce' />
+=======
+      <SEO
+        keywords={[`gatsby`, `react`,]}
+        title='E-commerce'
+      />
+>>>>>>> upstream/master
 
       <section className='text-center'>
         <BackgroundImage
@@ -126,6 +133,7 @@ function ECommercePage() {
               bubbleRight={false}
               bubbleSide='right'
               bubbleHigh={true}
+              imgHeight="686"
             />
           </div>
         </section>

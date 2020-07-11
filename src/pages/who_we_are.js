@@ -7,6 +7,10 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 
 import SpecialImage from '../components/SpecialImage';
+<<<<<<< HEAD
+=======
+import GraySection from '../components/GraySection';
+>>>>>>> upstream/master
 
 import BackgroundImage from 'gatsby-background-image';
 
@@ -107,6 +111,23 @@ function WhoWeArePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        <div className='hidden lg:block lg:mt-270'>
+          <section className='mt-12 text-left bg-gray-100 lg:flex lg:mt-52 lg:flex-row-reverse'>
+            <div className='pt-10 mx-auto w-11/12 lg:w-1/2 lg:mt-auto lg:px-100 xl:px-190  lg:py-40 '>
+              <div className='xl:w-580 space-y-8'>{RichText.render(section1.text)}</div>
+            </div>
+            <div className='mt-6 lg:w-1/2 lg:-mt-110'>
+              <SpecialImage
+                imgSrc={section1.fluidImage}
+                imgAlt={section1.imageAlt}
+                bubbleSide='right'
+              />
+            </div>
+          </section>
+        </div>
+>>>>>>> upstream/master
       </section>
     </Layout>
   );
