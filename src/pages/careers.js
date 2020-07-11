@@ -102,7 +102,7 @@ function CareersPage() {
 
         <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
           {RichText.render(section1.heading)}
-          <div className='mt-6 w-320 mx-auto lg:mt-10 lg:mb-270 lg:w-960 px-6'>
+          <div className='mt-6 px-4 lg:mt-10 lg:mb-270 lg:w-960 lg:px-6 mx-auto'>
             {RichText.render(section1.text)}
           </div>
         </section>
