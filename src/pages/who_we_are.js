@@ -96,7 +96,7 @@ function WhoWeArePage() {
               {RichText.render(section1.text)}
             </div>
           </div>
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-px'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-1-5px desktop:mt-0'>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}
