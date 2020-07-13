@@ -7,7 +7,6 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import AsSeenOn from '../components/AsSeenOn';
 import SpecialImage from '../components/SpecialImage';
-import GraySection from '../components/GraySection';
 import TextBox from '../components/Home/TextBox';
 import ImageBox from '../components/Home/ImageBox';
 
@@ -94,7 +93,7 @@ function IndexPage() {
       heading: document.section_2_heading,
       text: document.section_2_text,
       fluidImage: document.section_2_imageSharp.childImageSharp.fluid,
-      imageAlt: document.section_2_image.alt
+      imageAlt: document.section_2_image.alt,
     },
     section3: {
       heading: document.section_3_heading,
@@ -112,27 +111,20 @@ function IndexPage() {
 
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `react`,]}
-        title='Home'
-      />
+      <SEO keywords={[`gatsby`, `react`]} title='Home' />
 
       <section className='text-center'>
         <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
-            <div
-              className='flex flex-col justify-center h-full'
-            >
-              <div className='xl:w-860'>
-                {RichText.render(hero.heading)}
-              </div>
+            <div className='flex flex-col justify-center h-full '>
+              <div className='xl:w-860'>{RichText.render(hero.heading)}</div>
               <p className='mt-6 xl:mt-10 xl:w-800'>
                 {RichText.asText(hero.text)}
               </p>
             </div>
           </Hero>
         </BackgroundImage>
-        
+
         <section className='mt-6 mx-auto w-11/12 xl:w-screen'>
           <div className='xl:w-1522 xl:mx-auto flex xl:justify-center'>
             <AsSeenOn />
@@ -185,17 +177,20 @@ function IndexPage() {
           </div>
         </section>
 
-        <GraySection
-          heading={section2.heading}
-          text={section2.text}
-          widthOfText='580'
-        >
-          <SpecialImage
-            imgSrc={section2.fluidImage}
-            imgAlt={section2.imageAlt}
-            imgHeight="699"
-          />
-        </GraySection>
+        <section className='mt-12 text-left lg:flex lg:mt-270 lg:relative lg:pt-110'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-100 desktop:pr-52'>
+              <h2 className='inline-block xl:mb-10'>{RichText.asText(section2.heading)}</h2>
+              <div className='mt-3 xl:mt-0 space-y-4'>{RichText.render(section2.text)}</div>
+            </div>
+          </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-3px desktop:mt-0'>
+            <SpecialImage
+              imgSrc={section2.fluidImage}
+              imgAlt={section2.imageAlt}
+            />
+          </div>
+        </section>
 
         <section className='mx-auto w-11/12 mt-12 xl:mt-40'>
           <h2 className='capitalize'>{RichText.asText(section3.heading)}</h2>
