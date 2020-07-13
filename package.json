@@ -1,7 +1,7 @@
 {
   "name": "meliorism-website",
   "description": "Meliorism website using Gatsby and Prismic",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Kazi Noshin J. O.",
   "dependencies": {
     "@prismicio/gatsby-source-prismic-graphql": "^3.6.8",
