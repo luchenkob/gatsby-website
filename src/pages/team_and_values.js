@@ -116,7 +116,7 @@ function TeamAndValuesPage() {
             {RichText.asText(section1.text)}
             </div>
           </div>
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-1 desktop:mt-0'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-3px desktop:mt-0'>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}

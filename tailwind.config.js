@@ -28,6 +28,7 @@ module.exports = {
         'desktop': '1920px'
       },
       spacing: {
+        "3px": '3px',
         "2-5": "0.625rem",
         "2-75": "0.6875rem",
         "7-5": "1.875rem",
