@@ -114,8 +114,8 @@ function ELearningPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className='lg:w-916 lg:mt-168'>
+            <div className='flex flex-col justify-center h-full lg:mt-0'>
+              <div className='pr-32 xl:pr-0 lg:w-916'>
                 {RichText.render(hero.heading)}
               </div>
               <p className='mt-6 lg:mt-10 lg:w-800'>

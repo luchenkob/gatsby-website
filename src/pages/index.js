@@ -121,10 +121,9 @@ function IndexPage() {
         <BackgroundImage Tag={`section`} id={`media-test`} fluid={sources}>
           <Hero>
             <div
-              className='-mt-12 flex flex-col justify-center h-full xl:justify-start 
-            xl:mt-0'
+              className='flex flex-col justify-center h-full'
             >
-              <div className='xl:w-860 xl:mt-140'>
+              <div className='xl:w-860'>
                 {RichText.render(hero.heading)}
               </div>
               <p className='mt-6 xl:mt-10 xl:w-800'>

@@ -82,8 +82,8 @@ function WhoWeArePage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full xl:justify-start xl:mt-0'>
-              <div className='xl:mt-202 xl:w-545'>
+            <div className=' flex flex-col justify-center h-full'>
+              <div className='xl:w-545'>
                 {RichText.render(hero.heading)}
               </div>
             </div>

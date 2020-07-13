@@ -106,8 +106,8 @@ function TravelPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className='lg:w-916 lg:mt-168'>
+            <div className='flex flex-col justify-center h-full'>
+              <div className='w-4/5 lg:w-916'>
                 {RichText.render(hero.heading)}
               </div>
               <p className='mt-6 lg:mt-10 lg:w-800'>

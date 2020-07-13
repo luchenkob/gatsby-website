@@ -92,8 +92,8 @@ function CareersPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className='w-8/12 lg:mt-202 lg:w-734'>
+            <div className='flex flex-col justify-center h-full'>
+              <div className='w-8/12 lg:w-734'>
                 {RichText.render(hero.heading)}
               </div>
             </div>

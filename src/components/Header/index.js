@@ -43,7 +43,7 @@ const Header = ({ isBackgroundWhite = false }) => {
   };
 
   return (
-    <header className='bg-transparent'>
+    <header className='bg-transparent relative z-40'>
       <div>
         <Helmet>
           <style>{`${isExpanded ? 'body { overflow: hidden; }' : ''}`}</style>
@@ -212,7 +212,7 @@ const Header = ({ isBackgroundWhite = false }) => {
       {/* Overlay */}
       {selected && (
         <div
-          className='fixed z-10 inset-0 h-screen'
+          className='fixed z-20 inset-0 h-screen'
           onMouseOver={() => setSelected(null)}
         />
       )}

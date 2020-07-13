@@ -84,8 +84,8 @@ function ContactUsPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className='lg:mt-202 lg:w-545'>
+            <div className=' flex flex-col justify-center h-full'>
+              <div className='lg:w-545'>
                 {RichText.render(hero.heading)}
               </div>
             </div>

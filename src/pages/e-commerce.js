@@ -91,8 +91,8 @@ function ECommercePage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full lg:justify-start lg:mt-0'>
-              <div className=' lg:w-860 lg:mt-152'>
+            <div className=' flex flex-col justify-center h-full '>
+              <div className=' lg:w-860'>
                 {RichText.render(hero.heading)}
               </div>
             </div>
