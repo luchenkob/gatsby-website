@@ -31,7 +31,7 @@ h5 {
 }
 
 .big {
-  @apply font-poppins font-light
+  @apply font-poppins font-light;
 }
 
 @screen xl {

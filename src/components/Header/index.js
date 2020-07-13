@@ -43,9 +43,34 @@ const Header = ({ isBackgroundWhite = false }) => {
   };
 
   return (
-    <header className='bg-transparent'>
+    <header className='bg-transparent relative z-40'>
       <div>
         <Helmet>
+          <link rel='alternate' hrefLang='en' href='https://bemeliorism.com' />
+          <link
+            rel='alternate'
+            hrefLang='fr'
+            href='https://fr.bemeliorism.com'
+          />
+          <link
+            rel='alternate'
+            hrefLang='pt'
+            href='https://pt.bemeliorism.com'
+          />
+          <link
+            rel='alternate'
+            hrefLang='es'
+            href='https://es.bemeliorism.com'
+          />
+          <script
+            type='text/javascript'
+            src='https://cdn.weglot.com/weglot.min.js'
+          />
+          <script>
+            {` Weglot.initialize({
+        api_key: 'wg_6870896df66a3b11963eb6febf22e2832'
+    });`}
+          </script>
           <style>{`${isExpanded ? 'body { overflow: hidden; }' : ''}`}</style>
         </Helmet>
       </div>
@@ -66,7 +91,9 @@ const Header = ({ isBackgroundWhite = false }) => {
         </Link>
 
         <button
-          className={`flex items-center text-white focus:outline-none lg:hidden ${isBackgroundWhite ? 'text-gray-600' : 'white'}`}
+          className={`flex items-center text-white focus:outline-none lg:hidden ${
+            isBackgroundWhite ? 'text-gray-600' : 'white'
+          }`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -212,7 +239,7 @@ const Header = ({ isBackgroundWhite = false }) => {
       {/* Overlay */}
       {selected && (
         <div
-          className='fixed z-10 inset-0 h-screen'
+          className='fixed z-20 inset-0 h-screen'
           onMouseOver={() => setSelected(null)}
         />
       )}
