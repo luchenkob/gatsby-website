@@ -13,7 +13,4 @@ yarn-error.log
 # deployment-specific configs
 now.json
 
-# environment variables
-.env
-
 todo.md
