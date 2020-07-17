@@ -15,7 +15,7 @@ const TextBox = ({
     >
       <h4 className="inline-block text-left xl:text-xl">{text}</h4>
       <img
-        className="mt-8 xl:mt-22 xl:w-10 xl:h-8"
+        className="mt-8 xl:mt-22 w-22px xl:w-10 xl:h-8"
         src={imgSrc}
         alt={`${text} icon`}
       />

@@ -117,9 +117,9 @@ function TravelPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto lg:mt-40 xl:w-1260'>
+        <section className='mt-12 mx-auto lg:mt-40 lg:w-1260'>
           {RichText.render(section1.heading)}
-          <p className='mt-6  mx-auto lg:mt-10'>
+          <p className='mt-6 mx-auto lg:mt-10 lg:px-5'>
             {RichText.asText(section1.text)}
           </p>
         </section>
@@ -133,7 +133,7 @@ function TravelPage() {
           </div>
           <div className='lg:w-1/2'>
             <Img
-              className='block mt-6 w-screen lg:w-full lg:h-full'
+              className='block mt-6 w-screen lg:mt-0 lg:w-full lg:h-full'
               fluid={section2.fluidImage}
               alt={section2.imageAlt}
             />

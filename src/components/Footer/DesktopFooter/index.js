@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 const DesktopFooter = ({ links }) => (
   <nav className="mx-auto flex space-x-580 w-1260">
-    <div className="grid grid-cols-3 grid-flow-col gap-12">
+    <div className="grid grid-cols-3 grid-flow-col gap-16">
       <div>
         <div className="caption uppercase text-gray-400 space-x-156">
           Products

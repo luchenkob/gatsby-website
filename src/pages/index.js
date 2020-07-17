@@ -126,11 +126,11 @@ function IndexPage() {
         </BackgroundImage>
 
         <section className='mt-6 mx-auto w-11/12 xl:w-screen'>
-          <div className='xl:w-1522 xl:mx-auto flex xl:justify-center'>
+          <div className='lg:mt-20 xl:w-1522 xl:mx-auto flex xl:justify-center'>
             <AsSeenOn />
           </div>
 
-          <p className='big -mx-2 mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-165 xl:px-56 xl:w-1522 lg:mx-auto'>
+          <p className='big -mx-2 mt-12 font-light text-sm xl:text-3-5xl text-center xl:mt-40 xl:px-56 xl:w-1522 lg:mx-auto'>
             {RichText.asText(section1.text)}
           </p>
 
@@ -154,7 +154,7 @@ function IndexPage() {
             <TextBox text='Travel' imgSrc={iconTravel} hasTopBorder={false} />
           </div>
 
-          <div className='hidden xl:flex flex-wrap mx-auto mt-18 w-843 mb-270'>
+          <div className='hidden xl:flex flex-wrap mx-auto mt-18 w-843'>
             <TextBox
               text='E-learning'
               imgSrc={iconGraduate}
@@ -177,14 +177,14 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 text-left lg:flex lg:mt-270 lg:relative lg:pt-110'>
+        <section className='mt-12 lg:mt-40 text-left lg:flex lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
-            <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-100 desktop:pr-52'>
+            <div className='px-2 pb-6 lg:w-580 lg:py-40 lg:ml-190 lg:px-5'>
               <h2 className='inline-block xl:mb-10'>{RichText.asText(section2.heading)}</h2>
               <div className='mt-3 xl:mt-0 space-y-4'>{RichText.render(section2.text)}</div>
             </div>
           </div>
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-3px desktop:mt-0'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-px'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
@@ -194,7 +194,7 @@ function IndexPage() {
 
         <section className='mx-auto w-11/12 mt-12 xl:mt-40'>
           <h2 className='capitalize'>{RichText.asText(section3.heading)}</h2>
-          <p className='mt-6 mx-auto xl:mt-10 xl:w-800'>
+          <p className='mt-6 mx-auto xl:mt-10 xl:w-764'>
             {RichText.asText(section3.text)}
           </p>
 

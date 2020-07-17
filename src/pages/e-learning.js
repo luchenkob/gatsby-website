@@ -125,11 +125,11 @@ function ELearningPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916 lg:mb-270'>
+        <section className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-916'>
           <p>{RichText.asText(section1.text)}</p>
         </section>
 
-        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
+        <section className='mt-12 text-left lg:flex lg:mt-40 lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
             <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190'>
             {RichText.render(section2.text)}
@@ -155,19 +155,22 @@ function ELearningPage() {
           {RichText.asText(section3.heading)}
         </h3>
 
-        <section className='mt-6 text-left flex flex-col lg:flex-row-reverse mx-auto lg:mt-20 lg:max-w-4xl xl:w-1260 xl:h-400'>
-          <div className='mx-auto mt-2 text-left w-11/12 lg:self-center lg:mt-0 lg:w-1/2 lg:ml-100 xl:mr-auto'>
+        <section className='mx-auto mt-10 text-left flex flex-col lg:flex-row-reverse lg:mt-20 lg:w-1260 lg:h-400'>
+          <div className='mx-auto text-left w-11/12 lg:w-1/2 lg:pl-100 lg:mx-0 lg:self-center'>
             <h5>{RichText.asText(section3.subheading)}</h5>
-            <div className='mt-2 lg:mt-4'>{RichText.render(section3.text)}</div>
+            <div className='mt-2 lg:mt-4 space-y-4'>
+              {RichText.render(section3.text)}
+            </div>
           </div>
-          <div className='lg:w-1/2'>
+          <div className='lg:w-580'>
             <Img
-              className='block mt-6 w-screen lg:h-full lg:w-full object-center object-contain'
+              className='block mt-6 w-screen lg:mt-0 lg:w-full lg:h-full'
               fluid={section3.fluidImage}
               alt={section3.imageAlt}
             />
           </div>
         </section>
+
       </section>
     </Layout>
   );

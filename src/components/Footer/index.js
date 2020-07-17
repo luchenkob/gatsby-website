@@ -36,7 +36,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-12 xl:mt-40 py-8 xl:py-16 bg-gray-600 text-gray-300">
+    <footer className="mt-12 lg:mt-40 py-8 xl:py-16 bg-gray-600 text-gray-300">
       <div className="xl:hidden">
         <MobileFooter links={links} />
       </div>

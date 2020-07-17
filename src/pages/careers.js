@@ -73,65 +73,52 @@ function CareersPage() {
   ];
   return (
     <Layout>
-      {' '}
-      <SEO keywords={[`gatsby`, `react`]} title='Careers' />{' '}
+      <SEO keywords={[`gatsby`, `react`]} title='Careers' />
       <section className='text-center'>
-        {' '}
         <BackgroundImage
           Tag={`section`}
           id={`media-test`}
           fluid={sources}
           style={{ backgroundPosition: 'top' }}
         >
-          {' '}
           <Hero>
-            {' '}
             <div className='flex flex-col justify-center h-full'>
-              {' '}
               <div className='w-8/12 lg:w-734'>
-                {' '}
-                {RichText.render(hero.heading)}{' '}
-              </div>{' '}
-            </div>{' '}
-          </Hero>{' '}
-        </BackgroundImage>{' '}
+                {RichText.render(hero.heading)}
+              </div>
+            </div>
+          </Hero>
+        </BackgroundImage>
         <section className='mt-12 mx-auto w-11/12 lg:mt-40'>
-          {' '}
-          {RichText.render(section1.heading)}{' '}
-          <div className='mt-6 px-4 lg:mt-10 lg:mb-270 lg:w-960 lg:px-6 mx-auto'>
-            {' '}
-            {RichText.render(section1.text)}{' '}
-          </div>{' '}
-        </section>{' '}
-        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
-          {' '}
+          {RichText.render(section1.heading)}
+          <div className='mt-6 px-4 lg:mt-10 lg:w-960 lg:px-6 mx-auto'>
+            {RichText.render(section1.text)}
+          </div>
+        </section>
+        <section className='mt-12 text-left lg:flex lg:mt-40 lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
-            {' '}
             <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto'>
-              {' '}
-              {RichText.render(section2.heading)}{' '}
+              {RichText.render(section2.heading)}
               <div className='mt-2 lg:mt-4'>
                 {RichText.render(section2.text)}
-              </div>{' '}
+              </div>
               <div className='mt-4 lg:mt-8'>
-                {' '}
                 <Button
                   text='Check job openings'
                   toMail={RichText.asText(section2.email)}
-                />{' '}
-              </div>{' '}
-            </div>{' '}
-          </div>{' '}
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
-            {' '}
+                />
+              </div>
+            </div>
+          </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-px'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
               bubbleSide='right'
-            />{' '}
-          </div>{' '}
-        </section>{' '}
-      </section>{' '}
+            />
+          </div>
+        </section>
+      </section>
     </Layout>
   );
 }
