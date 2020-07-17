@@ -78,18 +78,17 @@ function WhoWeArePage() {
         </BackgroundImage>
 
         <section className='mt-12 text-left lg:flex lg:mt-40 lg:relative lg:pt-110'>
-          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
+          <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0 lg:flex lg:justify-end'>
             <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto space-y-4 lg:space-y-8'>
               {RichText.render(section1.text)}
             </div>
-          </div>
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-1-5px desktop:mt-0'>
+            </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-px desktop:mt-0'>
             <SpecialImage
               imgSrc={section1.fluidImage}
               imgAlt={section1.imageAlt}
               bubbleRight={false}
               bubbleSide='right'
-              bubbleHigh={true}
             />
           </div>
         </section>

@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       screens: {
-        xl: '1400px',
+        xl: '1680px',
         desktop: '1920px',
       },
       spacing: {
@@ -63,7 +63,6 @@ module.exports = {
         '200': '200px',
         '202': '202px',
         '241': '241px',
-        '270': '270px',
         '281': '281px',
         '289': '289px',
         '316': '316px',
