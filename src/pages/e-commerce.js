@@ -102,7 +102,7 @@ function ECommercePage() {
               </ul>
             </div>
           </div>
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-px'>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}

@@ -177,9 +177,9 @@ function IndexPage() {
           </div>
         </section>
 
-        <section className='mt-12 lg:mt-40 text-left lg:flex lg:relative lg:pt-110'>
+        <section className='mt-12 lg:mt-40 text-left xl:flex lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
-            <div className='px-2 pb-6 lg:w-580 lg:py-40 lg:ml-190 lg:px-5'>
+            <div className='px-2 pb-6 lg:w-580 lg:py-40 lg:ml-100 xl:ml-190 lg:px-5'>
               <h2 className='inline-block xl:mb-10'>{RichText.asText(section2.heading)}</h2>
               <div className='mt-3 xl:mt-0 space-y-4'>{RichText.render(section2.text)}</div>
             </div>
