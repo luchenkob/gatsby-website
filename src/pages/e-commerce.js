@@ -68,10 +68,8 @@ function ECommercePage() {
   const listItems = document.features.map((item) => item.feature_text);
   return (
     <Layout>
-      {' '}
-      <SEO keywords={[`gatsby`, `react`]} title='E-commerce' />{' '}
+      <SEO keywords={[`gatsby`, `react`]} title='E-commerce' />
       <section className='text-center'>
-        {' '}
         <BackgroundImage
           className='bg-center'
           Tag={`section`}
@@ -79,54 +77,42 @@ function ECommercePage() {
           fluid={sources}
           style={{ backgroundPosition: 'top' }}
         >
-          {' '}
           <Hero>
-            {' '}
             <div className=' flex flex-col justify-center h-full '>
-              {' '}
-              <div className=' lg:w-860'>
-                {' '}
-                {RichText.render(hero.heading)}{' '}
-              </div>{' '}
-            </div>{' '}
-          </Hero>{' '}
-        </BackgroundImage>{' '}
-        <div className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-734 lg:mb-270'>
-          {' '}
-          {RichText.asText(section1.text)}{' '}
-        </div>{' '}
-        <section className='mt-12 text-left lg:flex lg:mt-52 lg:relative lg:pt-110'>
-          {' '}
+              <div className=' lg:w-860'>{RichText.render(hero.heading)}</div>
+            </div>
+          </Hero>
+        </BackgroundImage>
+        
+        <div className='mt-12 mx-auto w-11/12 lg:mt-40 lg:w-900'>
+          {RichText.asText(section1.text)}
+        </div>
+
+        <section className='mt-12 text-left lg:flex lg:mt-40 lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
-            {' '}
             <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190 ml-auto'>
-              {' '}
-              {RichText.render(section2.text)}{' '}
+              {RichText.render(section2.text)}
               <ul className='block mt-2 lg:mt-6 list-none space-y-2 lg:space-y-4'>
-                {' '}
                 {listItems.map((item, index) => (
                   <li key={index} className='flex items-center'>
-                    {' '}
-                    <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>{' '}
-                    <span className='ml-2'>{item}</span>{' '}
+                    <div className='inline-block h-1 w-1 lg:h-2 lg:w-2 rounded-full bg-purple'></div>
+                    <span className='ml-2'>{item}</span>
                   </li>
-                ))}{' '}
-              </ul>{' '}
-            </div>{' '}
-          </div>{' '}
-          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0'>
-            {' '}
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:left-0 lg:mt-px'>
             <SpecialImage
               imgSrc={section2.fluidImage}
               imgAlt={section2.imageAlt}
               bubbleRight={false}
               bubbleSide='right'
               bubbleHigh={true}
-              imgHeight='686'
-            />{' '}
-          </div>{' '}
-        </section>{' '}
-      </section>{' '}
+            />
+          </div>
+        </section>
+      </section>
     </Layout>
   );
 }

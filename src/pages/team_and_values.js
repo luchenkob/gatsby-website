@@ -96,7 +96,7 @@ function TeamAndValuesPage() {
           }}
         >
           <Hero>
-            <div className='-mt-12 flex flex-col justify-center h-full xl:mt-0'>
+            <div className='flex flex-col justify-center h-full'>
               <div className='xl:w-960'>
                 {RichText.render(hero.heading)}
               </div>
@@ -107,7 +107,7 @@ function TeamAndValuesPage() {
           </Hero>
         </BackgroundImage>
 
-        <section className='mt-12 text-left lg:flex lg:mt-270 lg:relative lg:pt-110'>
+        <section className='mt-12 text-left lg:flex lg:mt-40 lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
             <div className='px-2 pb-6 lg:w-1/2 lg:py-40 lg:pl-190 lg:pr-140 desktop:pr-190'>
               {RichText.asText(section1.text)}
@@ -121,13 +121,13 @@ function TeamAndValuesPage() {
           </div>
         </section>
 
-        <section className='mt-16 mx-auto w-11/12 tracking-tight'>
+        <section className='mt-16 lg:mt-20 mx-auto w-11/12 tracking-tight'>
           <div className='xl:w-1522 xl:mx-auto flex xl:justify-center'>
             <AsSeenOn />
           </div>
         </section>
 
-        <section className='mt-12 mx-auto w-11/12 tracking-tight xl:mt-165'>
+        <section className='mt-12 mx-auto w-11/12 tracking-tight lg:mt-40'>
           <h2>{RichText.asText(section2.heading)}</h2>
           <div className='flex flex-col mt-6 border-gray-200 border divide-y divide-gray-200 w-11/12 mx-auto lg:flex-row lg:max-w-4xl xl:w-1260 xl:divide-x xl:divide-y-0 xl:mt-20 xl:max-w-none'>
             <ValueBox
