@@ -37,49 +37,43 @@ function IndexPage() {
   const { prismic } = useStaticQuery(graphql`
     query {
       prismic {
-        _allDocuments(uid: "homepage") {
-          edges {
-            node {
-              ... on PRISMIC_Homepage {
-                heading
-                text
-                background_mobile
-                background_mobileSharp {
-                  childImageSharp {
-                    fluid(quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                background_desktop
-                background_desktopSharp {
-                  childImageSharp {
-                    fluid(quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                section_1_text
-                section_2_heading
-                section_2_text
-                section_2_image
-                section_2_imageSharp {
-                  childImageSharp {
-                    fluid(quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                section_3_heading
-                section_3_text
+        homepage(lang: "en-us", uid: "homepage") {
+          heading
+          text
+          background_mobile
+          background_mobileSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
+          background_desktop
+          background_desktopSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_1_text
+          section_2_heading
+          section_2_text
+          section_2_image
+          section_2_imageSharp {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          section_3_heading
+          section_3_text
         }
       }
     }
   `);
-  const document = prismic._allDocuments.edges[0].node;
+  const document = prismic.homepage;
 
   const { hero, section1, section2, section3 } = {
     hero: {
@@ -180,8 +174,12 @@ function IndexPage() {
         <section className='mt-12 lg:mt-40 text-left xl:flex lg:relative lg:pt-110'>
           <div className='bg-gray-100 pt-10 mx-auto lg:w-full lg:pt-0'>
             <div className='px-2 pb-6 lg:w-580 lg:py-40 lg:ml-100 xl:ml-190 lg:px-5'>
-              <h2 className='inline-block xl:mb-10'>{RichText.asText(section2.heading)}</h2>
-              <div className='mt-3 xl:mt-0 space-y-4'>{RichText.render(section2.text)}</div>
+              <h2 className='inline-block xl:mb-10'>
+                {RichText.asText(section2.heading)}
+              </h2>
+              <div className='mt-3 xl:mt-0 space-y-4'>
+                {RichText.render(section2.text)}
+              </div>
             </div>
           </div>
           <div className='lg:w-1/2 lg:h-full lg:absolute lg:top-0 lg:right-0 lg:mt-px'>
